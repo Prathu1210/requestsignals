@@ -1,0 +1,28 @@
+/* Background gradient used everywhere */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #6a7cff, #7b5fcf);
+  min-height: 100vh;
+}
+
+/* GLOBAL table styles (allowed here) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background: #f9fafb;
+}

@@ -1,0 +1,99 @@
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6f7bf7, #7b5bbd);
+  padding: 80px 16px 40px;
+}
+
+
+.card {
+  background: white;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto; 
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.title {
+  color: #7a4df3;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.table thead {
+  background: #8b5cf6;
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+}
+
+.empty {
+  text-align: center;
+  padding: 16px;
+}
+
+.link {
+  color: #7a4df3;
+  font-weight: 500;
+}
+
+/* Scrollable table container */
+.tableContainer {
+  max-height: 520px; /* ✅ controls visible height */
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+/* Optional: smoother scroll */
+.tableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 4px;
+}
+/* Container that holds table + ad */
+.contentArea {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable table area */
+.tableContainer {
+  max-height: 420px; /* ⬅ reduced to make space for ads */
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+/* Ad placeholder area */
+.adContainer {
+  height: 100px; /* ⬅ reserved ad height */
+  margin-top: 12px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 14px;
+  border: 1px dashed #d1d5db;
+}

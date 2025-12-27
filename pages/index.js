@@ -17,15 +17,10 @@ useEffect(() => {
 const fetchLeads = async () => {
   try {
     const res = await fetch("/api/leads");
-    const json = await res.json();
+    const data = await res.json();
 
-    // ✅ ALWAYS read from json.data
-    if (Array.isArray(json.data)) {
-      setLeads(json.data);
-    } else {
-      console.error("API returned invalid data:", json);
-      setLeads([]);
-    }
+    // ✅ API returns array directly
+    setLeads(Array.isArray(data) ? data : []);
   } catch (err) {
     console.error("Fetch failed:", err);
     setLeads([]);
@@ -92,7 +87,7 @@ const filteredLeads = selectedDate
               </tr>
             </thead>
 
-            <tbody>
+                        <tbody>
               {visibleLeads.length === 0 ? (
                 <tr>
                   <td colSpan="4" className={styles.empty}>
@@ -104,43 +99,48 @@ const filteredLeads = selectedDate
                   <tr key={item.id}>
                     {/* DATE */}
                     <td className={styles.dateCell}>
-                        {item.created_at
-                          ? (() => {
-                              const d = new Date(item.created_at);
-                              return `${d.getDate()} ${d.toLocaleString("en-GB", {
-                                month: "short",
-                              })}, ${d.getFullYear()}`;
-                            })()
-                          : "-"}
-                      </td>
-
-                    {/* REQUIREMENT TITLE */}
-                    <td className={styles.requirement}>
-                      {item.title}
+                      {item.created_at
+                        ? (() => {
+                            const d = new Date(item.created_at);
+                            return `${d.getDate()} ${d.toLocaleString("en-GB", {
+                              month: "short",
+                            })}, ${d.getFullYear()}`;
+                          })()
+                        : "-"}
                     </td>
 
-                    {/* DETAILS – 2 LINE CLAMP */}
+                    {/* TITLE */}
+                    <td className={styles.requirement}>
+                      {item.title || "-"}
+                    </td>
+
+                    {/* CONTENT – 2 LINE CLAMP */}
                     <td>
                       <div className={styles.twoLine}>
-                        {item.content}
+                        {item.content || ""}
                       </div>
                     </td>
 
                     {/* LINK */}
                     <td>
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={styles.link}
-                      >
-                        View
-                      </a>
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.link}
+                        >
+                          View
+                        </a>
+                      ) : (
+                        "-"
+                      )}
                     </td>
                   </tr>
                 ))
               )}
             </tbody>
+
           </table>
         </div>
 

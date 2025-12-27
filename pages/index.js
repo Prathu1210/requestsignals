@@ -10,27 +10,27 @@ export default function Home() {
 
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    fetchLeads();
-  }, []);
+useEffect(() => {
+  fetchLeads();
+}, []);
 
-    const fetchLeads = async () => {
-      try {
-        const res = await fetch("/api/leads");
-        const json = await res.json();
+const fetchLeads = async () => {
+  try {
+    const res = await fetch("/api/leads");
+    const json = await res.json();
 
-        // ✅ Always enforce array
-        if (Array.isArray(json)) {
-          setLeads(json);
-        } else {
-          console.error("API returned non-array:", json);
-          setLeads([]);
-        }
-      } catch (err) {
-        console.error("Fetch failed:", err);
-        setLeads([]);
-      }
-    };
+    // ✅ ALWAYS read from json.data
+    if (Array.isArray(json.data)) {
+      setLeads(json.data);
+    } else {
+      console.error("API returned invalid data:", json);
+      setLeads([]);
+    }
+  } catch (err) {
+    console.error("Fetch failed:", err);
+    setLeads([]);
+  }
+};
 
   // ✅ DATE FILTER (YYYY-MM-DD from created_at)
   const safeLeads = Array.isArray(leads) ? leads : [];

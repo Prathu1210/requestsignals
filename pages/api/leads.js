@@ -2,19 +2,21 @@ import { supabase } from "../../lib/supabase";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json([]);
   }
 
   const { data, error } = await supabase
-    .from("linkedin_posts") // ✅ CORRECT TABLE
-    .select("id, title, content, link, created_at")
+    .from("linkedin_posts")   // ✅ CONFIRM table name
+    .select("*")
     .order("created_at", { ascending: false });
 
   if (error) {
-    console.error("Supabase error:", error);
-    return res.status(500).json({ error: error.message });
+    console.error("Supabase error:", error.message);
+
+    // ✅ ALWAYS return an array
+    return res.status(200).json([]);
   }
 
-  // ✅ ALWAYS return an array
+  // ✅ Always return array
   return res.status(200).json(data || []);
 }

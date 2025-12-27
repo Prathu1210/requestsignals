@@ -17,7 +17,7 @@ export default function Home() {
   const fetchLeads = async () => {
     const res = await fetch("/api/leads");
     const data = await res.json();
-    setLeads(data || []);
+    setLeads(Array.isArray(data) ? data : []);
   };
 
   // ✅ DATE FILTER (YYYY-MM-DD from created_at)

@@ -16,19 +16,20 @@ export default function Home() {
 
   const fetchLeads = async () => {
     const res = await fetch("/api/leads");
-    const json = await res.json();
-    setLeads(json.data || []);
+    const data = await res.json();
+    setLeads(data || []);
   };
 
-  // ✅ DATE FILTER
+  // ✅ DATE FILTER (YYYY-MM-DD from created_at)
   const filteredLeads = selectedDate
-    ? leads.filter((item) => item.date === selectedDate)
+    ? leads.filter(
+        (item) =>
+          item.created_at?.split("T")[0] === selectedDate
+      )
     : leads;
 
-  // ✅ VISIBLE ROWS (20 → 40 → 60 ...)
   const visibleLeads = filteredLeads.slice(0, visibleCount);
 
-  // ✅ INFINITE SCROLL HANDLER
   const handleScroll = () => {
     const el = containerRef.current;
     if (!el) return;
@@ -40,7 +41,6 @@ export default function Home() {
     }
   };
 
-  // Reset scroll when date changes
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
     if (containerRef.current) {
@@ -64,7 +64,6 @@ export default function Home() {
           />
         </div>
 
-        {/* ✅ SCROLLABLE TABLE */}
         <div
           className={styles.tableContainer}
           ref={containerRef}
@@ -90,24 +89,40 @@ export default function Home() {
               ) : (
                 visibleLeads.map((item) => (
                   <tr key={item.id}>
-                    <td>{item.date}</td>
+                    {/* DATE */}
+                    <td className={styles.dateCell}>
+                        {item.created_at
+                          ? (() => {
+                              const d = new Date(item.created_at);
+                              return `${d.getDate()} ${d.toLocaleString("en-GB", {
+                                month: "short",
+                              })}, ${d.getFullYear()}`;
+                            })()
+                          : "-"}
+                      </td>
+
+                    {/* REQUIREMENT TITLE */}
                     <td className={styles.requirement}>
-                      {item.requirement}
+                      {item.title}
                     </td>
-                    <td>{item.details}</td>
+
+                    {/* DETAILS – 2 LINE CLAMP */}
                     <td>
-                      {item.link ? (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.link}
-                        >
-                          View
-                        </a>
-                      ) : (
-                        "-"
-                      )}
+                      <div className={styles.twoLine}>
+                        {item.content}
+                      </div>
+                    </td>
+
+                    {/* LINK */}
+                    <td>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.link}
+                      >
+                        View
+                      </a>
                     </td>
                   </tr>
                 ))
@@ -116,9 +131,8 @@ export default function Home() {
           </table>
         </div>
 
-        {/* Optional footer indicator */}
         {visibleCount < filteredLeads.length && (
-          <div style={{ textAlign: "center", padding: "10px", color: "#666" }}>
+          <div className={styles.footer}>
             Scroll to load more…
           </div>
         )}

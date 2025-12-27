@@ -14,19 +14,32 @@ export default function Home() {
     fetchLeads();
   }, []);
 
-  const fetchLeads = async () => {
-    const res = await fetch("/api/leads");
-    const data = await res.json();
-    setLeads(data || []);
-  };
+    const fetchLeads = async () => {
+      try {
+        const res = await fetch("/api/leads");
+        const json = await res.json();
+
+        // ✅ Always enforce array
+        if (Array.isArray(json)) {
+          setLeads(json);
+        } else {
+          console.error("API returned non-array:", json);
+          setLeads([]);
+        }
+      } catch (err) {
+        console.error("Fetch failed:", err);
+        setLeads([]);
+      }
+    };
 
   // ✅ DATE FILTER (YYYY-MM-DD from created_at)
-  const filteredLeads = selectedDate
-    ? leads.filter(
-        (item) =>
-          item.created_at?.split("T")[0] === selectedDate
-      )
-    : leads;
+  const safeLeads = Array.isArray(leads) ? leads : [];
+
+const filteredLeads = selectedDate
+  ? safeLeads.filter(
+      (item) => item.created_at?.split("T")[0] === selectedDate
+    )
+  : safeLeads;
 
   const visibleLeads = filteredLeads.slice(0, visibleCount);
 

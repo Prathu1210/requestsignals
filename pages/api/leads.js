@@ -6,17 +6,15 @@ export default async function handler(req, res) {
   }
 
   const { data, error } = await supabase
-    .from("linkedin_posts")   // ✅ CONFIRM table name
+    .from("linkedin_posts")
     .select("*")
+    .eq("classification", "REQUIREMENT")
     .order("created_at", { ascending: false });
 
   if (error) {
-    console.error("Supabase error:", error.message);
-
-    // ✅ ALWAYS return an array
+    console.error("Supabase fetch error:", error.message);
     return res.status(200).json([]);
   }
 
-  // ✅ Always return array
   return res.status(200).json(data || []);
 }

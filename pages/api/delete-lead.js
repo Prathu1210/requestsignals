@@ -12,11 +12,12 @@ export default async function handler(req, res) {
   }
 
   const { error } = await supabase
-    .from("leads")
+    .from("linkedin_posts")
     .delete()
     .eq("id", id);
 
   if (error) {
+    console.error("Supabase delete error:", error.message);
     return res.status(500).json({ error: error.message });
   }
 

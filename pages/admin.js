@@ -26,21 +26,30 @@ export default function Admin() {
   const fetchLeads = async () => {
     const res = await fetch("/api/leads");
     const json = await res.json();
-    setLeads(json.data || []);
+
+    // API returns array directly
+    setLeads(Array.isArray(json) ? json : []);
   };
 
   useEffect(() => {
     if (authorized) fetchLeads();
   }, [authorized]);
 
-  // ---- ADD DATA ----
+  // ---- ADD DATA (MAP TO SUPABASE SCHEMA) ----
   const addLead = async () => {
-    if (!form.date || !form.requirement) return;
+    if (!form.requirement || !form.details || !form.link) {
+      alert("Requirement, Details and Link are required");
+      return;
+    }
 
     await fetch("/api/add-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({
+        title: form.requirement,     // 🔁 mapping
+        content: form.details,       // 🔁 mapping
+        link: form.link,
+      }),
     });
 
     setForm({ date: "", requirement: "", details: "", link: "" });
@@ -61,7 +70,7 @@ export default function Admin() {
     fetchLeads();
   };
 
-  // 🔒 PASSWORD SCREEN
+  // 🔒 PASSWORD SCREEN (UNCHANGED)
   if (!authorized) {
     return (
       <div className={styles.wrapper}>
@@ -84,7 +93,7 @@ export default function Admin() {
     );
   }
 
-  // ✅ ADMIN PANEL
+  // ✅ ADMIN PANEL (DESIGN UNCHANGED)
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
@@ -150,9 +159,13 @@ export default function Admin() {
               ) : (
                 leads.map((item) => (
                   <tr key={item.id}>
-                    <td>{item.date}</td>
-                    <td>{item.requirement}</td>
-                    <td>{item.details}</td>
+                    <td>
+                      {item.created_at
+                        ? new Date(item.created_at).toLocaleDateString()
+                        : "-"}
+                    </td>
+                    <td>{item.title}</td>
+                    <td>{item.content}</td>
                     <td>
                       <a href={item.link} target="_blank" rel="noreferrer">
                         View

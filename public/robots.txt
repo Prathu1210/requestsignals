@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://requestsignals.com/sitemap.xml

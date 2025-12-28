@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://requestsignals.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://requestsignals.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://requestsignals.com/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://requestsignals.com/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://requestsignals.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+<url>
+  <loc>https://requestsignals.com/blog</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://requestsignals.com/blog/best-approach-to-contact-linkedin-leads</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://requestsignals.com/blog/building-trust-before-closing-linkedin-project-deals</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://requestsignals.com/blog/follow-up-strategies-for-linkedin-leads</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://requestsignals.com/blog/how-to-close-project-deals-from-linkedin</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://requestsignals.com/blog/how-to-convert-linkedin-project-leads</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+</urlset>

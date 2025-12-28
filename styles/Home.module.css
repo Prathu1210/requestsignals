@@ -152,3 +152,68 @@
 }
 
 
+/* PAGE WRAPPER */
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* TOP & BOTTOM ADS */
+.adTop,
+.adBottom {
+  width: 100%;
+  height: 90px;
+  background: #f3f3f3;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* MAIN GRID */
+.main {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 16px;
+}
+
+/* SIDE ADS */
+.adSide {
+  width: 300px;
+  height: 250px;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* CONTENT AREA */
+.content {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ------------------ */
+/* RESPONSIVE (MOBILE) */
+/* ------------------ */
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .adSide {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .adTop,
+  .adBottom {
+    height: 60px;
+  }
+}

@@ -1,0 +1,63 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerInner {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  background: linear-gradient(135deg, #6f7bf7, #9c6ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav a {
+  margin-right: 22px;
+  font-size: 14px;
+}
+
+.btnPrimary {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6f7bf7, #9c6ff7);
+
+  box-shadow: 0 8px 20px rgba(111, 123, 247, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover pop-up effect */
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(111, 123, 247, 0.45);
+}
+
+/* Click feedback */
+.btnPrimary:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(111, 123, 247, 0.35);
+}

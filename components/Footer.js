@@ -1,18 +1,15 @@
-import Link from "next/link";
-import styles from "./Footer.module.css";
+import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
-        <p>© {new Date().getFullYear()} RequestSignals</p>
-
-        <nav className={styles.nav}>
-          <Link href="/about">About</Link>
-          <Link href="/privacy-policy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
+      <div className={`${styles.container} ${styles.footerInner}`}>
+        <span>© 2025 RequestSignals</span>
+        <div className={styles.footerLinks}>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </div>
       </div>
     </footer>
   );

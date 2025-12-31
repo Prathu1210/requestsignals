@@ -28,7 +28,7 @@ export default function Admin() {
   const checkPassword = (e) => {
     e?.preventDefault();
     // TEMPORARY PASSWORD - SET YOUR OWN
-    if (password === "admin123") {
+    if (password === "ambigA@1324") {
       setAuthorized(true);
     } else {
       alert("Wrong password");

@@ -146,7 +146,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
-      
+      <meta name="google-site-verification" content="oDar9BANP54D51zBgbBUAns6pXn1aqe8G_d5ZjuS-4I" />
       <Header />
       
       {/* HERO SECTION */}

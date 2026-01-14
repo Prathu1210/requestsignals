@@ -6,10 +6,30 @@ import styles from "../styles/Theme.module.css";
 
 const PAGE_SIZE = 9;
 
+// Date filter options
+const DATE_FILTER_OPTIONS = [
+  { value: "last14days", label: "Last 14 days" },
+  { value: "today", label: "Today" },
+  { value: "yesterday", label: "Yesterday" },
+  { value: "last3days", label: "Last 3 days" },
+  { value: "last7days", label: "Last 7 days" }
+];
+
+// ---- title formatter (ADD THIS) ----
+const toTitleCase = (str = "") =>
+  str
+    .toLowerCase()
+    .split(" ")
+    .map(word => {
+      if (word.length <= 2) return word.toUpperCase(); // AI, UI, API
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+
 export default function Leads() {
   const [leads, setLeads] = useState([]);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [selectedDate, setSelectedDate] = useState("");
+  const [dateFilter, setDateFilter] = useState("last14days"); // Default value
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
   const [loading, setLoading] = useState(true);
@@ -34,14 +54,56 @@ export default function Leads() {
     }
   };
 
+  // Function to calculate date range based on selected filter
+  const getDateRange = () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const startDate = new Date(today);
+    
+    switch (dateFilter) {
+      case "today":
+        startDate.setHours(0, 0, 0, 0);
+        return { start: startDate, end: new Date(today.getTime() + 24 * 60 * 60 * 1000) };
+      
+      case "yesterday":
+        startDate.setDate(today.getDate() - 1);
+        startDate.setHours(0, 0, 0, 0);
+        return { 
+          start: startDate, 
+          end: new Date(startDate.getTime() + 24 * 60 * 60 * 1000) 
+        };
+      
+      case "last3days":
+        startDate.setDate(today.getDate() - 3);
+        return { start: startDate, end: new Date(today.getTime() + 24 * 60 * 60 * 1000) };
+      
+      case "last7days":
+        startDate.setDate(today.getDate() - 7);
+        return { start: startDate, end: new Date(today.getTime() + 24 * 60 * 60 * 1000) };
+      
+      case "last14days":
+      default:
+        startDate.setDate(today.getDate() - 14);
+        return { start: startDate, end: new Date(today.getTime() + 24 * 60 * 60 * 1000) };
+    }
+  };
+
   // Filter and sort leads
   const safeLeads = Array.isArray(leads) ? leads : [];
 
   const filteredLeads = safeLeads.filter(item => {
-    if (selectedDate && item.created_at?.split("T")[0] !== selectedDate) {
-      return false;
+    // Date filtering
+    if (dateFilter && dateFilter !== "last14days") {
+      const itemDate = new Date(item.created_at);
+      const { start, end } = getDateRange();
+      
+      if (itemDate < start || itemDate > end) {
+        return false;
+      }
     }
     
+    // Search filtering
     if (searchTerm) {
       const searchLower = searchTerm.toLowerCase();
       const titleMatch = item.title?.toLowerCase().includes(searchLower);
@@ -80,7 +142,7 @@ export default function Leads() {
     if (containerRef.current) {
       containerRef.current.scrollTop = 0;
     }
-  }, [selectedDate, searchTerm, sortBy]);
+  }, [dateFilter, searchTerm, sortBy]);
 
   return (
     <>
@@ -183,10 +245,9 @@ export default function Leads() {
                   <i className="fas fa-calendar" style={{ marginRight: '6px' }}></i>
                   Filter by Date
                 </label>
-                <input
-                  type="date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
+                <select
+                  value={dateFilter}
+                  onChange={(e) => setDateFilter(e.target.value)}
                   style={{
                     width: '100%',
                     padding: '10px 12px',
@@ -194,10 +255,17 @@ export default function Leads() {
                     border: '1px solid #e2e8f0',
                     fontSize: '13px',
                     color: '#1f2937',
+                    background: 'rgba(255, 255, 255, 0.9)',
                     transition: 'all 0.3s',
-                    background: 'rgba(255, 255, 255, 0.9)'
+                    cursor: 'pointer'
                   }}
-                />
+                >
+                  {DATE_FILTER_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
               </div>
               
               <div>
@@ -231,7 +299,7 @@ export default function Leads() {
               </div>
             </div>
             
-            {(selectedDate || searchTerm) && (
+            {(dateFilter !== "last14days" || searchTerm) && (
               <div style={{ 
                 marginTop: '15px',
                 paddingTop: '15px',
@@ -242,10 +310,15 @@ export default function Leads() {
               }}>
                 <div style={{ fontSize: '13px', color: '#6b7280' }}>
                   Showing {sortedLeads.length} of {safeLeads.length} leads
+                  {dateFilter !== "last14days" && (
+                    <span style={{ marginLeft: '10px', fontSize: '12px', color: '#9ca3af' }}>
+                      (Filtered by: {DATE_FILTER_OPTIONS.find(opt => opt.value === dateFilter)?.label || "Date"})
+                    </span>
+                  )}
                 </div>
                 <button
                   onClick={() => {
-                    setSelectedDate("");
+                    setDateFilter("last14days");
                     setSearchTerm("");
                     setSortBy("newest");
                   }}
@@ -449,7 +522,7 @@ export default function Leads() {
                               WebkitLineClamp: 2,
                               WebkitBoxOrient: 'vertical'
                             }}>
-                              {item.title || "Service Request"}
+                               {toTitleCase(item.title || "Service Request")}
                             </h3>
                             <div style={{ 
                               display: 'flex', 
@@ -566,6 +639,11 @@ export default function Leads() {
                 }}>
                   <div>
                     Showing {Math.min(visibleCount, sortedLeads.length)} of {sortedLeads.length} leads
+                    {dateFilter !== "last14days" && (
+                      <span style={{ marginLeft: '10px', fontSize: '11px', color: '#9ca3af', fontStyle: 'italic' }}>
+                        (Filtered: {DATE_FILTER_OPTIONS.find(opt => opt.value === dateFilter)?.label || "Date"})
+                      </span>
+                    )}
                   </div>
                   <div>
                     {sortedLeads.length > 0 && (

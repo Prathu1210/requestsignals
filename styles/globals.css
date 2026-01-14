@@ -26,3 +26,37 @@ button {
 }
 
 /* Add any other global styles you need */
+/* Prevent text overflow globally */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* For all text containers */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  overflow-wrap: break-word;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Force single column layout */
+  .row, .flex-container {
+    flex-direction: column !important;
+  }
+  
+  /* Scale down large elements */
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}

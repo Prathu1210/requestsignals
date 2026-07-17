@@ -26,7 +26,10 @@ export default function CategoryFilter({ active = 'all', counts = [] }) {
 
   const handleClick = (key) => {
     const query = key === 'all' ? {} : { category: key }
-    router.push({ pathname: router.pathname, query }, undefined, { shallow: true })
+    // Not shallow: category filtering happens in getServerSideProps, so the
+    // navigation needs to actually re-run data fetching, not just change the
+    // URL client-side.
+    router.push({ pathname: router.pathname, query })
   }
 
   return (

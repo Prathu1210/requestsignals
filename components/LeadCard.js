@@ -32,73 +32,78 @@ export default function LeadCard({ lead }) {
   const hasMore = (lead.content?.length || 0) > 180
 
   return (
-    
- e.currentTarget.style.borderColor = '#d1d5db'}
-    onMouseLeave={e => e.currentTarget.style.borderColor = '#e5e7eb'}
+    <div
+      style={{
+        border: '1px solid #e5e7eb', borderRadius: 10, padding: 16, background: '#fff',
+        transition: 'border-color .15s',
+      }}
+      onMouseEnter={e => e.currentTarget.style.borderColor = '#d1d5db'}
+      onMouseLeave={e => e.currentTarget.style.borderColor = '#e5e7eb'}
     >
       {/* Top row */}
-      
-
-        
-
-          {meta.label}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+          <span style={{
+            fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12,
+            background: meta.bg, color: meta.color, border: `1px solid ${meta.border}`
+          }}>
+            {meta.label}
+          </span>
           {lead.urgent && (
-            
+            <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: '#fef2f2', color: '#b91c1c', border: '1px solid #fca5a5' }}>
               Urgent
-            
+            </span>
           )}
           {lead.budget_mentioned && (
-            
+            <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: '#f0fdf4', color: '#15803d', border: '1px solid #86efac' }}>
               Budget mentioned
-            
+            </span>
           )}
-        
+        </div>
 
-        
+        <span style={{ fontSize: 12, color: '#9ca3af', whiteSpace: 'nowrap' }}>
           {timeAgo(lead.published_at)}
-        
-      
-
+        </span>
+      </div>
 
       {/* Title */}
-      
-
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#111827', marginBottom: 6 }}>
         {lead.title}
-      
-
+      </div>
 
       {/* Content */}
-      
-
-
+      <div style={{ fontSize: 13, color: '#4b5563', lineHeight: 1.5 }}>
         {expanded ? lead.content : preview}
         {hasMore && !expanded && '...'}
         {hasMore && (
-           setExpanded(v => !v)}
+          <button
+            onClick={() => setExpanded(v => !v)}
             style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: 12, cursor: 'pointer', marginLeft: 4, padding: 0, fontWeight: 500 }}
           >
             {expanded ? 'Show less' : 'Show more'}
-          
+          </button>
         )}
-      
-
-
+      </div>
 
       {/* Footer */}
-      
-
-        
-          AI confidence: {lead.ai_confidence}%
-        
-         e.currentTarget.style.background = '#dbeafe'}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12, paddingTop: 12, borderTop: '1px solid #f3f4f6' }}>
+        <span style={{ fontSize: 12, color: '#9ca3af' }}>
+          AI confidence: {Math.round((lead.ai_confidence || 0) * 100)}%
+        </span>
+        <a
+          href={lead.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: 12, fontWeight: 600, color: '#2563eb', textDecoration: 'none',
+            padding: '5px 12px', borderRadius: 6, background: '#eff6ff'
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = '#dbeafe'}
           onMouseLeave={e => e.currentTarget.style.background = '#eff6ff'}
         >
-          View on LinkedIn
-          
-        
-      
-
-    
-
+          View on LinkedIn →
+        </a>
+      </div>
+    </div>
   )
 }

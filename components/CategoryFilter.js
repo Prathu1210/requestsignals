@@ -30,13 +30,14 @@ export default function CategoryFilter({ active = 'all', counts = [] }) {
   }
 
   return (
-    
-
+    <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
       {CATEGORIES.map(cat => {
         const isActive = active === cat.key
         const count = getCount(cat.key)
         return (
-           handleClick(cat.key)}
+          <button
+            key={cat.key}
+            onClick={() => handleClick(cat.key)}
             style={{
               flexShrink: 0, padding: '6px 14px', borderRadius: 20,
               border: isActive ? '1px solid #2563eb' : '1px solid #e5e7eb',
@@ -49,14 +50,17 @@ export default function CategoryFilter({ active = 'all', counts = [] }) {
           >
             {cat.label}
             {count > 0 && (
-              
+              <span style={{
+                fontSize: 11, fontWeight: 600, padding: '1px 6px', borderRadius: 10,
+                background: isActive ? 'rgba(255,255,255,0.25)' : '#e5e7eb',
+                color: isActive ? '#fff' : '#6b7280'
+              }}>
                 {count}
-              
+              </span>
             )}
-          
+          </button>
         )
       })}
-    
-
+    </div>
   )
 }

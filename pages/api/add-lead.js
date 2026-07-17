@@ -1,4 +1,4 @@
-import { supabase } from '../../lib/supabase'
+import { getLeadsCollection } from '../../lib/mongodb'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -12,26 +12,31 @@ export default async function handler(req, res) {
 
   if (!title || !link) return res.status(400).json({ error: 'title and link are required' })
 
-  const existing = await supabase.from('linkedin_posts').select('id').eq('link', link).single()
-  if (existing.data) return res.status(409).json({ error: 'Lead already exists' })
+  try {
+    const leads = await getLeadsCollection()
 
-  const { data, error } = await supabase.from('linkedin_posts').insert([{
-    title,
-    content: content?.substring(0, 1200),
-    link,
-    category: category || 'other',
-    budget_mentioned: budget_mentioned || false,
-    urgent: urgent || false,
-    ai_confidence: ai_confidence || 0,
-    published_at: published_at || new Date().toISOString(),
-    processed_at: new Date().toISOString(),
-    is_active: true,
-  }]).select().single()
+    const existing = await leads.findOne({ link })
+    if (existing) return res.status(409).json({ error: 'Lead already exists' })
 
-  if (error) {
+    const doc = {
+      title,
+      content: content?.substring(0, 1200),
+      link,
+      category: category || 'other',
+      budget_mentioned: budget_mentioned || false,
+      urgent: urgent || false,
+      ai_confidence: ai_confidence || 0,
+      published_at: published_at ? new Date(published_at) : new Date(),
+      processed_at: new Date(),
+      is_active: true,
+    }
+
+    const result = await leads.insertOne(doc)
+    const { _id, ...docWithoutId } = doc
+
+    return res.status(201).json({ success: true, lead: { id: result.insertedId.toString(), ...docWithoutId } })
+  } catch (error) {
     console.error('Insert error:', error)
     return res.status(500).json({ error: 'Failed to save lead' })
   }
-
-  return res.status(201).json({ success: true, lead: data })
 }

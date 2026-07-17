@@ -1,32 +1,34 @@
-import { supabase } from '../../lib/supabase'
+import { getLeadsCollection } from '../../lib/mongodb'
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
 
-  const { category, search, page = 1, limit = 30, all } = req.query
+  const { category, search, page = 1, limit = 30 } = req.query
   const PAGE_SIZE = Math.min(parseInt(limit), 100)
   const pageNum = parseInt(page)
   const isAdmin = req.headers['x-admin-key'] === process.env.ADMIN_KEY
 
   try {
-    let q = supabase
-      .from('linkedin_posts')
-      .select('*', { count: 'exact' })
-      .order('published_at', { ascending: false })
-      .range((pageNum - 1) * PAGE_SIZE, pageNum * PAGE_SIZE - 1)
+    const leads = await getLeadsCollection()
 
-    if (!isAdmin) q = q.eq('is_active', true)
-    if (category && category !== 'all') q = q.eq('category', category)
-    if (search) q = q.textSearch('title', search, { type: 'websearch' })
+    const filter = {}
+    if (!isAdmin) filter.is_active = true
+    if (category && category !== 'all') filter.category = category
+    if (search) filter.$text = { $search: search }
 
-    const { data, count, error } = await q
-    if (error) throw error
+    const total = await leads.countDocuments(filter)
+    const docs = await leads
+      .find(filter)
+      .sort({ published_at: -1 })
+      .skip((pageNum - 1) * PAGE_SIZE)
+      .limit(PAGE_SIZE)
+      .toArray()
 
     return res.status(200).json({
-      leads: data || [],
-      total: count || 0,
+      leads: docs.map(({ _id, ...rest }) => ({ id: _id.toString(), ...rest })),
+      total,
       page: pageNum,
-      totalPages: Math.ceil((count || 0) / PAGE_SIZE),
+      totalPages: Math.ceil(total / PAGE_SIZE),
     })
   } catch (err) {
     console.error('API error:', err)

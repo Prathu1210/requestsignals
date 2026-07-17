@@ -62,6 +62,11 @@ const MIN_CONFIDENCE = 0.6
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
+// Thrown when OpenRouter reports the shared daily free-model quota is fully
+// spent, so the caller can stop the whole run early instead of burning the
+// rest of its wall-clock time on guaranteed 429s.
+class QuotaExceededError extends Error {}
+
 function requireEnv() {
   const missing = []
   if (!GOOGLE_CSE_KEY) missing.push('GOOGLE_CSE_KEY')
@@ -143,6 +148,9 @@ Where:
 
   if (!res.ok) {
     const body = await res.text()
+    if (res.status === 429 && /per-day/i.test(body)) {
+      throw new QuotaExceededError(body)
+    }
     console.error(`  ! OpenRouter failed (${res.status}): ${body.slice(0, 200)}`)
     return null
   }
@@ -161,6 +169,23 @@ Where:
   } catch {
     console.error(`  ! Could not parse classifier JSON: ${text.slice(0, 120)}`)
     return null
+  }
+}
+
+// Cheap existence check against our own database — costs no AI quota, so we
+// use it to skip already-saved posts before ever calling the classifier.
+async function leadExists(link) {
+  const url = new URL(`${SITE_URL.replace(/\/$/, '')}/api/check-lead`)
+  url.searchParams.set('link', link)
+
+  try {
+    const res = await fetch(url, { headers: { 'x-admin-key': ADMIN_KEY } })
+    if (!res.ok) return false
+    const data = await res.json()
+    return !!data.exists
+  } catch (err) {
+    console.error(`  ! check-lead request error: ${err.message}`)
+    return false
   }
 }
 
@@ -214,6 +239,7 @@ async function main() {
     duplicatesSkipped: 0,
     rejected: 0,
     errors: 0,
+    quotaExhausted: false,
   }
 
   // De-dupe links within this run so we don't classify the same post twice
@@ -227,6 +253,7 @@ async function main() {
   const dayOffset = Math.floor(Date.now() / 86400000) % CATEGORIES.length
   const rotatedCategories = [...CATEGORIES.slice(dayOffset), ...CATEGORIES.slice(0, dayOffset)]
 
+  catLoop:
   for (const cat of rotatedCategories) {
     for (const phrase of SEEK_PHRASES) {
       const query = `site:linkedin.com/posts "${phrase}" ${cat.term}`
@@ -240,7 +267,25 @@ async function main() {
         if (!result.link || seenLinks.has(result.link)) continue
         seenLinks.add(result.link)
 
-        const verdict = await classifyLead(result, cat.key)
+        // Skip posts we've already saved without spending any AI quota on
+        // them — matters most when the scraper runs multiple times a day.
+        if (await leadExists(result.link)) {
+          stats.duplicatesSkipped++
+          console.log(`  = duplicate (already saved): ${result.title.slice(0, 70)}`)
+          continue
+        }
+
+        let verdict
+        try {
+          verdict = await classifyLead(result, cat.key)
+        } catch (err) {
+          if (err instanceof QuotaExceededError) {
+            console.error('\n! Daily classifier quota exhausted — stopping run early.')
+            stats.quotaExhausted = true
+            break catLoop
+          }
+          throw err
+        }
         stats.classifyCalls++
         await sleep(CLASSIFY_DELAY_MS)
 
@@ -280,6 +325,9 @@ async function main() {
   console.log(`Duplicates skipped: ${stats.duplicatesSkipped}`)
   console.log(`Rejected (not lead/low conf): ${stats.rejected}`)
   console.log(`Errors:             ${stats.errors}`)
+  if (stats.quotaExhausted) {
+    console.log('Stopped early:      daily classifier quota exhausted')
+  }
   console.log('=============================')
 }
 

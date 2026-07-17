@@ -101,7 +101,7 @@ export default function LeadCard({ lead }) {
           onMouseEnter={e => e.currentTarget.style.background = '#dbeafe'}
           onMouseLeave={e => e.currentTarget.style.background = '#eff6ff'}
         >
-          View on LinkedIn →
+          View post →
         </a>
       </div>
     </div>

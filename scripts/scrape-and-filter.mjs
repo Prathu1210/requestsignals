@@ -4,6 +4,12 @@
 // Lead-scraping pipeline:
 //   Google Custom Search -> OpenRouter (NVIDIA Nemotron 3 Ultra, free) classification -> POST /api/add-lead
 //
+// The search itself isn't restricted to one platform in code — it relies on
+// the Programmable Search Engine's own "Sites to search" configuration
+// (currently: linkedin.com, facebook.com, instagram.com, reddit.com, x.com)
+// to scope results across social platforms where people post asking for
+// freelance/agency help.
+//
 // Run locally:   npm run scrape   (uses node --env-file=.env.local)
 // Run in CI:     see .github/workflows/scrape.yml
 //
@@ -25,8 +31,8 @@ const {
 const CLASSIFIER_MODEL = 'nvidia/nemotron-3-ultra-550b-a55b:free'
 
 // Keep these keys in sync with components/CategoryFilter.js. Each category maps
-// to the noun phrase we search LinkedIn posts for. "term" is what the person
-// is looking to hire.
+// to the noun phrase we search for across social platforms. "term" is what
+// the person is looking to hire.
 const CATEGORIES = [
   { key: 'web_development',   term: 'web developer' },
   { key: 'app_development',   term: 'mobile app developer' },
@@ -43,6 +49,8 @@ const CATEGORIES = [
 // Intent phrases signalling someone is seeking freelance/agency help. Combined
 // with each category term. More phrases = more queries = more CSE quota used.
 // Google CSE free tier is 100 queries/day; 10 categories x 2 phrases = 20/day.
+// Each query searches across whatever platforms are configured in the CSE's
+// own "Sites to search" list, not just one hardcoded site.
 const SEEK_PHRASES = ['looking for', 'in need of a']
 
 // Delay between classification calls. OpenRouter's free-tier binding
@@ -107,7 +115,7 @@ async function googleSearch(query) {
 // Ask the classifier model (via OpenRouter) to judge a single search result.
 // Returns the parsed JSON object or null if the call/parse failed.
 async function classifyLead(result, categoryKey) {
-  const prompt = `You are qualifying leads from LinkedIn posts. A "lead" is a post from someone who is actively looking to HIRE freelance or agency help (not people offering services, not job seekers, not recruiters posting job openings for full-time roles).
+  const prompt = `You are qualifying leads from social media posts (LinkedIn, Facebook, Instagram, Reddit, X/Twitter). A "lead" is a post from someone who is actively looking to HIRE freelance or agency help (not people offering services, not job seekers, not recruiters posting job openings for full-time roles).
 
 Post title: ${result.title}
 Post snippet: ${result.snippet}
@@ -256,7 +264,7 @@ async function main() {
   catLoop:
   for (const cat of rotatedCategories) {
     for (const phrase of SEEK_PHRASES) {
-      const query = `site:linkedin.com/posts "${phrase}" ${cat.term}`
+      const query = `"${phrase}" ${cat.term}`
       console.log(`\n[query] ${query}`)
       const results = await googleSearch(query)
       stats.queriesRun++

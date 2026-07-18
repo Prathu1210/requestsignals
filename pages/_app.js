@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
         
         {/* PRIMARY META TAGS - ADD THESE */}
         <meta name="title" content="RequestSignals - Social Media Project Leads Platform" />
-        <meta name="description" content="Connect with quality project leads from LinkedIn, Reddit, X, Facebook, and Instagram. Get direct access to people looking for web, app, and digital services." />
+        <meta name="description" content="Connect with quality project leads from major social media platforms. Get direct access to people looking for web, app, and digital services." />
         <meta name="keywords" content="social media leads, LinkedIn leads, Reddit leads, project leads, freelance clients, B2B leads, web development leads, digital marketing leads" />
         <meta name="author" content="RequestSignals" />
         
@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="RequestSignals" />
         <meta property="og:title" content="RequestSignals - Social Media Project Leads Platform" />
-        <meta property="og:description" content="Connect with quality project leads from LinkedIn, Reddit, X, Facebook, and Instagram. Get direct access to people looking to hire." />
+        <meta property="og:description" content="Connect with quality project leads from major social media platforms. Get direct access to people looking to hire." />
         <meta property="og:url" content="https://requestsignals.com" />
         <meta property="og:image" content="https://requestsignals.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }) {
         {/* Twitter Card - Enhanced */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="RequestSignals - Social Media Project Leads Platform" />
-        <meta name="twitter:description" content="Connect with quality project leads from LinkedIn, Reddit, X, Facebook, and Instagram. Get direct access to people looking to hire." />
+        <meta name="twitter:description" content="Connect with quality project leads from major social media platforms. Get direct access to people looking to hire." />
         <meta name="twitter:image" content="https://requestsignals.com/og-image.png" />
         <meta name="twitter:site" content="@requestsignals" />
         <meta name="twitter:creator" content="@requestsignals" />

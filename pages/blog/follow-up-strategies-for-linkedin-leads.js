@@ -41,17 +41,17 @@ export default function Post() {
         <title>Follow-Up Strategies That Actually Work | RequestSignals</title>
         <meta
           name="description"
-          content="How and when to follow up on a lead you found on LinkedIn, Reddit, X, Facebook, or Instagram. Platform-specific timing, message templates, and etiquette that keep you from getting ignored, blocked, or reported."
+          content="How and when to follow up on a lead you found on social media. Platform-specific timing, message templates, and etiquette that keep you from getting ignored, blocked, or reported."
         />
-        <meta name="keywords" content="follow-up strategies, how to follow up on a lead, LinkedIn follow-up, Reddit DM follow-up, X Twitter follow-up, Instagram DM follow-up, Facebook group follow-up, cold outreach follow-up, freelance lead follow-up, social media outreach" />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Follow-Up Strategies That Actually Work" />
-        <meta property="og:description" content="Follow-up timing and etiquette are different on every platform. Here's how to follow up on LinkedIn, Reddit, X, Facebook, and Instagram without getting ignored or blocked." />
+        <meta property="og:description" content="Follow-up timing and etiquette are different on every platform. Here's how to follow up across several social media platforms without getting ignored or blocked." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://requestsignals.com/blog/follow-up-strategies-for-linkedin-leads" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Follow-Up Strategies That Actually Work" />
-        <meta name="twitter:description" content="Platform-specific follow-up timing and templates for LinkedIn, Reddit, X, Facebook, and Instagram leads." />
+        <meta name="twitter:description" content="Platform-specific follow-up timing and templates for leads from several social media platforms." />
 
         {/* Structured Data for SEO */}
         <script type="application/ld+json">
@@ -59,7 +59,7 @@ export default function Post() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Follow-Up Strategies That Actually Work",
-            "description": "How and when to follow up on a lead you found on LinkedIn, Reddit, X, Facebook, or Instagram, with platform-specific timing, templates, and etiquette.",
+            "description": "How and when to follow up on a lead you found on social media, with platform-specific timing, templates, and etiquette.",
             "image": "https://requestsignals.com/images/follow-up-strategies.jpg",
             "author": {
               "@type": "Organization",
@@ -107,7 +107,7 @@ export default function Post() {
               Follow-Up Strategies That <span className={styles.gradientText}>Actually Work</span>
             </h1>
             <p className={styles.subtitle} style={{ fontSize: '18px' }}>
-              A lead going quiet doesn't mean no. It usually means your follow-up needs to match the platform. Here's how timing, tone, and cadence should change across LinkedIn, Reddit, X, Facebook, and Instagram.
+              A lead going quiet doesn't mean no. It usually means your follow-up needs to match the platform. Here's how timing, tone, and cadence should change across major social media platforms.
             </p>
 
             <div className={styles.meta} style={{ marginTop: '25px', flexWrap: 'wrap', gap: '20px' }}>
@@ -157,7 +157,7 @@ export default function Post() {
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}><i className="fas fa-lightbulb"></i></span>
                     <div className={styles.highlightText}>
                       <h4>Timing Isn't Universal</h4>
-                      <p>A Reddit DM and an X reply need very different cadences</p>
+                      <p>A community-platform DM and a fast-moving-platform reply need very different cadences</p>
                     </div>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                But "follow up a few days later" isn't a universal rule anymore. <strong>RequestSignals now surfaces leads from LinkedIn, Reddit, X (Twitter), Facebook, and Instagram</strong> — and each of those platforms has its own norms for how soon is too soon, how many follow-ups are acceptable, and what actually gets you blocked or reported. This guide breaks down follow-up timing and etiquette platform by platform, so your persistence reads as helpful instead of pushy.
+                But "follow up a few days later" isn't a universal rule anymore. <strong>RequestSignals now surfaces leads from several social media platforms</strong> — and each type of platform has its own norms for how soon is too soon, how many follow-ups are acceptable, and what actually gets you blocked or reported. This guide breaks down follow-up timing and etiquette platform by platform, so your persistence reads as helpful instead of pushy.
               </p>
 
               <div className={styles.card} style={{
@@ -271,7 +271,7 @@ export default function Post() {
                   <div>
                     <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The Follow-Up Reality Check</h4>
                     <p style={{ margin: '0', color: '#4b5563', fontSize: '15px', lineHeight: '1.6' }}>
-                      <strong>Roughly half of outreach senders</strong> never follow up at all. Another quarter send one follow-up and stop. The people closing the most deals are the small minority who send several well-spaced, value-adding follow-ups — but "well-spaced" means something different on Reddit than it does on LinkedIn.
+                      <strong>Roughly half of outreach senders</strong> never follow up at all. Another quarter send one follow-up and stop. The people closing the most deals are the small minority who send several well-spaced, value-adding follow-ups — but "well-spaced" means something different on community-driven platforms than it does on professional networking platforms.
                     </p>
                   </div>
                 </div>
@@ -440,52 +440,52 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Yes — significantly.</strong> The same follow-up cadence that feels normal on LinkedIn can feel like harassment on Reddit, and the pace that feels appropriate on X can feel glacially slow on Instagram. Here's how to adjust for each platform where RequestSignals surfaces leads.
+                <strong>Yes — significantly.</strong> The same follow-up cadence that feels normal on professional networking platforms can feel like harassment on community-driven platforms, and the pace that feels appropriate on fast-moving, short-form platforms can feel glacially slow on visual, portfolio-first platforms. Here's how to adjust for each platform type where RequestSignals surfaces leads.
               </p>
 
               <div style={{ display: 'grid', gap: '20px', marginBottom: '10px' }}>
                 <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
                   <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
-                    <i className="fab fa-linkedin" style={{ color: '#0a66c2' }}></i> LinkedIn
+                    <i className="fab fa-linkedin" style={{ color: '#0a66c2' }}></i> Professional Networking Platforms
                   </h4>
                   <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                    LinkedIn is the most follow-up-tolerant platform in this list. A message a few days later that references the original post — <em>"following up on what you mentioned about [project]"</em> — is normal, expected, and rarely seen as pushy. People check LinkedIn less frequently than X or Instagram, so a 2-4 day gap before your first follow-up is appropriate, not impatient.
+                    Professional networking platforms are the most follow-up-tolerant of the bunch. A message a few days later that references the original post — <em>"following up on what you mentioned about [project]"</em> — is normal, expected, and rarely seen as pushy. People check these platforms less frequently than fast-moving, short-form or visual, portfolio-first ones, so a 2-4 day gap before your first follow-up is appropriate, not impatient.
                   </p>
                 </div>
 
                 <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
                   <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
-                    <i className="fab fa-reddit-alien" style={{ color: '#ff4500' }}></i> Reddit
+                    <i className="fab fa-reddit-alien" style={{ color: '#ff4500' }}></i> Community-Driven Platforms
                   </h4>
                   <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                    Reddit needs the lightest touch of any platform. If a conversation started in a thread's comments and moved to DMs, <strong>one follow-up is usually the ceiling.</strong> Redditors are unusually sensitive to feeling "sold to," and a subreddit's culture punishes anything that smells like repeated solicitation. A second follow-up after silence can get you blocked or reported rather than answered — if there's no reply after your first DM follow-up, let it go.
+                    Community-driven platforms need the lightest touch of any platform type. If a conversation started in a thread's comments and moved to DMs, <strong>one follow-up is usually the ceiling.</strong> Members of these communities are unusually sensitive to feeling "sold to," and community culture punishes anything that smells like repeated solicitation. A second follow-up after silence can get you blocked or reported rather than answered — if there's no reply after your first DM follow-up, let it go.
                   </p>
                 </div>
 
                 <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
                   <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
-                    <i className="fab fa-twitter" style={{ color: '#1da1f2' }}></i> X (Twitter)
+                    <i className="fab fa-twitter" style={{ color: '#1da1f2' }}></i> Fast-Moving, Short-Form Platforms
                   </h4>
                   <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                    Conversation on X moves fast, and your follow-up cadence should match. <strong>Follow up after 1-2 days, not weeks</strong> — by then the original post has scrolled out of relevance. A common and effective pattern is a public reply to keep the thread visible, followed by a DM once there's some engagement. Don't let an X lead sit as long as you would a LinkedIn one; the platform's pace makes a two-week-old follow-up feel like it came from nowhere.
+                    Conversation on fast-moving, short-form platforms moves fast, and your follow-up cadence should match. <strong>Follow up after 1-2 days, not weeks</strong> — by then the original post has scrolled out of relevance. A common and effective pattern is a public reply to keep the thread visible, followed by a DM once there's some engagement. Don't let a lead here sit as long as you would on a professional networking platform; the pace makes a two-week-old follow-up feel like it came from nowhere.
                   </p>
                 </div>
 
                 <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
                   <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
-                    <i className="fab fa-instagram" style={{ color: '#e1306c' }}></i> Instagram
+                    <i className="fab fa-instagram" style={{ color: '#e1306c' }}></i> Visual, Portfolio-First Platforms
                   </h4>
                   <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                    Instagram is a visual platform, so a plain "just checking in" DM tends to fall flat. <strong>A follow-up that includes an added portfolio piece, before/after example, or relevant sample</strong> performs noticeably better — it gives the recipient a reason to open it and a reason to reply. Treat every follow-up here as a small additional pitch, not a nudge.
+                    Visual, portfolio-first platforms revolve around imagery, so a plain "just checking in" DM tends to fall flat. <strong>A follow-up that includes an added portfolio piece, before/after example, or relevant sample</strong> performs noticeably better — it gives the recipient a reason to open it and a reason to reply. Treat every follow-up here as a small additional pitch, not a nudge.
                   </p>
                 </div>
 
                 <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
                   <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
-                    <i className="fab fa-facebook" style={{ color: '#1877f2' }}></i> Facebook
+                    <i className="fab fa-facebook" style={{ color: '#1877f2' }}></i> Group-Based Social Platforms
                   </h4>
                   <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                    Most Facebook leads come from groups, and groups have posting rules — some explicitly ban repeated commenting on the same thread or restrict self-promotion. <strong>Respect the group's rules and avoid multiple public comments on the same post.</strong> Once you've made contact, move the follow-up to a private message rather than commenting again publicly; it's both more professional and less likely to get you removed from the group.
+                    Most leads on group-based social platforms come from groups, and groups have posting rules — some explicitly ban repeated commenting on the same thread or restrict self-promotion. <strong>Respect the group's rules and avoid multiple public comments on the same post.</strong> Once you've made contact, move the follow-up to a private message rather than commenting again publicly; it's both more professional and less likely to get you removed from the group.
                   </p>
                 </div>
               </div>
@@ -552,7 +552,7 @@ export default function Post() {
                 }}>
                   {[
                     { icon: 'fas fa-newspaper', title: 'Industry Insight', desc: 'Share a relevant article or trend', example: '"Saw this and thought of what you posted about [project]"' },
-                    { icon: 'fas fa-image', title: 'Portfolio Sample', desc: 'A relevant example or before/after (great on Instagram)', example: '"Here\'s a similar project I finished recently"' },
+                    { icon: 'fas fa-image', title: 'Portfolio Sample', desc: 'A relevant example or before/after (great on visual, portfolio-first platforms)', example: '"Here\'s a similar project I finished recently"' },
                     { icon: 'fas fa-user-friends', title: 'Case Study', desc: 'Brief success story', example: '"I recently helped someone with a very similar need"' },
                     { icon: 'fas fa-question-circle', title: 'Thoughtful Question', desc: 'Ask about a specific detail', example: '"Have you settled on a timeline for this yet?"' },
                     { icon: 'fas fa-tools', title: 'Tool/Resource', desc: 'Share a helpful tool or template', example: '"This template might help while you\'re scoping it out"' },
@@ -627,7 +627,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Three to five follow-ups is a reasonable ceiling on most platforms — but on Reddit, one is often the limit.</strong> Below is a general sequence built for LinkedIn, X, Facebook, and Instagram. Adjust the number of steps down sharply for Reddit, where persistence past a single DM tends to backfire.
+                <strong>Three to five follow-ups is a reasonable ceiling on most platforms — but on community-driven platforms, one is often the limit.</strong> Below is a general sequence built for professional networking, fast-moving, group-based, and visual platforms. Adjust the number of steps down sharply for community-driven platforms, where persistence past a single DM tends to backfire.
               </p>
 
               <div className={styles.card} style={{
@@ -659,29 +659,29 @@ export default function Post() {
                     },
                     {
                       step: "First Follow-Up",
-                      timing: "Day 2-4 (LinkedIn/Facebook/Instagram) · Day 1-2 (X) · Skip unless it's a warm DM (Reddit)",
+                      timing: "Day 2-4 (professional networking/group-based/visual platforms) · Day 1-2 (fast-moving platforms) · Skip unless it's a warm DM (community-driven platforms)",
                       platformNote: "Adjust timing per platform",
                       template: `Hi [Name], following up on my message. I came across [relevant example/insight] and thought it might help with [their challenge]. How are you thinking about [detail] at this point?`,
                       goal: "Add new value, show continued interest without pressure"
                     },
                     {
                       step: "Second Follow-Up",
-                      timing: "Day 7 (LinkedIn/Facebook) · Day 3-4 (X) · Not recommended (Reddit)",
-                      platformNote: "Reddit: stop here",
+                      timing: "Day 7 (professional networking/group-based platforms) · Day 3-4 (fast-moving platforms) · Not recommended (community-driven platforms)",
+                      platformNote: "Community-driven platforms: stop here",
                       template: `Hi [Name], hope things are moving along. I put together [example/portfolio piece/case study] that's close to what you described — happy to share more details if useful.`,
                       goal: "Share proof, offer deeper value"
                     },
                     {
                       step: "Third Follow-Up",
-                      timing: "Day 14 (LinkedIn/Facebook) · Day 6-7 (X/Instagram)",
+                      timing: "Day 14 (professional networking/group-based platforms) · Day 6-7 (fast-moving/visual platforms)",
                       platformNote: "Final attempt",
                       template: `Hi [Name], checking in one last time. Even if now isn't the right time, I'd love to stay connected. Here's a [tool/resource] that might help with [their challenge] regardless.`,
                       goal: "Graceful exit, leave the door open"
                     },
                     {
                       step: "Re-engagement",
-                      timing: "Month 1+ (LinkedIn/Facebook/Instagram only)",
-                      platformNote: "Skip on X and Reddit",
+                      timing: "Month 1+ (professional networking/group-based/visual platforms only)",
+                      platformNote: "Skip on fast-moving and community-driven platforms",
                       template: `Hi [Name], hope all is well. I came across [relevant update] and thought of our earlier conversation. How did things end up going with [their project]? Still happy to help if it's relevant.`,
                       goal: "Reconnect with a fresh, low-pressure reason"
                     }
@@ -775,7 +775,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Follow-ups feel desperate when they're about you, and feel helpful when they're about the recipient.</strong> The tactics below hold across every platform, but the consequences of getting it wrong vary — a slightly-too-eager LinkedIn message gets ignored, while the same behavior on Reddit or in a Facebook group can get you blocked or reported.
+                <strong>Follow-ups feel desperate when they're about you, and feel helpful when they're about the recipient.</strong> The tactics below hold across every platform, but the consequences of getting it wrong vary — a slightly-too-eager message on a professional networking platform gets ignored, while the same behavior on a community-driven platform or in a group-based social platform can get you blocked or reported.
               </p>
 
               <div className={styles.howGrid} style={{ marginBottom: '30px' }}>
@@ -789,7 +789,7 @@ export default function Post() {
                     <li>Generic "just checking in" messages</li>
                     <li>Multiple follow-ups in one day</li>
                     <li>Repeated public comments on the same post</li>
-                    <li>Ignoring platform norms (e.g. over-DMing on Reddit)</li>
+                    <li>Ignoring platform norms (e.g. over-DMing on community-driven platforms)</li>
                   </ul>
                 </div>
 
@@ -825,7 +825,7 @@ export default function Post() {
                   The Reminder vs. Pressure Principle
                 </h4>
                 <p style={{ color: '#4b5563', marginBottom: '0', fontSize: '15px' }}>
-                  <strong>Effective follow-ups feel like helpful reminders, not pressure.</strong> They acknowledge that the person is busy, provide value regardless of whether they respond, and make it easy to engage when they're ready. On Reddit especially, treat a non-response as a final answer — the platform's community norms make "no reply" a much stronger signal than it is on LinkedIn.
+                  <strong>Effective follow-ups feel like helpful reminders, not pressure.</strong> They acknowledge that the person is busy, provide value regardless of whether they respond, and make it easy to engage when they're ready. On community-driven platforms especially, treat a non-response as a final answer — the community norms there make "no reply" a much stronger signal than it is on professional networking platforms.
                 </p>
               </div>
             </div>
@@ -854,7 +854,7 @@ export default function Post() {
                 textAlign: 'center',
                 marginBottom: '0'
               }}>
-                Mastering <strong>follow-up strategy across platforms</strong> means matching your cadence to where the lead actually is: patient and expected on LinkedIn, fast and public-then-private on X, light-touch and easily-limited on Reddit, example-driven on Instagram, and rule-respecting inside Facebook groups.
+                Mastering <strong>follow-up strategy across platforms</strong> means matching your cadence to where the lead actually is: patient and expected on professional networking platforms, fast and public-then-private on fast-moving, short-form platforms, light-touch and easily-limited on community-driven platforms, example-driven on visual, portfolio-first platforms, and rule-respecting inside group-based social platforms.
                 <br/><br/>
                 Your follow-up should always be a <strong>value delivery system,</strong> not a pressure application system — tuned to the platform it's sent on. Get that right, and follow-ups stop feeling like a numbers game and start doing what they're supposed to: turning silence into a client.
               </p>
@@ -987,7 +987,7 @@ export default function Post() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Put these follow-up strategies to work with real leads sourced from LinkedIn, Reddit, X, Facebook, and Instagram — refreshed every two hours on RequestSignals.
+              Put these follow-up strategies to work with real leads sourced from major social media platforms — refreshed every two hours on RequestSignals.
             </p>
             <div style={{
               display: 'flex',

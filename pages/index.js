@@ -7,11 +7,11 @@ import styles from "../styles/Theme.module.css";
 const FAQS = [
   {
     q: "What is RequestSignals?",
-    a: "RequestSignals is a free tool that surfaces real-time posts from people publicly asking to hire a freelancer, consultant, or agency. We monitor LinkedIn, Reddit, X (Twitter), Facebook, and Instagram, then use AI to separate genuine hiring requests from job listings, advice threads, and self-promotion.",
+    a: "RequestSignals is a free tool that surfaces real-time posts from people publicly asking to hire a freelancer, consultant, or agency. We monitor major social media platforms, then use AI to separate genuine hiring requests from job listings, advice threads, and self-promotion.",
   },
   {
     q: "Which platforms does RequestSignals monitor?",
-    a: "LinkedIn, Reddit, X (Twitter), Facebook, and Instagram. We're not limited to one network — anywhere people publicly post that they're looking to hire help is fair game.",
+    a: "Several major social media platforms where people publicly post about their projects. We're not limited to one network — anywhere people publicly post that they're looking to hire help is fair game.",
   },
   {
     q: "How often is new data added?",
@@ -84,8 +84,9 @@ export default function Home() {
         <title>RequestSignals — Real Service Requests from Social Media, AI-Filtered</title>
         <meta
           name="description"
-          content="RequestSignals finds people actively looking to hire freelancers and agencies across LinkedIn, Reddit, X, Facebook, and Instagram — filtered by AI so you only see genuine requests, not job posts or noise. Free, updated every 2 hours."
+          content="RequestSignals finds people actively looking to hire freelancers and agencies across major social media platforms — filtered by AI so you only see genuine requests, not job posts or noise. Free, updated every 2 hours."
         />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -96,7 +97,7 @@ export default function Home() {
             "@type": "Organization",
             "name": "RequestSignals",
             "url": "https://requestsignals.com",
-            "description": "RequestSignals aggregates real-time service and hiring requests from LinkedIn, Reddit, X, Facebook, and Instagram, filtered by AI to remove job posts and noise.",
+            "description": "RequestSignals aggregates real-time service and hiring requests from major social media platforms, filtered by AI to remove job posts and noise.",
             "sameAs": []
           })}
         </script>
@@ -123,7 +124,7 @@ export default function Home() {
               Find Clients Who Are <span className={styles.gradientText}>Already Looking For You</span>
             </h1>
             <p className={styles.subtitle}>
-              We scan LinkedIn, Reddit, X, Facebook, and Instagram for people actively asking to hire a freelancer or agency — then use AI to filter out job posts, spam, and noise. What's left is real demand.
+              We scan major social media platforms for people actively asking to hire a freelancer or agency — then use AI to filter out job posts, spam, and noise. What's left is real demand.
             </p>
             <p className={styles.meta}>
               <i className="fas fa-globe"></i> 5 Platforms
@@ -191,7 +192,7 @@ export default function Home() {
             </h2>
 
             <p style={{ color: '#4b5563', fontSize: '16px', lineHeight: '1.7', marginBottom: '20px' }}>
-              <strong>RequestSignals is a free tool that surfaces real-time posts from people publicly asking to hire a freelancer, consultant, or agency.</strong> We monitor public activity across LinkedIn, Reddit, X (Twitter), Facebook, and Instagram — not just one network — because genuine buying intent shows up everywhere people talk about their projects.
+              <strong>RequestSignals is a free tool that surfaces real-time posts from people publicly asking to hire a freelancer, consultant, or agency.</strong> We monitor public activity across several major social media platforms — not just one network — because genuine buying intent shows up everywhere people talk about their projects.
             </p>
 
             <p style={{ color: '#4b5563', fontSize: '16px', lineHeight: '1.7', marginBottom: '0' }}>
@@ -289,7 +290,7 @@ export default function Home() {
               Ready to Find Real Clients?
             </h2>
             <p style={{ color: '#6b7280', fontSize: '16px', lineHeight: '1.6', marginBottom: '25px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-              Start browsing genuine service requests from across LinkedIn, Reddit, X, Facebook, and Instagram today.
+              Start browsing genuine service requests from across social media today.
             </p>
             <a
               href="/leads"

@@ -157,8 +157,9 @@ export default function Contact() {
         <title>Contact – RequestSignals</title>
         <meta
           name="description"
-          content="Get in touch with the RequestSignals team. We're here to help you find real service requests across LinkedIn, Reddit, X, Facebook, and Instagram."
+          content="Get in touch with the RequestSignals team. We're here to help you find real service requests across major social media platforms."
         />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
@@ -248,13 +249,13 @@ export default function Contact() {
         <div className={styles.container} style={{ maxWidth: '900px' }}>
           <div className={styles.howGrid} style={{ gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
             <div className={styles.card}>
-              <div className={styles.cardIcon}><i className="fab fa-linkedin"></i></div>
-              <h3>LinkedIn</h3>
+              <div className={styles.cardIcon}><i className="fas fa-share-nodes"></i></div>
+              <h3>Social Media</h3>
               <p>
-                Connect with us on LinkedIn for the quickest response and updates about new features.
+                Follow us on social media for the quickest response and updates about new features.
               </p>
               <button className={styles.btnPrimary} style={{marginTop: '15px'}}>
-                Visit LinkedIn
+                Follow Us
               </button>
             </div>
 
@@ -406,7 +407,7 @@ export default function Contact() {
                   How often are leads updated?
                 </h3>
                 <p style={{color: '#4b5563', lineHeight: '1.6'}}>
-                  Leads are refreshed every 2 hours from public activity across LinkedIn, Reddit, X, Facebook, and Instagram to ensure you get the most current opportunities.
+                  Leads are refreshed every 2 hours from public activity across major social media platforms to ensure you get the most current opportunities.
                 </p>
               </div>
               

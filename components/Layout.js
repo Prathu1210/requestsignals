@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout({
   title = "Request Signals",
-  description = "Real service requests from LinkedIn, Reddit, X, Facebook, and Instagram",
+  description = "Real service requests from major social media platforms",
   children,
 }) {
   return (

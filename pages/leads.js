@@ -61,7 +61,7 @@ export default function Leads({ leads, counts, activeCategory, searchQuery, page
   return (
     <Layout
       title="All Leads — RequestSignals"
-      description="Browse every verified service request we've found across LinkedIn, Reddit, X, Facebook, and Instagram — filtered by AI, updated every 2 hours."
+      description="Browse every verified service request we've found across major social media platforms — filtered by AI, updated every 2 hours."
     >
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '24px 20px 8px' }}>
 

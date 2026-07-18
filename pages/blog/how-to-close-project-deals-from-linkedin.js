@@ -41,17 +41,17 @@ export default function Post() {
         <title>How to Close Project Deals You Found on Social Media | RequestSignals</title>
         <meta
           name="description"
-          content="Step-by-step guide to closing project deals sourced from LinkedIn, Reddit, X, Facebook, or Instagram. Learn how to write winning proposals, talk pricing with confidence, handle objections, protect yourself with contracts, and get to a signature."
+          content="Step-by-step guide to closing project deals sourced from major social media platforms. Learn how to write winning proposals, talk pricing with confidence, handle objections, protect yourself with contracts, and get to a signature."
         />
-        <meta name="keywords" content="close social media leads, close project deals, freelance proposal, pricing conversation, handling client objections, freelance contract, closing deals LinkedIn Reddit X Facebook Instagram, sales closing techniques, deal closing framework, get client to sign contract" />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="How to Close Project Deals You Found on Social Media" />
-        <meta property="og:description" content="Master the process of turning a reply on LinkedIn, Reddit, X, Facebook, or Instagram into a signed contract. Proposals, pricing conversations, objection handling, contracts, and the follow-up that closes deals." />
+        <meta property="og:description" content="Master the process of turning a reply on a major social media platform into a signed contract. Proposals, pricing conversations, objection handling, contracts, and the follow-up that closes deals." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://requestsignals.com/blog/how-to-close-project-deals-from-linkedin" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How to Close Project Deals You Found on Social Media" />
-        <meta name="twitter:description" content="Learn how freelancers and agencies close project deals sourced from LinkedIn, Reddit, X, Facebook, and Instagram with proven closing techniques." />
+        <meta name="twitter:description" content="Learn how freelancers and agencies close project deals sourced from major social media platforms with proven closing techniques." />
 
         {/* Structured Data for SEO */}
         <script type="application/ld+json">
@@ -59,7 +59,7 @@ export default function Post() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "How to Close Project Deals You Found on Social Media",
-            "description": "Step-by-step guide to closing project deals sourced from LinkedIn, Reddit, X, Facebook, or Instagram. Learn proposal writing, pricing conversations, objection handling, contracts, and how to get to a signature.",
+            "description": "Step-by-step guide to closing project deals sourced from major social media platforms. Learn proposal writing, pricing conversations, objection handling, contracts, and how to get to a signature.",
             "image": "https://requestsignals.com/images/social-deal-closing.jpg",
             "author": {
               "@type": "Organization",
@@ -107,7 +107,7 @@ export default function Post() {
               How to Close <span className={styles.gradientText}>Project Deals</span> You Found on Social Media
             </h1>
             <p className={styles.subtitle} style={{ fontSize: '18px' }}>
-              Whether the conversation started as a LinkedIn comment, a Reddit reply, a quote-tweet on X, a Facebook group post, or an Instagram DM, closing works almost the same way once someone actually replies. Here's the proven process for turning that reply into a signed contract.
+              Whether the conversation started as a comment on a professional networking platform, a reply on a community-driven platform, a quick exchange on a fast-moving, short-form platform, a post in a group-based social platform, or a DM on a visual, portfolio-first platform, closing works almost the same way once someone actually replies. Here's the proven process for turning that reply into a signed contract.
             </p>
 
             <div className={styles.meta} style={{ marginTop: '25px', flexWrap: 'wrap', gap: '20px' }}>
@@ -191,7 +191,7 @@ export default function Post() {
                 color: '#374151',
                 marginBottom: '20px'
               }}>
-                <strong>Closing a project deal you found on social media is less about persuasion and more about perfect alignment.</strong> It doesn't matter if the original post was a LinkedIn status update, a Reddit thread in r/forhire, a tweet on X, a Facebook group request, or an Instagram DM — clients say yes when they feel deeply understood, confident in your process, and clear about the value they'll receive.
+                <strong>Closing a project deal you found on social media is less about persuasion and more about perfect alignment.</strong> It doesn't matter if the original post was a status update on a professional networking platform, a thread on a community-driven platform, a post on a fast-moving, short-form platform, a request in a group-based social platform, or a DM on a visual, portfolio-first platform — clients say yes when they feel deeply understood, confident in your process, and clear about the value they'll receive.
               </p>
 
               <div className={styles.card} style={{
@@ -223,7 +223,7 @@ export default function Post() {
                   <div>
                     <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The Multi-Platform Deal Closing Reality</h4>
                     <p style={{ margin: '0', color: '#4b5563', fontSize: '15px', lineHeight: '1.6' }}>
-                      Most freelancers and agencies lose deals not because of price or competition, but because they fail to <strong>clarify expectations</strong> and <strong>build confidence</strong> during the closing process. That's true whether the lead came from LinkedIn, Reddit, X, Facebook, or Instagram — and almost every deal, regardless of origin, eventually moves to email, a call, or a proposal tool to actually get signed. The final 20% of the sales process determines 80% of your success.
+                      Most freelancers and agencies lose deals not because of price or competition, but because they fail to <strong>clarify expectations</strong> and <strong>build confidence</strong> during the closing process. That's true no matter which major social media platform the lead came from — and almost every deal, regardless of origin, eventually moves to email, a call, or a proposal tool to actually get signed. The final 20% of the sales process determines 80% of your success.
                     </p>
                   </div>
                 </div>
@@ -317,7 +317,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Not much, once the prospect actually replies.</strong> The mechanics of closing — clarifying scope, presenting a proposal, discussing price, handling objections, and getting a signature — are nearly identical across LinkedIn, Reddit, X, Facebook, and Instagram. What differs is the <strong>speed</strong> people expect, how <strong>cautious</strong> they are about sharing contact details, and how quickly you should try to move the conversation off-platform.
+                <strong>Not much, once the prospect actually replies.</strong> The mechanics of closing — clarifying scope, presenting a proposal, discussing price, handling objections, and getting a signature — are nearly identical across major social media platforms. What differs is the <strong>speed</strong> people expect, how <strong>cautious</strong> they are about sharing contact details, and how quickly you should try to move the conversation off-platform.
               </p>
 
               <div className={styles.card} style={{
@@ -338,37 +338,37 @@ export default function Post() {
                 </h4>
                 <div style={{ display: 'grid', gap: '15px' }}>
                   <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                    <i className="fab fa-linkedin" style={{ color: '#0a66c2', fontSize: '20px', marginTop: '3px' }}></i>
+                    <i className="fas fa-user-tie" style={{ color: '#6f7bf7', fontSize: '20px', marginTop: '3px' }}></i>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>LinkedIn:</strong>
+                      <strong style={{ color: '#1f2937' }}>Professional Networking Platforms:</strong>
                       <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>People here are professionally minded and often comfortable jumping straight to a scheduled call — real names and job titles are already public, so trust is established faster. Suggest a 15-minute call early.</p>
                     </div>
                   </div>
                   <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                    <i className="fab fa-reddit-alien" style={{ color: '#ff4500', fontSize: '20px', marginTop: '3px' }}></i>
+                    <i className="fas fa-comments" style={{ color: '#ff6b35', fontSize: '20px', marginTop: '3px' }}></i>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Reddit:</strong>
-                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Redditors are often anonymous by design and privacy-cautious about handing over an email address right away. Keep the first few replies inside Reddit chat or DMs, prove you understand their problem, and only ask to move to email once they've engaged twice.</p>
+                      <strong style={{ color: '#1f2937' }}>Community-Driven Platforms:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Users here are often anonymous by design and privacy-cautious about handing over an email address right away. Keep the first few replies inside the platform's own chat or DMs, prove you understand their problem, and only ask to move to email once they've engaged twice.</p>
                     </div>
                   </div>
                   <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                    <i className="fab fa-twitter" style={{ color: '#1d9bf0', fontSize: '20px', marginTop: '3px' }}></i>
+                    <i className="fas fa-bolt" style={{ color: '#1d9bf0', fontSize: '20px', marginTop: '3px' }}></i>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>X (Twitter):</strong>
-                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Conversations move fast and attention spans are short. If someone replies to your DM with interest, send a proposal or booking link within hours, not days — the window where they're actively thinking about the problem closes quickly on X.</p>
+                      <strong style={{ color: '#1f2937' }}>Fast-Moving, Short-Form Platforms:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Conversations move fast and attention spans are short. If someone replies to your DM with interest, send a proposal or booking link within hours, not days — the window where they're actively thinking about the problem closes quickly.</p>
                     </div>
                   </div>
                   <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                    <i className="fab fa-facebook" style={{ color: '#1877f2', fontSize: '20px', marginTop: '3px' }}></i>
+                    <i className="fas fa-users" style={{ color: '#1877f2', fontSize: '20px', marginTop: '3px' }}></i>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Facebook:</strong>
-                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Leads from Facebook groups often expect a more personal, conversational tone since the platform skews toward community and local business. Mutual group membership or a shared connection is a trust shortcut worth mentioning early.</p>
+                      <strong style={{ color: '#1f2937' }}>Group-Based Social Platforms:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Leads from these groups often expect a more personal, conversational tone since the platform skews toward community and local business. Mutual group membership or a shared connection is a trust shortcut worth mentioning early.</p>
                     </div>
                   </div>
                   <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                    <i className="fab fa-instagram" style={{ color: '#e1306c', fontSize: '20px', marginTop: '3px' }}></i>
+                    <i className="fas fa-image" style={{ color: '#e1306c', fontSize: '20px', marginTop: '3px' }}></i>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Instagram:</strong>
+                      <strong style={{ color: '#1f2937' }}>Visual, Portfolio-First Platforms:</strong>
                       <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>DMs here often start informally, sometimes with voice notes or quick replies. Your portfolio or visual work often does the persuading, so lean on a link in bio or a case study carousel before pushing to a formal call.</p>
                     </div>
                   </div>
@@ -419,7 +419,7 @@ export default function Post() {
                   </div>
                   <h3>What Loses Deals</h3>
                   <p>
-                    "Can you email me?" sent with no context, right after someone shares a real problem in a Reddit thread or LinkedIn comment.
+                    "Can you email me?" sent with no context, right after someone shares a real problem in a community-driven platform thread or a professional networking platform comment.
                   </p>
                 </div>
 
@@ -471,7 +471,7 @@ export default function Post() {
                   </li>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}><strong>Match their pace:</strong> Move fast on X, take it slower on Reddit, default to a call on LinkedIn</span>
+                    <span style={{ color: '#4b5563' }}><strong>Match their pace:</strong> Move fast on fast-moving, short-form platforms, take it slower on community-driven platforms, default to a call on professional networking platforms</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
@@ -900,7 +900,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                Objections aren't rejections — they're requests for more information. <strong>Respond with empathy first, then evidence.</strong> The same handful of objections show up whether the lead came from a LinkedIn post, a Reddit thread, an X reply, a Facebook group, or an Instagram DM.
+                Objections aren't rejections — they're requests for more information. <strong>Respond with empathy first, then evidence.</strong> The same handful of objections show up whether the lead came from a post on a professional networking platform, a thread on a community-driven platform, a reply on a fast-moving, short-form platform, a group-based social platform, or a DM on a visual, portfolio-first platform.
               </p>
 
               <div className={styles.card} style={{
@@ -1058,7 +1058,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Pressure kills deals.</strong> Corporate clients often need time for internal discussions, budget approvals, and stakeholder alignment. Following up politely while allowing thinking space is a delicate balance that separates amateur closers from professionals — and it holds true whether you first connected on LinkedIn, Reddit, X, Facebook, or Instagram.
+                <strong>Pressure kills deals.</strong> Corporate clients often need time for internal discussions, budget approvals, and stakeholder alignment. Following up politely while allowing thinking space is a delicate balance that separates amateur closers from professionals — and it holds true no matter which major social media platform you first connected on.
               </p>
 
               <div className={styles.card} style={{
@@ -1207,7 +1207,7 @@ export default function Post() {
               </div>
 
               <p className={styles.subtitle} style={{ fontSize: '15px', lineHeight: '1.7', color: '#4b5563', marginTop: '20px' }}>
-                Once you've moved to email, keep following up there rather than jumping back to the original platform — a scattered conversation across LinkedIn comments, DMs, and email makes you look disorganized right when you need to look the most professional.
+                Once you've moved to email, keep following up there rather than jumping back to the original platform — a scattered conversation across social platform comments, DMs, and email makes you look disorganized right when you need to look the most professional.
               </p>
             </div>
 
@@ -1315,7 +1315,7 @@ export default function Post() {
                 textAlign: 'center',
                 marginBottom: '0'
               }}>
-                Closing <strong>project deals sourced from social media</strong> successfully requires shifting from a "sales" mindset to a "partnership" mindset. Your goal isn't to convince someone to buy, but to help them make the best decision for their business — no matter whether that conversation began on LinkedIn, Reddit, X, Facebook, or Instagram.
+                Closing <strong>project deals sourced from social media</strong> successfully requires shifting from a "sales" mindset to a "partnership" mindset. Your goal isn't to convince someone to buy, but to help them make the best decision for their business — no matter which major social media platform that conversation began on.
                 <br/><br/>
                 Remember: <strong>clarity beats persuasion, and the platform stops mattering the moment someone replies.</strong> A client who understands exactly what they're getting, how they're getting it, and why it's valuable will close themselves. Your job is to provide that clarity through a fast bridge off-platform, a specific proposal, a confident pricing conversation, a solid contract, and patient, professional follow-up.
               </p>
@@ -1353,7 +1353,7 @@ export default function Post() {
                 </span>
               </div>
               <h3>How to Convert Social Media Project Leads into Paying Clients</h3>
-              <p>Learn proven strategies to turn leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients with authentic outreach.</p>
+              <p>Learn proven strategies to turn leads from major social media platforms into paying clients with authentic outreach.</p>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -1448,7 +1448,7 @@ export default function Post() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Apply these deal-closing strategies with real project leads actively looking for services like yours across LinkedIn, Reddit, X, Facebook, and Instagram.
+              Apply these deal-closing strategies with real project leads actively looking for services like yours across major social media platforms.
             </p>
             <div style={{
               display: 'flex',

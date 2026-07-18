@@ -41,17 +41,17 @@ export default function Post() {
         <title>Best Ways to Approach Project Leads From Social Media | RequestSignals</title>
         <meta
           name="description"
-          content="LinkedIn, Reddit, X, Instagram, and Facebook each demand a different first message. Learn platform-specific outreach strategies and message templates that get replies instead of blocks, downvotes, or bans."
+          content="Professional networking platforms, community-driven platforms, fast-moving short-form platforms, visual portfolio-first platforms, and group-based social platforms each demand a different first message. Learn platform-specific outreach strategies and message templates that get replies instead of blocks, downvotes, or bans."
         />
-        <meta name="keywords" content="how to approach a lead on LinkedIn, how to DM on Reddit, Reddit self promotion rules, X Twitter outreach, Instagram DM for freelancers, Facebook group outreach rules, first contact message templates, social media lead generation, cold outreach etiquette, multi-platform client outreach" />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Best Ways to Approach Project Leads From Social Media" />
-        <meta property="og:description" content="A platform-by-platform playbook for first-contact outreach on LinkedIn, Reddit, X, Instagram, and Facebook, with real message templates for each." />
+        <meta property="og:description" content="A platform-by-platform playbook for first-contact outreach across major social media platforms, with real message templates for each." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://requestsignals.com/blog/best-approach-to-contact-linkedin-leads" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Best Ways to Approach Project Leads From Social Media" />
-        <meta name="twitter:description" content="Platform-specific first-contact strategies for LinkedIn, Reddit, X, Instagram, and Facebook, with templates that get replies instead of bans." />
+        <meta name="twitter:description" content="Platform-specific first-contact strategies for major social media platforms, with templates that get replies instead of bans." />
 
         {/* Structured Data for SEO */}
         <script type="application/ld+json">
@@ -59,7 +59,7 @@ export default function Post() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Best Ways to Approach Project Leads From Social Media",
-            "description": "A platform-specific playbook for first-contact outreach on LinkedIn, Reddit, X, Instagram, and Facebook, including message templates and etiquette to avoid bans and rejections.",
+            "description": "A platform-specific playbook for first-contact outreach across major social media platforms, including message templates and etiquette to avoid bans and rejections.",
             "image": "https://requestsignals.com/images/social-leads-approach-strategies.jpg",
             "author": {
               "@type": "Organization",
@@ -107,7 +107,7 @@ export default function Post() {
               Best Ways to Approach <span className={styles.gradientText}>Project Leads From Social Media</span>
             </h1>
             <p className={styles.subtitle} style={{ fontSize: '18px' }}>
-              LinkedIn, Reddit, X, Instagram, and Facebook each reward a different first move. Learn the platform-specific outreach approach that gets replies, not blocks, downvotes, or a ban.
+              Major social media platforms each reward a different first move. Learn the platform-specific outreach approach that gets replies, not blocks, downvotes, or a ban.
             </p>
 
             <div className={styles.meta} style={{ marginTop: '25px', flexWrap: 'wrap', gap: '20px' }}>
@@ -128,9 +128,9 @@ export default function Post() {
             <div style={{ marginTop: '25px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               <span className={styles.tag}>Multi-Platform Outreach</span>
               <span className={styles.tag}>First Contact</span>
-              <span className={styles.tag}>Reddit DMs</span>
-              <span className={styles.tag}>LinkedIn Messaging</span>
-              <span className={styles.tag}>Instagram Outreach</span>
+              <span className={styles.tag}>Community DMs</span>
+              <span className={styles.tag}>Professional Messaging</span>
+              <span className={styles.tag}>Visual Platform Outreach</span>
             </div>
           </div>
 
@@ -157,7 +157,7 @@ export default function Post() {
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #ef4444, #f87171)' }}><i className="fas fa-ban"></i></span>
                     <div className={styles.highlightText}>
                       <h4>Rule #1</h4>
-                      <p>Cold-pitching on Reddit or in a Facebook group can get you banned instantly</p>
+                      <p>Cold-pitching in community-driven platforms or group-based social platforms can get you banned instantly</p>
                     </div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function Post() {
                 color: '#374151',
                 marginBottom: '20px'
               }}>
-                <strong>The exact message that lands a client on LinkedIn will get your comment removed on Reddit, ignored on X, and reported in a Facebook group.</strong> Now that leads on RequestSignals come from LinkedIn, Reddit, X, Instagram, and Facebook, "how do I message this person" no longer has one answer. It has five — and picking the wrong one costs you the lead before a real conversation ever starts.
+                <strong>The exact message that lands a client on a professional networking platform will get your comment removed on a community-driven platform, ignored on a fast-moving, short-form platform, and reported in a group-based social platform.</strong> Now that leads on RequestSignals come from several major social media platforms, "how do I message this person" no longer has one answer. It has five — and picking the wrong one costs you the lead before a real conversation ever starts.
               </p>
 
               <div className={styles.card} style={{
@@ -223,7 +223,7 @@ export default function Post() {
                   <div>
                     <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The Multi-Platform Outreach Reality</h4>
                     <p style={{ margin: '0', color: '#4b5563', fontSize: '15px', lineHeight: '1.6' }}>
-                      LinkedIn is a professional network built for direct messaging — a personalized cold message is expected there. <strong>Reddit and Facebook groups are communities first,</strong> and both routinely ban accounts that DM strangers without warming up publicly first. X rewards speed and public visibility over private messages. Instagram is visual-first, so a DM with a relevant example often works better than any amount of text. Your opening move has to match the room you're walking into.
+                      Professional networking platforms are built for direct messaging — a personalized cold message is expected there. <strong>Community-driven platforms and group-based social platforms are communities first,</strong> and both routinely ban accounts that DM strangers without warming up publicly first. Fast-moving, short-form platforms reward speed and public visibility over private messages. Visual, portfolio-first platforms are visual-first, so a DM with a relevant example often works better than any amount of text. Your opening move has to match the room you're walking into.
                     </p>
                   </div>
                 </div>
@@ -243,11 +243,11 @@ export default function Post() {
                 </h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
                   <a href="#why-platform-matters" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fas fa-angle-right" style={{ marginRight: '6px' }}></i>Why platform matters</a>
-                  <a href="#linkedin" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-linkedin" style={{ marginRight: '6px' }}></i>LinkedIn</a>
-                  <a href="#reddit" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-reddit-alien" style={{ marginRight: '6px' }}></i>Reddit</a>
-                  <a href="#x-twitter" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-x-twitter" style={{ marginRight: '6px' }}></i>X (Twitter)</a>
-                  <a href="#instagram" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-instagram" style={{ marginRight: '6px' }}></i>Instagram</a>
-                  <a href="#facebook" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-facebook" style={{ marginRight: '6px' }}></i>Facebook</a>
+                  <a href="#linkedin" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-linkedin" style={{ marginRight: '6px' }}></i>Professional Networking</a>
+                  <a href="#reddit" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-reddit-alien" style={{ marginRight: '6px' }}></i>Community-Driven</a>
+                  <a href="#x-twitter" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-x-twitter" style={{ marginRight: '6px' }}></i>Fast-Moving, Short-Form</a>
+                  <a href="#instagram" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-instagram" style={{ marginRight: '6px' }}></i>Visual, Portfolio-First</a>
+                  <a href="#facebook" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fab fa-facebook" style={{ marginRight: '6px' }}></i>Group-Based</a>
                   <a href="#cheat-sheet" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fas fa-table" style={{ marginRight: '6px' }}></i>Platform cheat sheet</a>
                   <a href="#universal" style={{ color: '#065f46', fontSize: '14px', textDecoration: 'none' }}><i className="fas fa-infinity" style={{ marginRight: '6px' }}></i>What never changes</a>
                 </div>
@@ -287,7 +287,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Because each platform has its own unwritten rules about solicitation, and breaking them costs you the lead before you ever get a reply.</strong> LinkedIn was built for professional networking, so a personalized direct message is normal and even welcomed. Reddit and most Facebook groups are communities first — members (and moderator bots) treat unsolicited DMs from strangers as spam, and can ban your account for it. X moves fast and rewards public conversation over private pitches. Instagram is a visual medium, so a DM that shows rather than tells often outperforms a written pitch.
+                <strong>Because each platform has its own unwritten rules about solicitation, and breaking them costs you the lead before you ever get a reply.</strong> Professional networking platforms were built for professional networking, so a personalized direct message is normal and even welcomed. Community-driven platforms and most group-based social platforms are communities first — members (and moderator bots) treat unsolicited DMs from strangers as spam, and can ban your account for it. Fast-moving, short-form platforms move fast and reward public conversation over private pitches. Visual, portfolio-first platforms are a visual medium, so a DM that shows rather than tells often outperforms a written pitch.
               </p>
 
               <div className={styles.card} style={{
@@ -306,14 +306,14 @@ export default function Post() {
                   Three Questions That Decide Your Opening Move
                 </h3>
                 <ul style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.8', paddingLeft: '20px', margin: 0 }}>
-                  <li><strong>Is this platform built for professional networking or community discussion?</strong> LinkedIn expects a pitch. Reddit and Facebook groups don't.</li>
-                  <li><strong>Does the platform's culture treat an unsolicited DM as normal or as spam?</strong> On Instagram and LinkedIn it's normal. On Reddit and in most Facebook groups, it's often against the rules.</li>
+                  <li><strong>Is this platform built for professional networking or community discussion?</strong> Professional networking platforms expect a pitch. Community-driven platforms and group-based social platforms don't.</li>
+                  <li><strong>Does the platform's culture treat an unsolicited DM as normal or as spam?</strong> On visual, portfolio-first platforms and professional networking platforms it's normal. On community-driven platforms and in most group-based social platforms, it's often against the rules.</li>
                   <li><strong>What's the visible, public step that has to happen before a private message is acceptable?</strong> A helpful comment, a public reply, or nothing at all — it depends entirely on where the lead posted.</li>
                 </ul>
               </div>
             </div>
 
-            {/* Section 2: LinkedIn */}
+            {/* Section 2: Professional networking platforms */}
             <div id="linkedin" style={{ marginBottom: '40px' }}>
               <h2 style={{
                 fontSize: '28px',
@@ -336,7 +336,7 @@ export default function Post() {
                 }}>
                   <i className="fab fa-linkedin"></i>
                 </span>
-                How Do You Approach a Lead on LinkedIn?
+                How Do You Approach a Lead on Professional Networking Platforms?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -345,7 +345,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                On LinkedIn, you approach with a <strong>personalized connection request note or a direct message that references the lead's specific post</strong> — LinkedIn is the one platform in this list where a well-crafted cold message is expected and often welcomed, not treated as spam. The catch is that "well-crafted" is doing a lot of work in that sentence. Generic templates still get ignored.
+                On professional networking platforms, you approach with a <strong>personalized connection request note or a direct message that references the lead's specific post</strong> — this is the one platform type in this list where a well-crafted cold message is expected and often welcomed, not treated as spam. The catch is that "well-crafted" is doing a lot of work in that sentence. Generic templates still get ignored.
               </p>
 
               <div className={styles.card} style={{
@@ -398,7 +398,7 @@ export default function Post() {
               </div>
             </div>
 
-            {/* Section 3: Reddit */}
+            {/* Section 3: Community-driven platforms */}
             <div id="reddit" style={{ marginBottom: '40px' }}>
               <h2 style={{
                 fontSize: '28px',
@@ -421,7 +421,7 @@ export default function Post() {
                 }}>
                   <i className="fab fa-reddit-alien"></i>
                 </span>
-                How Do You Approach a Lead on Reddit Without Getting Banned?
+                How Do You Approach a Lead on Community-Driven Platforms Without Getting Banned?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -430,7 +430,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                On Reddit, you <strong>never cold-DM someone who posted asking for help.</strong> You first leave a genuinely useful public comment on their thread, and only move to a DM if they respond positively, ask a follow-up, or explicitly invite it. Many subreddits have zero-tolerance "no solicitation" rules enforced by moderators and automod bots — a comment that reads as a pitch, or a DM sent to someone who never replied to you, can get your comment removed and your account banned from the subreddit or shadowbanned platform-wide.
+                On community-driven platforms, you <strong>never cold-DM someone who posted asking for help.</strong> You first leave a genuinely useful public comment on their thread, and only move to a DM if they respond positively, ask a follow-up, or explicitly invite it. Many communities have zero-tolerance "no solicitation" rules enforced by moderators and automod bots — a comment that reads as a pitch, or a DM sent to someone who never replied to you, can get your comment removed and your account banned from the community or shadowbanned platform-wide.
               </p>
 
               <div className={styles.card} style={{
@@ -448,14 +448,14 @@ export default function Post() {
                   gap: '10px'
                 }}>
                   <i className="fas fa-shield-alt" style={{ color: '#ff4500' }}></i>
-                  The Reddit Sequence
+                  The Community-First Sequence
                 </h4>
                 <ul style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.8', paddingLeft: '20px', margin: 0 }}>
-                  <li><strong>Check the sidebar or pinned rules for a self-promotion policy</strong> before doing anything. Some subs ban it outright; others allow it only in designated threads.</li>
+                  <li><strong>Check the sidebar or pinned rules for a self-promotion policy</strong> before doing anything. Some communities ban it outright; others allow it only in designated threads.</li>
                   <li>Answer their actual question in the comment, in full — even if they never hire you, the comment should stand on its own as genuinely helpful.</li>
                   <li>If the rules allow it, mention that you do this professionally in one short, low-key line at the end — not the headline of the comment.</li>
-                  <li>Only send a DM if they reply to you, upvote and engage, or the subreddit explicitly allows offering services in comments.</li>
-                  <li>An account with little karma or history posting "DM me" gets auto-removed by many subreddits' spam filters — build some genuine comment history first.</li>
+                  <li>Only send a DM if they reply to you, upvote and engage, or the community explicitly allows offering services in comments.</li>
+                  <li>An account with little reputation or history posting "DM me" gets auto-removed by many communities' spam filters — build some genuine comment history first.</li>
                 </ul>
               </div>
 
@@ -484,7 +484,7 @@ export default function Post() {
               </div>
             </div>
 
-            {/* Section 4: X / Twitter */}
+            {/* Section 4: Fast-moving, short-form platforms */}
             <div id="x-twitter" style={{ marginBottom: '40px' }}>
               <h2 style={{
                 fontSize: '28px',
@@ -507,7 +507,7 @@ export default function Post() {
                 }}>
                   <i className="fab fa-x-twitter"></i>
                 </span>
-                How Do You Approach a Lead on X (Twitter)?
+                How Do You Approach a Lead on Fast-Moving, Short-Form Platforms?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -516,7 +516,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                On X, you <strong>reply publicly with something genuinely useful first, then move the conversation to DMs</strong> once there's been an exchange or they open their DMs to you. A cold DM from a stranger with no prior interaction is frequently filtered straight into a "message requests" folder the person never checks. X also moves fast — a thread asking for recommendations is often stale within hours, so speed matters as much as quality.
+                On fast-moving, short-form platforms, you <strong>reply publicly with something genuinely useful first, then move the conversation to DMs</strong> once there's been an exchange or they open their DMs to you. A cold DM from a stranger with no prior interaction is frequently filtered straight into a "message requests" folder the person never checks. These platforms also move fast — a thread asking for recommendations is often stale within hours, so speed matters as much as quality.
               </p>
 
               <div className={styles.card} style={{
@@ -537,10 +537,10 @@ export default function Post() {
                   Why Speed and Brevity Matter Here
                 </h4>
                 <ul style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.8', paddingLeft: '20px', margin: 0 }}>
-                  <li>Reply within the first few hours — X threads lose visibility fast, and a reply on a dead thread reads as spam trawling.</li>
+                  <li>Reply within the first few hours — threads on these platforms lose visibility fast, and a reply on a dead thread reads as spam trawling.</li>
                   <li>Keep the public reply short: one useful sentence beats a paragraph. Long replies get collapsed and skipped.</li>
                   <li>Don't pitch in the reply itself — add value, then let the DM (once opened) carry the actual offer.</li>
-                  <li>A relevant quote-tweet with your own angle can outperform a reply if you have something substantive to add.</li>
+                  <li>A relevant public quote-share of their post with your own angle can outperform a reply if you have something substantive to add.</li>
                 </ul>
               </div>
 
@@ -569,7 +569,7 @@ export default function Post() {
               </div>
             </div>
 
-            {/* Section 5: Instagram */}
+            {/* Section 5: Visual, portfolio-first platforms */}
             <div id="instagram" style={{ marginBottom: '40px' }}>
               <h2 style={{
                 fontSize: '28px',
@@ -592,7 +592,7 @@ export default function Post() {
                 }}>
                   <i className="fab fa-instagram"></i>
                 </span>
-                How Do You Approach a Lead on Instagram?
+                How Do You Approach a Lead on Visual, Portfolio-First Platforms?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -601,7 +601,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                On Instagram, a <strong>direct DM is normal and expected — as long as it shows rather than tells.</strong> Instagram is a visual-first platform, which makes it especially strong for design, photography, video, branding, and other creative-work leads. A DM that includes one relevant example or a portfolio link that matches what they're asking for consistently outperforms paragraphs of explanation.
+                On visual, portfolio-first platforms, a <strong>direct DM is normal and expected — as long as it shows rather than tells.</strong> These platforms are visual-first, which makes them especially strong for design, photography, video, branding, and other creative-work leads. A DM that includes one relevant example or a portfolio link that matches what they're asking for consistently outperforms paragraphs of explanation.
               </p>
 
               <div className={styles.card} style={{
@@ -654,7 +654,7 @@ export default function Post() {
               </div>
             </div>
 
-            {/* Section 6: Facebook */}
+            {/* Section 6: Group-based social platforms */}
             <div id="facebook" style={{ marginBottom: '40px' }}>
               <h2 style={{
                 fontSize: '28px',
@@ -677,7 +677,7 @@ export default function Post() {
                 }}>
                   <i className="fab fa-facebook"></i>
                 </span>
-                How Do You Approach a Lead in a Facebook Group?
+                How Do You Approach a Lead in a Group on a Group-Based Social Platform?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -686,7 +686,7 @@ export default function Post() {
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                In a Facebook group, you <strong>respect the group's rules first.</strong> Many freelance, small-business, and local-community groups explicitly ban direct solicitation in the comments — some remove the post entirely, some remove you from the group. If the rules aren't clear, message the group admin and ask directly whether offering your services in a comment or a DM is allowed. When it is allowed, a genuine, helpful comment before you DM still outperforms jumping straight to a pitch.
+                In a group on a group-based social platform, you <strong>respect the group's rules first.</strong> Many freelance, small-business, and local-community groups explicitly ban direct solicitation in the comments — some remove the post entirely, some remove you from the group. If the rules aren't clear, message the group admin and ask directly whether offering your services in a comment or a DM is allowed. When it is allowed, a genuine, helpful comment before you DM still outperforms jumping straight to a pitch.
               </p>
 
               <div className={styles.card} style={{
@@ -750,7 +750,7 @@ export default function Post() {
                 gap: '15px'
               }}>
                 <i className="fas fa-table" style={{ color: '#10b981' }}></i>
-                What's the Fastest Way to Compare Outreach Rules Across All Five Platforms?
+                What's the Fastest Way to Compare Outreach Rules Across All Five Platform Types?
               </h2>
 
               <p className={styles.subtitle} style={{
@@ -773,11 +773,11 @@ export default function Post() {
                   gap: '20px'
                 }}>
                   {[
-                    { platform: "LinkedIn", icon: "fab fa-linkedin", color: "linear-gradient(135deg, #0a66c2, #2e8fe0)", firstMove: "Personalized connection note or direct message", avoid: "Attaching a proposal or portfolio in message one", bestFor: "Professional services, consulting, B2B" },
-                    { platform: "Reddit", icon: "fab fa-reddit-alien", color: "linear-gradient(135deg, #ff4500, #ff6a33)", firstMove: "Genuinely helpful public comment on the thread", avoid: "DMing before they've responded to you", bestFor: "Niche technical or creative problems" },
-                    { platform: "X (Twitter)", icon: "fab fa-x-twitter", color: "linear-gradient(135deg, #111827, #374151)", firstMove: "Short, valuable public reply, fast", avoid: "Cold DMs with no prior public interaction", bestFor: "Fast-moving, visible requests" },
-                    { platform: "Instagram", icon: "fab fa-instagram", color: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)", firstMove: "Direct DM with one matching visual example", avoid: "Text-only pitches with no visual proof", bestFor: "Design, photo, video, creative work" },
-                    { platform: "Facebook", icon: "fab fa-facebook", color: "linear-gradient(135deg, #1877f2, #42a5f5)", firstMove: "Check group rules, then comment or ask an admin", avoid: "Solicitation comments in rule-strict groups", bestFor: "Local services, small business, community-based work" }
+                    { platform: "Professional Networking Platforms", icon: "fab fa-linkedin", color: "linear-gradient(135deg, #0a66c2, #2e8fe0)", firstMove: "Personalized connection note or direct message", avoid: "Attaching a proposal or portfolio in message one", bestFor: "Professional services, consulting, B2B" },
+                    { platform: "Community-Driven Platforms", icon: "fab fa-reddit-alien", color: "linear-gradient(135deg, #ff4500, #ff6a33)", firstMove: "Genuinely helpful public comment on the thread", avoid: "DMing before they've responded to you", bestFor: "Niche technical or creative problems" },
+                    { platform: "Fast-Moving, Short-Form Platforms", icon: "fab fa-x-twitter", color: "linear-gradient(135deg, #111827, #374151)", firstMove: "Short, valuable public reply, fast", avoid: "Cold DMs with no prior public interaction", bestFor: "Fast-moving, visible requests" },
+                    { platform: "Visual, Portfolio-First Platforms", icon: "fab fa-instagram", color: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)", firstMove: "Direct DM with one matching visual example", avoid: "Text-only pitches with no visual proof", bestFor: "Design, photo, video, creative work" },
+                    { platform: "Group-Based Social Platforms", icon: "fab fa-facebook", color: "linear-gradient(135deg, #1877f2, #42a5f5)", firstMove: "Check group rules, then comment or ask an admin", avoid: "Solicitation comments in rule-strict groups", bestFor: "Local services, small business, community-based work" }
                   ].map((item, index) => (
                     <div key={index} style={{
                       display: 'flex',
@@ -847,9 +847,9 @@ export default function Post() {
                 <ul style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.9', paddingLeft: '20px', margin: 0 }}>
                   <li><strong>Lead with value, not a pitch.</strong> Whether it's a comment, a reply, or a DM, the first thing the lead reads should help them, not sell to them.</li>
                   <li><strong>Reference the specifics of what they actually posted.</strong> A message that could be copy-pasted to anyone reads as a template everywhere, on every platform.</li>
-                  <li><strong>Don't front-load attachments.</strong> A proposal, invoice, or full portfolio dump in the very first touch feels like pressure — the one exception is a single relevant image on Instagram, where visual proof is the point.</li>
+                  <li><strong>Don't front-load attachments.</strong> A proposal, invoice, or full portfolio dump in the very first touch feels like pressure — the one exception is a single relevant image on visual, portfolio-first platforms, where visual proof is the point.</li>
                   <li><strong>Respond fast once you get a real signal.</strong> A reply, an upvote, an accepted connection, or an opened DM is a small window — momentum fades within a day or two on every platform.</li>
-                  <li><strong>Track what worked, per platform.</strong> The comment-then-DM sequence that works on Reddit looks nothing like the connection-note approach on LinkedIn — keep notes so you're not re-learning the same lessons every time.</li>
+                  <li><strong>Track what worked, per platform.</strong> The comment-then-DM sequence that works on community-driven platforms looks nothing like the connection-note approach on professional networking platforms — keep notes so you're not re-learning the same lessons every time.</li>
                 </ul>
               </div>
             </div>
@@ -878,7 +878,7 @@ export default function Post() {
                 textAlign: 'center',
                 marginBottom: '0'
               }}>
-                Mastering the <strong>best ways to approach project leads from social media</strong> means treating each platform as its own room with its own etiquette, not running one script everywhere. LinkedIn rewards a confident direct message. Reddit and Facebook groups reward patience and a public first step. X rewards speed. Instagram rewards proof over promises.
+                Mastering the <strong>best ways to approach project leads from social media</strong> means treating each platform as its own room with its own etiquette, not running one script everywhere. Professional networking platforms reward a confident direct message. Community-driven platforms and group-based social platforms reward patience and a public first step. Fast-moving, short-form platforms reward speed. Visual, portfolio-first platforms reward proof over promises.
                 <br/><br/>
                 Every platform gets you to the same destination — a real conversation with someone who needs your help — just through a different door. <strong>Match the door, and the conversation takes care of itself.</strong>
               </p>
@@ -1011,7 +1011,7 @@ export default function Post() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Browse real, actively-posted leads from LinkedIn, Reddit, X, Facebook, and Instagram, refreshed every two hours, and put the right platform-specific opening move to work.
+              Browse real, actively-posted leads from major social media platforms, refreshed every two hours, and put the right platform-specific opening move to work.
             </p>
             <div style={{
               display: 'flex',

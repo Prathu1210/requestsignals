@@ -38,7 +38,7 @@ export default function BlogIndex() {
   const blogPosts = [
     {
       title: "How to Convert Social Media Project Leads into Paying Clients",
-      description: "Learn proven strategies to turn leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients with authentic outreach.",
+      description: "Learn proven strategies to turn leads from major social media platforms into paying clients with authentic outreach.",
       link: "/blog/how-to-convert-linkedin-project-leads",
       icon: "fas fa-users",
       tags: ["Conversion", "Strategy", "Outreach"],
@@ -84,8 +84,9 @@ export default function BlogIndex() {
         <title>Social Media Project Leads – Conversion & Closing Guides | RequestSignals</title>
         <meta
           name="description"
-          content="Practical guides on converting project leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients. Learn outreach, follow-ups, and deal closing methods."
+          content="Practical guides on converting project leads from major social media platforms into paying clients. Learn outreach, follow-ups, and deal closing methods."
         />
+        <meta name="keywords" content="LinkedIn leads, Reddit leads, X leads, Facebook leads, Instagram leads, social media leads, freelance leads, project leads" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
@@ -100,7 +101,7 @@ export default function BlogIndex() {
               Social Media <span className={styles.gradientText}>Success Guides</span>
             </h1>
             <p className={styles.subtitle}>
-              Practical, experience-based methods to convert leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients. No theory, just proven strategies that work.
+              Practical, experience-based methods to convert leads from major social media platforms into paying clients. No theory, just proven strategies that work.
             </p>
             <p className={styles.meta}>
               <i className="fas fa-graduation-cap"></i> Proven Strategies 

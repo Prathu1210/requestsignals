@@ -173,7 +173,7 @@ export default function Terms() {
                     lineHeight: '1.7',
                     marginBottom: '15px'
                   }}>
-                    <strong>RequestSignals provides information based on publicly available data.</strong> We aggregate and curate service requests from public platforms including LinkedIn, Reddit, X, Facebook, and Instagram. We do not guarantee the accuracy, completeness, or availability of any information displayed on our platform.
+                    <strong>RequestSignals provides information based on publicly available data.</strong> We aggregate and curate service requests from major public social media platforms. We do not guarantee the accuracy, completeness, or availability of any information displayed on our platform.
                   </p>
                   <div style={{ 
                     background: 'rgba(255, 255, 255, 0.9)',
@@ -316,7 +316,7 @@ export default function Terms() {
                     lineHeight: '1.7',
                     marginBottom: '15px'
                   }}>
-                    <strong>RequestSignals is not affiliated with LinkedIn, Reddit, X, Facebook, Instagram, or any other third-party platforms referenced.</strong> We are an independent service that aggregates publicly available information.
+                    <strong>RequestSignals is not affiliated with any third-party social media platforms referenced.</strong> We are an independent service that aggregates publicly available information.
                   </p>
                   
                   <div style={{ 
@@ -343,7 +343,7 @@ export default function Terms() {
                       lineHeight: '1.6',
                       marginBottom: '0'
                     }}>
-                      When you click on links to LinkedIn, Reddit, X, Facebook, Instagram, or other platforms, you leave RequestSignals and are subject to those platforms' terms and privacy policies. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+                      When you click on links to third-party social media platforms, you leave RequestSignals and are subject to those platforms' terms and privacy policies. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
                     </p>
                   </div>
                 </div>

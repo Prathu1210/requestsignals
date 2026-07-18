@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Theme.module.css";
+import { useCardEffects } from "../hooks/useCardEffects";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,35 +13,9 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  useEffect(() => {
-    // Add interactive effects for cards
-    const cards = document.querySelectorAll(`.${styles.card}`);
-    
-    cards.forEach(card => {
-      // Add mouse move parallax effect
-      card.addEventListener('mousemove', function(e) {
-        const cardRect = this.getBoundingClientRect();
-        const x = e.clientX - cardRect.left;
-        const y = e.clientY - cardRect.top;
-        
-        const centerX = cardRect.width / 2;
-        const centerY = cardRect.height / 2;
-        
-        const rotateY = (x - centerX) / 25;
-        const rotateX = (centerY - y) / 25;
-        
-        this.style.transform = `translateY(-8px) scale(1.02) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-      
-      // Reset transform on mouse leave
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(-8px) scale(1.02)';
-        setTimeout(() => {
-          this.style.transform = '';
-        }, 300);
-      });
-    });
+  useCardEffects(styles.card);
 
+  useEffect(() => {
     // Button click effect
     const buttons = document.querySelectorAll(`.${styles.btnPrimary}`);
     buttons.forEach(button => {
@@ -83,27 +58,7 @@ export default function Contact() {
       }
     `;
     document.head.appendChild(style);
-    
-    // Add scroll animation for cards
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.cardVisible);
-        }
-      });
-    }, observerOptions);
-    
-    // Observe all cards
-    const allCards = document.querySelectorAll(`.${styles.card}`);
-    allCards.forEach(card => {
-      observer.observe(card);
-    });
-    
+
     return () => {
       // Cleanup if needed
       document.head.removeChild(style);

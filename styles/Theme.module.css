@@ -378,18 +378,23 @@ button.btnPrimary:active {
 
 /* CARDS - Updated with lighter hover effects */
 .card {
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
   background: rgba(255, 255, 255, 0.95);
   padding: 30px 24px;
   border-radius: 18px;
   border: 1px solid rgba(226, 232, 240, 0.5);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1), border-color 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 2;
   backdrop-filter: blur(8px);
+  will-change: transform;
 }
 
+/* Spotlight that follows the cursor — position is set by useCardEffects via
+   the --spotlight-x/--spotlight-y custom properties on mousemove. */
 .card::before {
   content: '';
   position: absolute;
@@ -397,10 +402,16 @@ button.btnPrimary:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(111, 123, 247, 0.03), rgba(156, 111, 247, 0.02));
+  background: radial-gradient(
+    480px circle at var(--spotlight-x) var(--spotlight-y),
+    rgba(111, 123, 247, 0.16),
+    rgba(156, 111, 247, 0.07) 35%,
+    transparent 65%
+  );
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .card::after {

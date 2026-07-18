@@ -1,39 +1,11 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "../../styles/Theme.module.css";
+import { useCardEffects } from "../../hooks/useCardEffects";
 
 export default function Post() {
-  useEffect(() => {
-    // Add scroll animation for cards
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Observe all cards
-    const allCards = document.querySelectorAll(`.${styles.card}`);
-    allCards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  useCardEffects(styles.card);
 
   return (
     <>

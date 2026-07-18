@@ -64,6 +64,13 @@ const RESULTS_PER_QUERY = Number(process.env.RESULTS_PER_QUERY || 10)
 // Minimum AI confidence to keep a lead.
 const MIN_CONFIDENCE = 0.6
 
+// Reject posts older than this. Google's Custom Search API has no hour-level
+// freshness filter (its finest built-in option is per-day), and social posts
+// often aren't indexed same-day anyway, so an exact "last 1-2 hours" window
+// isn't achievable against this data source. Instead we parse the real post
+// date out of the search snippet (Google shows it there) and filter on that.
+const MAX_POST_AGE_DAYS = Number(process.env.MAX_POST_AGE_DAYS || 14)
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -112,10 +119,30 @@ async function googleSearch(query) {
   }))
 }
 
+// Google's snippets usually lead with the page's actual date, e.g.
+// "Oct 16, 2022 ... Be warned, a full-featured ecommerce platform is...".
+// Extract it so we can (a) reject stale posts before spending AI quota on
+// them, and (b) store the real post date instead of "now".
+function extractPostDate(snippet) {
+  const match = snippet.match(/([A-Z][a-z]{2} \d{1,2}, \d{4})/)
+  if (!match) return null
+  const date = new Date(match[1])
+  return isNaN(date.getTime()) ? null : date
+}
+
 // Ask the classifier model (via OpenRouter) to judge a single search result.
 // Returns the parsed JSON object or null if the call/parse failed.
 async function classifyLead(result, categoryKey) {
-  const prompt = `You are qualifying leads from social media posts (LinkedIn, Facebook, Instagram, Reddit, X/Twitter). A "lead" is a post from someone who is actively looking to HIRE freelance or agency help (not people offering services, not job seekers, not recruiters posting job openings for full-time roles).
+  const prompt = `You are qualifying leads from social media posts (LinkedIn, Facebook, Instagram, Reddit, X/Twitter). A "lead" is a post where the author has a SPECIFIC project of their own right now and is directly trying to HIRE a freelancer or agency to do it.
+
+REJECT (is_lead: false) even if hiring/freelancers/developers are mentioned, when the post is:
+- Asking the community for ADVICE or opinions ("How do I find a good developer?", "Should I hire someone or build it myself?", "Any tips for finding freelancers?", "What should I look for when hiring a designer?")
+- General discussion, opinion, or educational content about hiring, freelancing, or a profession
+- Someone OFFERING their own services (a freelancer/agency promoting themselves)
+- A job posting for a full-time employee, or a recruiter's post
+- A subreddit/community page, or a post whose "looking for" refers to something other than paid freelance work (a job, a mentor, unpaid advice, a co-founder)
+
+ACCEPT (is_lead: true) only when the author describes their OWN specific project or need and is inviting people to reach out, apply, comment, or message them to do the work.
 
 Post title: ${result.title}
 Post snippet: ${result.snippet}
@@ -125,7 +152,7 @@ Respond with STRICT JSON only, no markdown, no commentary, exactly this shape:
 {"is_lead": boolean, "category": string, "budget_mentioned": boolean, "urgent": boolean, "ai_confidence": number}
 
 Where:
-- is_lead: true only if this is someone seeking to hire freelance/agency help.
+- is_lead: per the ACCEPT/REJECT rules above.
 - category: one of web_development, app_development, digital_marketing, design, software_dev, ecommerce, devops_cloud, data_analytics, cybersecurity, content_writing. Pick the best fit.
 - budget_mentioned: true if a budget, rate, or pay is mentioned.
 - urgent: true if urgency is expressed (asap, urgent, immediately, tight deadline).
@@ -198,7 +225,7 @@ async function leadExists(link) {
 }
 
 // POST a qualified lead. Returns 'added' | 'duplicate' | 'error'.
-async function addLead(result, verdict) {
+async function addLead(result, verdict, postDate) {
   const url = `${SITE_URL.replace(/\/$/, '')}/api/add-lead`
   let res
   try {
@@ -216,7 +243,10 @@ async function addLead(result, verdict) {
         budget_mentioned: !!verdict.budget_mentioned,
         urgent: !!verdict.urgent,
         ai_confidence: verdict.ai_confidence,
-        published_at: new Date().toISOString(),
+        // Use the post's real date when we could parse one out of the
+        // snippet, so the site shows honest "X days ago" instead of "Just
+        // now" for content that's actually old.
+        published_at: (postDate || new Date()).toISOString(),
       }),
     })
   } catch (err) {
@@ -246,6 +276,7 @@ async function main() {
     leadsAdded: 0,
     duplicatesSkipped: 0,
     rejected: 0,
+    tooOld: 0,
     errors: 0,
     quotaExhausted: false,
   }
@@ -274,6 +305,16 @@ async function main() {
       for (const result of results) {
         if (!result.link || seenLinks.has(result.link)) continue
         seenLinks.add(result.link)
+
+        // Reject stale posts before any network calls at all — cheapest
+        // possible check, and the main defense against old content since
+        // Google's API can't filter freshness at this granularity itself.
+        const postDate = extractPostDate(result.snippet)
+        if (postDate && Date.now() - postDate.getTime() > MAX_POST_AGE_DAYS * 86400000) {
+          stats.tooOld++
+          console.log(`  - too old (${postDate.toDateString()}): ${result.title.slice(0, 70)}`)
+          continue
+        }
 
         // Skip posts we've already saved without spending any AI quota on
         // them — matters most when the scraper runs multiple times a day.
@@ -311,7 +352,7 @@ async function main() {
           continue
         }
 
-        const outcome = await addLead(result, verdict)
+        const outcome = await addLead(result, verdict, postDate)
         if (outcome === 'added') {
           stats.leadsAdded++
           console.log(`  + added [${verdict.category}] ${result.title.slice(0, 70)}`)
@@ -332,6 +373,7 @@ async function main() {
   console.log(`Leads added:        ${stats.leadsAdded}`)
   console.log(`Duplicates skipped: ${stats.duplicatesSkipped}`)
   console.log(`Rejected (not lead/low conf): ${stats.rejected}`)
+  console.log(`Too old (>${MAX_POST_AGE_DAYS}d):     ${stats.tooOld}`)
   console.log(`Errors:             ${stats.errors}`)
   if (stats.quotaExhausted) {
     console.log('Stopped early:      daily classifier quota exhausted')

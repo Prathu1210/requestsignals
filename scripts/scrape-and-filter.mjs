@@ -87,6 +87,15 @@ const MIN_CONFIDENCE = 0.6
 // genuinely stale content while letting real volume through.
 const MAX_POST_AGE_DAYS = Number(process.env.MAX_POST_AGE_DAYS || 90)
 
+// Cap on classification calls per run. Without this, whichever run happens
+// to execute first in the day can burn through the entire shared 50/day
+// OpenRouter quota by itself, leaving nothing for the other ~11 scheduled
+// runs that day (observed: 3 consecutive scheduled runs all finished in
+// ~15s, meaning the very first run of the day already exhausted the whole
+// day's quota). Rationing a small slice per run keeps quota available
+// across the whole day instead of a first-run-wins race.
+const MAX_CLASSIFY_CALLS_PER_RUN = Number(process.env.MAX_CLASSIFY_CALLS_PER_RUN || 4)
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -295,6 +304,7 @@ async function main() {
     tooOld: 0,
     errors: 0,
     quotaExhausted: false,
+    capReached: false,
   }
 
   // De-dupe links within this run so we don't classify the same post twice
@@ -343,6 +353,12 @@ async function main() {
           stats.duplicatesSkipped++
           console.log(`  = duplicate (already saved): ${result.title.slice(0, 70)}`)
           continue
+        }
+
+        if (stats.classifyCalls >= MAX_CLASSIFY_CALLS_PER_RUN) {
+          console.log(`\n! Per-run classify cap (${MAX_CLASSIFY_CALLS_PER_RUN}) reached — stopping run early to leave quota for later runs today.`)
+          stats.capReached = true
+          break catLoop
         }
 
         let verdict
@@ -398,6 +414,9 @@ async function main() {
   console.log(`Errors:             ${stats.errors}`)
   if (stats.quotaExhausted) {
     console.log('Stopped early:      daily classifier quota exhausted')
+  }
+  if (stats.capReached) {
+    console.log(`Stopped early:      per-run classify cap (${MAX_CLASSIFY_CALLS_PER_RUN}) reached`)
   }
   console.log('=============================')
 }

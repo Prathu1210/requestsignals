@@ -37,23 +37,23 @@ export default function BlogIndex() {
 
   const blogPosts = [
     {
-      title: "How to Convert LinkedIn Project Leads into Clients",
-      description: "Learn proven strategies to turn LinkedIn project leads into paying clients with authentic outreach.",
+      title: "How to Convert Social Media Project Leads into Paying Clients",
+      description: "Learn proven strategies to turn leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients with authentic outreach.",
       link: "/blog/how-to-convert-linkedin-project-leads",
       icon: "fas fa-users",
       tags: ["Conversion", "Strategy", "Outreach"],
       color: "#6f7bf7"
     },
     {
-      title: "Best Ways to Approach LinkedIn Project Leads",
-      description: "Discover the most effective methods to contact LinkedIn leads without sounding salesy or desperate.",
+      title: "Best Ways to Approach Project Leads From Social Media",
+      description: "Discover the most effective methods to contact leads across different platforms without sounding salesy or desperate.",
       link: "/blog/best-approach-to-contact-linkedin-leads",
       icon: "fas fa-handshake",
       tags: ["Approach", "First Contact", "Messaging"],
       color: "#9c6ff7"
     },
     {
-      title: "How to Close Project Deals from LinkedIn",
+      title: "How to Close Project Deals You Found on Social Media",
       description: "Master the art of closing deals after initial contact. From proposal to signed contract.",
       link: "/blog/how-to-close-project-deals-from-linkedin",
       icon: "fas fa-file-contract",
@@ -62,7 +62,7 @@ export default function BlogIndex() {
     },
     {
       title: "Follow-Up Strategies That Actually Work",
-      description: "Professional follow-up techniques that increase response rates without being annoying.",
+      description: "Professional follow-up techniques that increase response rates without being annoying, on any platform.",
       link: "/blog/follow-up-strategies-for-linkedin-leads",
       icon: "fas fa-sync-alt",
       tags: ["Follow-up", "Persistence", "Timing"],
@@ -81,10 +81,10 @@ export default function BlogIndex() {
   return (
     <>
       <Head>
-        <title>LinkedIn Project Leads – Conversion & Closing Guides | RequestSignals</title>
+        <title>Social Media Project Leads – Conversion & Closing Guides | RequestSignals</title>
         <meta
           name="description"
-          content="Practical guides on converting LinkedIn project leads into paying clients. Learn outreach, follow-ups, and deal closing methods."
+          content="Practical guides on converting project leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients. Learn outreach, follow-ups, and deal closing methods."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -97,10 +97,10 @@ export default function BlogIndex() {
         <div className={`${styles.container} ${styles.heroInner}`}>
           <div className={styles.heroText}>
             <h1>
-              LinkedIn <span className={styles.gradientText}>Success Guides</span>
+              Social Media <span className={styles.gradientText}>Success Guides</span>
             </h1>
             <p className={styles.subtitle}>
-              Practical, experience-based methods to convert LinkedIn leads into paying clients. No theory, just proven strategies that work.
+              Practical, experience-based methods to convert leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients. No theory, just proven strategies that work.
             </p>
             <p className={styles.meta}>
               <i className="fas fa-graduation-cap"></i> Proven Strategies 
@@ -487,7 +487,7 @@ export default function BlogIndex() {
                   lineHeight: '1.6',
                   marginBottom: '0'
                 }}>
-                  Each guide is designed to give you <strong>immediately actionable advice</strong>. Pick one topic, implement the strategies, and start seeing better results with your LinkedIn outreach this week.
+                  Each guide is designed to give you <strong>immediately actionable advice</strong>. Pick one topic, implement the strategies, and start seeing better results with your outreach this week.
                 </p>
               </div>
             </div>
@@ -524,7 +524,7 @@ export default function BlogIndex() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Apply what you've learned from our guides with real, verified LinkedIn project leads.
+              Apply what you've learned from our guides with real, verified project leads from across social media.
             </p>
             <div style={{ 
               display: 'flex',

@@ -157,7 +157,7 @@ export default function Contact() {
         <title>Contact – RequestSignals</title>
         <meta
           name="description"
-          content="Get in touch with the RequestSignals team. We're here to help you find real LinkedIn service requests."
+          content="Get in touch with the RequestSignals team. We're here to help you find real service requests across LinkedIn, Reddit, X, Facebook, and Instagram."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -412,7 +412,7 @@ export default function Contact() {
                   Is RequestSignals really free?
                 </h3>
                 <p style={{color: '#4b5563', lineHeight: '1.6'}}>
-                  Yes, RequestSignals is completely free. We believe in providing direct access to LinkedIn service requests without any charges.
+                  Yes, RequestSignals is completely free. We believe in providing direct access to real service requests without any charges.
                 </p>
               </div>
               
@@ -422,7 +422,7 @@ export default function Contact() {
                   How often are leads updated?
                 </h3>
                 <p style={{color: '#4b5563', lineHeight: '1.6'}}>
-                  Leads are refreshed daily from public LinkedIn activity to ensure you get the most current opportunities.
+                  Leads are refreshed every 2 hours from public activity across LinkedIn, Reddit, X, Facebook, and Instagram to ensure you get the most current opportunities.
                 </p>
               </div>
               

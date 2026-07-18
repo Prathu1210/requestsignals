@@ -11,7 +11,7 @@ export default function Post() {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -20,7 +20,7 @@ export default function Post() {
         }
       });
     }, observerOptions);
-    
+
     // Observe all cards
     const allCards = document.querySelectorAll(`.${styles.card}`);
     allCards.forEach(card => {
@@ -29,7 +29,7 @@ export default function Post() {
       card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(card);
     });
-    
+
     return () => {
       observer.disconnect();
     };
@@ -38,29 +38,29 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>How to Close Project Deals from LinkedIn Leads | RequestSignals</title>
+        <title>How to Close Project Deals You Found on Social Media | RequestSignals</title>
         <meta
           name="description"
-          content="Step-by-step guide to close project deals from LinkedIn. Learn negotiation tactics, scope clarification, pricing strategies, and deal closing techniques for agencies and freelancers."
+          content="Step-by-step guide to closing project deals sourced from LinkedIn, Reddit, X, Facebook, or Instagram. Learn how to write winning proposals, talk pricing with confidence, handle objections, protect yourself with contracts, and get to a signature."
         />
-        <meta name="keywords" content="close LinkedIn deals, LinkedIn deal closing, project deals LinkedIn, LinkedIn negotiation, freelance deal closing, agency sales, LinkedIn sales closing, project proposal LinkedIn, deal closing strategies, LinkedIn contract signing" />
+        <meta name="keywords" content="close social media leads, close project deals, freelance proposal, pricing conversation, handling client objections, freelance contract, closing deals LinkedIn Reddit X Facebook Instagram, sales closing techniques, deal closing framework, get client to sign contract" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="How to Close Project Deals from LinkedIn Leads" />
-        <meta property="og:description" content="Master the art of closing project deals from LinkedIn. Learn the step-by-step process that successful agencies and freelancers use to convert leads into signed contracts." />
+        <meta property="og:title" content="How to Close Project Deals You Found on Social Media" />
+        <meta property="og:description" content="Master the process of turning a reply on LinkedIn, Reddit, X, Facebook, or Instagram into a signed contract. Proposals, pricing conversations, objection handling, contracts, and the follow-up that closes deals." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://requestsignals.com/blog/how-to-close-project-deals-from-linkedin" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="How to Close Project Deals from LinkedIn Leads" />
-        <meta name="twitter:description" content="Learn how agencies and freelancers successfully close project deals from LinkedIn leads with proven closing techniques." />
-        
+        <meta name="twitter:title" content="How to Close Project Deals You Found on Social Media" />
+        <meta name="twitter:description" content="Learn how freelancers and agencies close project deals sourced from LinkedIn, Reddit, X, Facebook, and Instagram with proven closing techniques." />
+
         {/* Structured Data for SEO */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "How to Close Project Deals from LinkedIn Leads",
-            "description": "Step-by-step guide to close project deals from LinkedIn. Learn negotiation tactics, scope clarification, pricing strategies, and deal closing techniques.",
-            "image": "https://requestsignals.com/images/linkedin-deal-closing.jpg",
+            "headline": "How to Close Project Deals You Found on Social Media",
+            "description": "Step-by-step guide to closing project deals sourced from LinkedIn, Reddit, X, Facebook, or Instagram. Learn proposal writing, pricing conversations, objection handling, contracts, and how to get to a signature.",
+            "image": "https://requestsignals.com/images/social-deal-closing.jpg",
             "author": {
               "@type": "Organization",
               "name": "RequestSignals",
@@ -74,8 +74,8 @@ export default function Post() {
                 "url": "https://requestsignals.com/logo.png"
               }
             },
-            "datePublished": "2024-01-20",
-            "dateModified": "2024-01-20",
+            "datePublished": "2026-07-18",
+            "dateModified": "2026-07-18",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://requestsignals.com/blog/how-to-close-project-deals-from-linkedin"
@@ -84,15 +84,15 @@ export default function Post() {
         </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
-      
+
       <Header />
-      
+
       {/* BLOG HERO SECTION */}
       <section className={styles.hero}>
         <div className={`${styles.container} ${styles.heroInner}`}>
           <div className={styles.heroText}>
-            <div style={{ 
-              display: 'inline-block', 
+            <div style={{
+              display: 'inline-block',
               marginBottom: '15px',
               fontSize: '14px',
               fontWeight: '600',
@@ -104,12 +104,12 @@ export default function Post() {
               <i className="fas fa-file-contract"></i> Deal Closing Guide
             </div>
             <h1 style={{ fontSize: '42px', lineHeight: '1.2' }}>
-              How to Close <span className={styles.gradientText}>Project Deals</span> from LinkedIn
+              How to Close <span className={styles.gradientText}>Project Deals</span> You Found on Social Media
             </h1>
             <p className={styles.subtitle} style={{ fontSize: '18px' }}>
-              Master the art of converting LinkedIn conversations into signed contracts. Learn the proven 7-step closing process that successful agencies use to win 40%+ of their LinkedIn opportunities.
+              Whether the conversation started as a LinkedIn comment, a Reddit reply, a quote-tweet on X, a Facebook group post, or an Instagram DM, closing works almost the same way once someone actually replies. Here's the proven process for turning that reply into a signed contract.
             </p>
-            
+
             <div className={styles.meta} style={{ marginTop: '25px', flexWrap: 'wrap', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fas fa-briefcase" style={{ color: '#f76fd8' }}></i>
@@ -117,20 +117,20 @@ export default function Post() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fas fa-clock" style={{ color: '#f76fd8' }}></i>
-                <span style={{ fontSize: '14px', color: '#4b5563' }}>9 min read</span>
+                <span style={{ fontSize: '14px', color: '#4b5563' }}>14 min read</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fas fa-chart-line" style={{ color: '#f76fd8' }}></i>
                 <span style={{ fontSize: '14px', color: '#4b5563' }}>Advanced Level</span>
               </div>
             </div>
-            
+
             <div style={{ marginTop: '25px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               <span className={styles.tag}>Deal Closing</span>
-              <span className={styles.tag}>LinkedIn Sales</span>
-              <span className={styles.tag}>Project Negotiation</span>
-              <span className={styles.tag}>Contract Signing</span>
-              <span className={styles.tag}>Sales Process</span>
+              <span className={styles.tag}>Multi-Platform Outreach</span>
+              <span className={styles.tag}>Proposals & Pricing</span>
+              <span className={styles.tag}>Contracts</span>
+              <span className={styles.tag}>Objection Handling</span>
             </div>
           </div>
 
@@ -138,26 +138,26 @@ export default function Post() {
             <div className={styles.postBackground}>
               <div className={`${styles.blurredPost} ${styles.postBg1}`}></div>
               <div className={`${styles.blurredPost} ${styles.postBg2}`}></div>
-              
+
               <div className={`${styles.linkedinPost} ${styles.post1}`}>
                 <div className={styles.postContent}>
                   <div className={styles.contentHighlight}>
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)' }}><i className="fas fa-handshake"></i></span>
                     <div className={styles.highlightText}>
                       <h4>Success Rate</h4>
-                      <p>Proven methods achieving 40%+ close rates</p>
+                      <p>Proven methods that work across every platform</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className={`${styles.linkedinPost} ${styles.post2}`}>
                 <div className={styles.postContent}>
                   <div className={styles.contentHighlight}>
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)' }}><i className="fas fa-chart-pie"></i></span>
                     <div className={styles.highlightText}>
                       <h4>Key Insight</h4>
-                      <p>Closing is about alignment, not persuasion</p>
+                      <p>Once they reply, the platform stops mattering</p>
                     </div>
                   </div>
                 </div>
@@ -180,33 +180,33 @@ export default function Post() {
           <div className={`${styles.waterDrop} ${styles.water3}`}></div>
           <div className={`${styles.waterDrop} ${styles.water4}`}></div>
         </div>
-        
+
         <div className={styles.container}>
           <div className={styles.card} style={{ maxWidth: '800px', margin: '0 auto' }}>
             {/* Introduction */}
             <div style={{ marginBottom: '40px' }}>
-              <p className={styles.subtitle} style={{ 
+              <p className={styles.subtitle} style={{
                 fontSize: '18px',
                 lineHeight: '1.8',
                 color: '#374151',
                 marginBottom: '20px'
               }}>
-                <strong>Closing a LinkedIn project deal is less about persuasion and more about perfect alignment.</strong> Clients say yes when they feel deeply understood, confident in your process, and clear about the value they'll receive.
+                <strong>Closing a project deal you found on social media is less about persuasion and more about perfect alignment.</strong> It doesn't matter if the original post was a LinkedIn status update, a Reddit thread in r/forhire, a tweet on X, a Facebook group request, or an Instagram DM — clients say yes when they feel deeply understood, confident in your process, and clear about the value they'll receive.
               </p>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(111, 123, 247, 0.05)',
-                padding: '25px', 
+                padding: '25px',
                 borderRadius: '12px',
                 border: '1px solid rgba(111, 123, 247, 0.1)',
                 marginBottom: '30px'
               }}>
-                <div style={{ 
-                  display: 'flex', 
+                <div style={{
+                  display: 'flex',
                   alignItems: 'flex-start',
                   gap: '20px'
                 }}>
-                  <div style={{ 
+                  <div style={{
                     width: '50px',
                     height: '50px',
                     background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)',
@@ -221,18 +221,72 @@ export default function Post() {
                     <i className="fas fa-exclamation-circle"></i>
                   </div>
                   <div>
-                    <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The LinkedIn Deal Closing Reality</h4>
+                    <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The Multi-Platform Deal Closing Reality</h4>
                     <p style={{ margin: '0', color: '#4b5563', fontSize: '15px', lineHeight: '1.6' }}>
-                      Most freelancers and agencies lose deals not because of price or competition, but because they fail to <strong>clarify expectations</strong> and <strong>build confidence</strong> during the closing process. The final 20% of the sales process determines 80% of your success.
+                      Most freelancers and agencies lose deals not because of price or competition, but because they fail to <strong>clarify expectations</strong> and <strong>build confidence</strong> during the closing process. That's true whether the lead came from LinkedIn, Reddit, X, Facebook, or Instagram — and almost every deal, regardless of origin, eventually moves to email, a call, or a proposal tool to actually get signed. The final 20% of the sales process determines 80% of your success.
                     </p>
                   </div>
                 </div>
+              </div>
+
+              <div className={styles.card} style={{
+                background: 'rgba(16, 185, 129, 0.05)',
+                padding: '25px',
+                borderRadius: '12px',
+                border: '1px solid rgba(16, 185, 129, 0.15)'
+              }}>
+                <h4 style={{
+                  color: '#065f46',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px'
+                }}>
+                  <i className="fas fa-list-check"></i>
+                  What This Guide Covers
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'grid',
+                  gap: '10px'
+                }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>Whether the originating platform actually changes how you should close</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>How to move a social media conversation toward a real proposal</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>What a winning proposal needs to include</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>How to talk about pricing without scaring the client off</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>How to handle the objections that kill most deals</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>What your contract needs before you start work</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>How to follow up without pressure until you get a signature</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
             {/* Section 1 */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -240,7 +294,7 @@ export default function Post() {
                 alignItems: 'center',
                 gap: '15px'
               }}>
-                <span style={{ 
+                <span style={{
                   background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)',
                   color: 'white',
                   width: '40px',
@@ -254,86 +308,77 @@ export default function Post() {
                 }}>
                   1
                 </span>
-                Clarify Scope Before Discussing Price
+                Does It Matter Which Platform the Lead Came From?
               </h2>
-              
-              <p className={styles.subtitle} style={{ 
+
+              <p className={styles.subtitle} style={{
                 fontSize: '16px',
                 lineHeight: '1.7',
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                The number one reason LinkedIn project deals fail is <strong>unclear expectations and scope creep.</strong> Clients often don't know exactly what they need, and providers rush to give pricing without fully understanding requirements.
+                <strong>Not much, once the prospect actually replies.</strong> The mechanics of closing — clarifying scope, presenting a proposal, discussing price, handling objections, and getting a signature — are nearly identical across LinkedIn, Reddit, X, Facebook, and Instagram. What differs is the <strong>speed</strong> people expect, how <strong>cautious</strong> they are about sharing contact details, and how quickly you should try to move the conversation off-platform.
               </p>
-              
-              <div className={styles.howGrid} style={{ marginBottom: '30px' }}>
-                <div className={styles.card}>
-                  <div className={styles.cardIcon}>
-                    <i className="fas fa-times" style={{ color: '#ef4444' }}></i>
-                  </div>
-                  <h3>What Loses Deals</h3>
-                  <p>
-                    "Based on what you shared, I can do this for $5,000. Let me know if you're interested."
-                  </p>
-                </div>
 
-                <div className={styles.card}>
-                  <div className={styles.cardIcon}>
-                    <i className="fas fa-check" style={{ color: '#10b981' }}></i>
-                  </div>
-                  <h3>What Wins Deals</h3>
-                  <p>
-                    "Before discussing numbers, let me make sure I understand exactly what you need. Can you tell me more about [specific aspect]?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className={styles.card} style={{ 
-                background: 'rgba(110, 231, 183, 0.1)',
-                borderLeft: '4px solid #10b981',
-                padding: '20px',
-                borderRadius: '8px'
+              <div className={styles.card} style={{
+                background: 'rgba(111, 123, 247, 0.05)',
+                padding: '25px',
+                borderRadius: '12px',
+                marginBottom: '10px'
               }}>
-                <h4 style={{ 
-                  color: '#065f46',
+                <h4 style={{
+                  color: '#1f2937',
                   marginBottom: '15px',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '10px'
                 }}>
-                  <i className="fas fa-lightbulb"></i>
-                  The Scope Clarification Checklist
+                  <i className="fas fa-globe" style={{ color: '#6f7bf7' }}></i>
+                  Platform-Specific Quirks to Know Before You Close
                 </h4>
-                <ul style={{ 
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  display: 'grid',
-                  gap: '12px'
-                }}>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}><strong>Project Goals:</strong> What specific business outcomes are they trying to achieve?</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}><strong>Success Metrics:</strong> How will they measure success? (KPIs, metrics, deliverables)</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}><strong>Timeline Expectations:</strong> When do they need it? Is there flexibility?</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}><strong>Decision Process:</strong> Who else needs to approve? What's their timeline?</span>
-                  </li>
-                </ul>
+                <div style={{ display: 'grid', gap: '15px' }}>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                    <i className="fab fa-linkedin" style={{ color: '#0a66c2', fontSize: '20px', marginTop: '3px' }}></i>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>LinkedIn:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>People here are professionally minded and often comfortable jumping straight to a scheduled call — real names and job titles are already public, so trust is established faster. Suggest a 15-minute call early.</p>
+                    </div>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                    <i className="fab fa-reddit-alien" style={{ color: '#ff4500', fontSize: '20px', marginTop: '3px' }}></i>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>Reddit:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Redditors are often anonymous by design and privacy-cautious about handing over an email address right away. Keep the first few replies inside Reddit chat or DMs, prove you understand their problem, and only ask to move to email once they've engaged twice.</p>
+                    </div>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                    <i className="fab fa-twitter" style={{ color: '#1d9bf0', fontSize: '20px', marginTop: '3px' }}></i>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>X (Twitter):</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Conversations move fast and attention spans are short. If someone replies to your DM with interest, send a proposal or booking link within hours, not days — the window where they're actively thinking about the problem closes quickly on X.</p>
+                    </div>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                    <i className="fab fa-facebook" style={{ color: '#1877f2', fontSize: '20px', marginTop: '3px' }}></i>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>Facebook:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>Leads from Facebook groups often expect a more personal, conversational tone since the platform skews toward community and local business. Mutual group membership or a shared connection is a trust shortcut worth mentioning early.</p>
+                    </div>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                    <i className="fab fa-instagram" style={{ color: '#e1306c', fontSize: '20px', marginTop: '3px' }}></i>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>Instagram:</strong>
+                      <p style={{ color: '#4b5563', margin: '4px 0 0 0', fontSize: '14px' }}>DMs here often start informally, sometimes with voice notes or quick replies. Your portfolio or visual work often does the persuading, so lean on a link in bio or a case study carousel before pushing to a formal call.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Section 2 */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -341,7 +386,7 @@ export default function Post() {
                 alignItems: 'center',
                 gap: '15px'
               }}>
-                <span style={{ 
+                <span style={{
                   background: 'linear-gradient(135deg, #9c6ff7, #f76fd8)',
                   color: 'white',
                   width: '40px',
@@ -355,26 +400,131 @@ export default function Post() {
                 }}>
                   2
                 </span>
-                Explain the Process, Not Just the Price
+                How Do You Move the Conversation Off-Platform?
               </h2>
-              
-              <p className={styles.subtitle} style={{ 
+
+              <p className={styles.subtitle} style={{
                 fontSize: '16px',
                 lineHeight: '1.7',
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                Clients are more comfortable spending money when they understand <strong>how the work will be delivered,</strong> what milestones to expect, and how you'll handle challenges. A clear process builds confidence more than any discount ever could.
+                <strong>Almost every deal — no matter where it started — eventually needs to move to email, a call, or a proposal tool to actually close.</strong> Comment threads, DMs, and reply chains are great for starting a conversation, but they're a poor place to negotiate scope, send a contract, or collect a signature. The trick is bridging the gap without sounding like you're brushing the client off.
               </p>
-              
-              <div style={{ 
+
+              <div className={styles.howGrid} style={{ marginBottom: '30px' }}>
+                <div className={styles.card}>
+                  <div className={styles.cardIcon}>
+                    <i className="fas fa-times" style={{ color: '#ef4444' }}></i>
+                  </div>
+                  <h3>What Loses Deals</h3>
+                  <p>
+                    "Can you email me?" sent with no context, right after someone shares a real problem in a Reddit thread or LinkedIn comment.
+                  </p>
+                </div>
+
+                <div className={styles.card}>
+                  <div className={styles.cardIcon}>
+                    <i className="fas fa-check" style={{ color: '#10b981' }}></i>
+                  </div>
+                  <h3>What Wins Deals</h3>
+                  <p>
+                    "I've helped a few teams with exactly this. Happy to send over a short proposal — what's the best email, or would a quick 15-minute call be easier?"
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.card} style={{
+                background: 'rgba(110, 231, 183, 0.1)',
+                borderLeft: '4px solid #10b981',
+                padding: '20px',
+                borderRadius: '8px'
+              }}>
+                <h4 style={{
+                  color: '#065f46',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px'
+                }}>
+                  <i className="fas fa-lightbulb"></i>
+                  The Bridge-to-Email Checklist
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'grid',
+                  gap: '12px'
+                }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Earn it first:</strong> Show you understood their exact problem before asking for contact details</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Give them a choice:</strong> Offer email or a call rather than demanding one channel</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Explain the "why":</strong> "So I can send a proper proposal with pricing" reads as legitimate, not pushy</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Match their pace:</strong> Move fast on X, take it slower on Reddit, default to a call on LinkedIn</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Use a booking link:</strong> A Calendly-style link removes the back-and-forth of finding a time</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Section 3 */}
+            <div style={{ marginBottom: '40px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                marginBottom: '20px',
+                color: '#1f2937',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px'
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #6f7bf7, #9c6ff7)',
+                  color: 'white',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  fontWeight: '600'
+                }}>
+                  3
+                </span>
+                What Should Your Proposal Actually Include?
+              </h2>
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                A winning proposal answers three questions before the client has to ask them: <strong>what exactly will I get, when will I get it, and what will it cost.</strong> The number one reason deals stall after the proposal stage is unclear scope — clients often don't know exactly what they need, and providers rush to quote a number before fully understanding requirements.
+              </p>
+
+              <div style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
                 gap: '20px',
                 marginBottom: '30px'
               }}>
                 <div className={styles.card} style={{ textAlign: 'center', padding: '20px' }}>
-                  <div style={{ 
+                  <div style={{
                     width: '60px',
                     height: '60px',
                     background: 'linear-gradient(135deg, #6f7bf7, #9c6ff7)',
@@ -388,14 +538,14 @@ export default function Post() {
                   }}>
                     <i className="fas fa-dollar-sign"></i>
                   </div>
-                  <h4 style={{ marginBottom: '10px', color: '#1f2937' }}>Price-First Approach</h4>
+                  <h4 style={{ marginBottom: '10px', color: '#1f2937' }}>Price-Only Proposal</h4>
                   <p style={{ fontSize: '14px', color: '#4b5563', lineHeight: '1.5' }}>
-                    Focuses only on cost. Creates price sensitivity. Leads to haggling. Low conversion rates.
+                    Just a number and a deadline. Invites price shopping. No context for the value. Low conversion rates.
                   </p>
                 </div>
-                
+
                 <div className={styles.card} style={{ textAlign: 'center', padding: '20px' }}>
-                  <div style={{ 
+                  <div style={{
                     width: '60px',
                     height: '60px',
                     background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)',
@@ -407,22 +557,22 @@ export default function Post() {
                     fontSize: '22px',
                     margin: '0 auto 15px auto'
                   }}>
-                    <i className="fas fa-project-diagram"></i>
+                    <i className="fas fa-file-alt"></i>
                   </div>
-                  <h4 style={{ marginBottom: '10px', color: '#1f2937' }}>Process-First Approach</h4>
+                  <h4 style={{ marginBottom: '10px', color: '#1f2937' }}>Structured Proposal</h4>
                   <p style={{ fontSize: '14px', color: '#4b5563', lineHeight: '1.5' }}>
-                    Focuses on value delivery. Builds confidence. Justifies investment. Higher conversion.
+                    Scope, process, timeline, and price together. Builds confidence. Justifies the investment. Higher conversion.
                   </p>
                 </div>
               </div>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(111, 123, 247, 0.05)',
                 padding: '25px',
                 borderRadius: '12px',
                 marginBottom: '20px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#1f2937',
                   marginBottom: '15px',
                   display: 'flex',
@@ -430,9 +580,9 @@ export default function Post() {
                   gap: '10px'
                 }}>
                   <i className="fas fa-list-ol" style={{ color: '#6f7bf7' }}></i>
-                  The 5-Step Project Process You Should Explain
+                  6 Sections Every Proposal Needs
                 </h4>
-                <ol style={{ 
+                <ol style={{
                   listStyle: 'none',
                   padding: 0,
                   margin: 0,
@@ -440,13 +590,13 @@ export default function Post() {
                   gap: '15px',
                   counterReset: 'step-counter'
                 }}>
-                  <li style={{ 
+                  <li style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
                     counterIncrement: 'step-counter'
                   }}>
-                    <span style={{ 
+                    <span style={{
                       background: 'linear-gradient(135deg, #6f7bf7, #9c6ff7)',
                       color: 'white',
                       width: '30px',
@@ -462,17 +612,17 @@ export default function Post() {
                       1
                     </span>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Discovery Phase:</strong>
-                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Deep dive into requirements, goals, and constraints</p>
+                      <strong style={{ color: '#1f2937' }}>The Problem, In Their Words:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Restate what they told you, so they know you actually read their post or reply</p>
                     </div>
                   </li>
-                  <li style={{ 
+                  <li style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
                     counterIncrement: 'step-counter'
                   }}>
-                    <span style={{ 
+                    <span style={{
                       background: 'linear-gradient(135deg, #9c6ff7, #f76fd8)',
                       color: 'white',
                       width: '30px',
@@ -488,17 +638,17 @@ export default function Post() {
                       2
                     </span>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Planning & Approval:</strong>
-                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Detailed project plan, timeline, and deliverables</p>
+                      <strong style={{ color: '#1f2937' }}>Scope of Work:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Exactly what's included, and just as important, what's not included</p>
                     </div>
                   </li>
-                  <li style={{ 
+                  <li style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
                     counterIncrement: 'step-counter'
                   }}>
-                    <span style={{ 
+                    <span style={{
                       background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)',
                       color: 'white',
                       width: '30px',
@@ -514,17 +664,17 @@ export default function Post() {
                       3
                     </span>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Execution Phase:</strong>
-                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Regular updates, milestone reviews, and feedback loops</p>
+                      <strong style={{ color: '#1f2937' }}>Process & Timeline:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Milestones, check-in points, and a realistic delivery date</p>
                     </div>
                   </li>
-                  <li style={{ 
+                  <li style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
                     counterIncrement: 'step-counter'
                   }}>
-                    <span style={{ 
+                    <span style={{
                       background: 'linear-gradient(135deg, #ff6b9d, #ff8b6b)',
                       color: 'white',
                       width: '30px',
@@ -540,17 +690,17 @@ export default function Post() {
                       4
                     </span>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Review & Revisions:</strong>
-                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Client review, feedback implementation, and refinements</p>
+                      <strong style={{ color: '#1f2937' }}>Pricing & Payment Terms:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>The number, the currency, deposit requirements, and payment schedule</p>
                     </div>
                   </li>
-                  <li style={{ 
+                  <li style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
                     counterIncrement: 'step-counter'
                   }}>
-                    <span style={{ 
+                    <span style={{
                       background: 'linear-gradient(135deg, #10b981, #34d399)',
                       color: 'white',
                       width: '30px',
@@ -566,17 +716,47 @@ export default function Post() {
                       5
                     </span>
                     <div>
-                      <strong style={{ color: '#1f2937' }}>Delivery & Support:</strong>
-                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>Final delivery, training, and post-project support</p>
+                      <strong style={{ color: '#1f2937' }}>Proof It Works:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>One or two relevant results, testimonials, or case studies — nothing generic</p>
+                    </div>
+                  </li>
+                  <li style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '15px',
+                    counterIncrement: 'step-counter'
+                  }}>
+                    <span style={{
+                      background: 'linear-gradient(135deg, #6b7280, #9ca3af)',
+                      color: 'white',
+                      width: '30px',
+                      height: '30px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      flexShrink: 0
+                    }}>
+                      6
+                    </span>
+                    <div>
+                      <strong style={{ color: '#1f2937' }}>Clear Next Step:</strong>
+                      <p style={{ color: '#4b5563', margin: '5px 0 0 0', fontSize: '14px' }}>A single call to action — "reply to accept" or "sign here" — not five options</p>
                     </div>
                   </li>
                 </ol>
               </div>
+
+              <p className={styles.subtitle} style={{ fontSize: '15px', lineHeight: '1.7', color: '#4b5563' }}>
+                Tools like PandaDoc, Proposify, Bonsai, or even a well-formatted Google Doc all work fine. What matters far more than the tool is that the proposal is <strong>specific to this client</strong> — a generic PDF you send to everyone is the fastest way to lose a deal you'd otherwise win.
+              </p>
             </div>
 
-            {/* Section 3 */}
+            {/* Section 4 */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -584,7 +764,186 @@ export default function Post() {
                 alignItems: 'center',
                 gap: '15px'
               }}>
-                <span style={{ 
+                <span style={{
+                  background: 'linear-gradient(135deg, #f76fd8, #ff6b9d)',
+                  color: 'white',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  fontWeight: '600'
+                }}>
+                  4
+                </span>
+                How Do You Talk About Pricing Without Losing the Deal?
+              </h2>
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                <strong>Lead with the process before the price, and present options instead of a single number.</strong> Clients are more comfortable spending money when they understand how the work will be delivered and what they're actually paying for. A clear process builds confidence more than any discount ever could.
+              </p>
+
+              <div className={styles.card} style={{
+                background: 'rgba(111, 123, 247, 0.05)',
+                padding: '25px',
+                borderRadius: '12px',
+                marginBottom: '20px'
+              }}>
+                <h4 style={{
+                  color: '#1f2937',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px'
+                }}>
+                  <i className="fas fa-layer-group" style={{ color: '#6f7bf7' }}></i>
+                  Three Ways to Frame Your Number
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'grid',
+                  gap: '12px'
+                }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Tiered options:</strong> Offer a good/better/best structure so the conversation becomes "which tier" rather than "yes or no"</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Value anchoring:</strong> Tie the number to the outcome ("this typically saves teams 10+ hours a week") not just the hours worked</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Phased pricing:</strong> Break a large project into phases with separate pricing to lower the initial commitment</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className={styles.card} style={{
+                background: 'rgba(254, 226, 226, 0.2)',
+                borderLeft: '4px solid #ef4444',
+                padding: '20px',
+                borderRadius: '8px'
+              }}>
+                <h4 style={{
+                  color: '#7f1d1d',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px'
+                }}>
+                  <i className="fas fa-exclamation-triangle"></i>
+                  Pricing Mistakes That Kill Deals
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'grid',
+                  gap: '10px'
+                }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-times-circle" style={{ color: '#ef4444', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>Quoting a price in the first DM before understanding the actual scope</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-times-circle" style={{ color: '#ef4444', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>Apologizing for your rate or offering to "work something out" unprompted</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-times-circle" style={{ color: '#ef4444', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}>Going silent after sending the number instead of following up with context</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Section 5 */}
+            <div style={{ marginBottom: '40px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                marginBottom: '20px',
+                color: '#1f2937',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px'
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #9c6ff7, #f76fd8)',
+                  color: 'white',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  fontWeight: '600'
+                }}>
+                  5
+                </span>
+                How Do You Handle the Most Common Objections?
+              </h2>
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                Objections aren't rejections — they're requests for more information. <strong>Respond with empathy first, then evidence.</strong> The same handful of objections show up whether the lead came from a LinkedIn post, a Reddit thread, an X reply, a Facebook group, or an Instagram DM.
+              </p>
+
+              <div className={styles.card} style={{
+                background: 'rgba(111, 123, 247, 0.05)',
+                padding: '25px',
+                borderRadius: '12px'
+              }}>
+                <div style={{ display: 'grid', gap: '18px' }}>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#7f1d1d' }}><i className="fas fa-quote-left" style={{ marginRight: '6px' }}></i><strong>"That's more than we budgeted for."</strong></p>
+                    <p style={{ margin: 0, fontSize: '14px', color: '#065f46' }}><i className="fas fa-reply" style={{ marginRight: '6px' }}></i>Ask what the budget was built around, then offer a phased or reduced-scope option that fits — rather than discounting the same scope.</p>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#7f1d1d' }}><i className="fas fa-quote-left" style={{ marginRight: '6px' }}></i><strong>"I need to think about it / talk to my team."</strong></p>
+                    <p style={{ margin: 0, fontSize: '14px', color: '#065f46' }}><i className="fas fa-reply" style={{ marginRight: '6px' }}></i>Ask what specifically they need to think through, and offer to answer it directly so it doesn't stall in someone else's inbox.</p>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#7f1d1d' }}><i className="fas fa-quote-left" style={{ marginRight: '6px' }}></i><strong>"We're also talking to a couple of other people."</strong></p>
+                    <p style={{ margin: 0, fontSize: '14px', color: '#065f46' }}><i className="fas fa-reply" style={{ marginRight: '6px' }}></i>Don't badmouth competitors. Ask what matters most in the decision, then show exactly how you meet that criteria.</p>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#7f1d1d' }}><i className="fas fa-quote-left" style={{ marginRight: '6px' }}></i><strong>"Can you start smaller so we can test things out first?"</strong></p>
+                    <p style={{ margin: 0, fontSize: '14px', color: '#065f46' }}><i className="fas fa-reply" style={{ marginRight: '6px' }}></i>Offer a small, well-scoped paid pilot with a clear success metric — this is often a legitimate path to a bigger contract, not a stall tactic.</p>
+                  </div>
+                  <div style={{ background: 'white', padding: '15px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#7f1d1d' }}><i className="fas fa-quote-left" style={{ marginRight: '6px' }}></i><strong>"How do I know you can actually deliver this?"</strong></p>
+                    <p style={{ margin: 0, fontSize: '14px', color: '#065f46' }}><i className="fas fa-reply" style={{ marginRight: '6px' }}></i>Point to a specific, relevant result rather than a generic portfolio link, and offer a reference call if they want it.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 6 */}
+            <div style={{ marginBottom: '40px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                marginBottom: '20px',
+                color: '#1f2937',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px'
+              }}>
+                <span style={{
                   background: 'linear-gradient(135deg, #6f7bf7, #9c6ff7)',
                   color: 'white',
                   width: '40px',
@@ -596,28 +955,120 @@ export default function Post() {
                   fontSize: '18px',
                   fontWeight: '600'
                 }}>
-                  3
+                  6
                 </span>
-                The Art of Patient Follow-Up (Don't Rush the Decision)
+                What Should Your Contract Include Before You Start Work?
               </h2>
-              
-              <p className={styles.subtitle} style={{ 
+
+              <p className={styles.subtitle} style={{
                 fontSize: '16px',
                 lineHeight: '1.7',
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                <strong>Pressure kills deals.</strong> Corporate clients often need time for internal discussions, budget approvals, and stakeholder alignment. Following up politely while allowing thinking space is a delicate balance that separates amateur closers from professionals.
+                <strong>Never start work on a verbal "yes" alone — even a simple one-page agreement protects both sides.</strong> This matters more, not less, with leads sourced from social media, since there's often no prior business relationship or mutual professional network to fall back on if something goes wrong.
               </p>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
+                background: 'rgba(110, 231, 183, 0.1)',
+                borderLeft: '4px solid #10b981',
+                padding: '20px',
+                borderRadius: '8px',
+                marginBottom: '20px'
+              }}>
+                <h4 style={{
+                  color: '#065f46',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px'
+                }}>
+                  <i className="fas fa-shield-alt"></i>
+                  Contract Essentials Checklist
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'grid',
+                  gap: '12px'
+                }}>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Scope of work:</strong> The same scope from your proposal, word for word — no surprises</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Payment terms:</strong> Deposit amount, milestone payments, due dates, and late payment terms</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Revision limits:</strong> How many rounds of revisions are included before extra charges apply</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Cancellation clause:</strong> What happens, and what's owed, if either side ends the project early</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>IP ownership:</strong> When ownership of the work transfers to the client (typically on final payment)</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <i className="fas fa-check-circle" style={{ color: '#10b981', marginTop: '3px', flexShrink: 0 }}></i>
+                    <span style={{ color: '#4b5563' }}><strong>Confidentiality:</strong> A short NDA clause if the client shares sensitive business information</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className={styles.subtitle} style={{ fontSize: '15px', lineHeight: '1.7', color: '#4b5563' }}>
+                A simple e-signature tool — DocuSign, HelloSign, PandaDoc, or Bonsai — turns "I'll sign it later" into a completed contract in minutes. Always require a <strong>deposit before starting work</strong>, typically 30–50% upfront; it's the single strongest signal that a deal is actually closed rather than just verbally agreed.
+              </p>
+            </div>
+
+            {/* Section 7 - Follow-up */}
+            <div style={{ marginBottom: '40px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                marginBottom: '20px',
+                color: '#1f2937',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px'
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #ff6b9d, #ff8b6b)',
+                  color: 'white',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  fontWeight: '600'
+                }}>
+                  7
+                </span>
+                How Do You Follow Up Without Losing the Deal?
+              </h2>
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                <strong>Pressure kills deals.</strong> Corporate clients often need time for internal discussions, budget approvals, and stakeholder alignment. Following up politely while allowing thinking space is a delicate balance that separates amateur closers from professionals — and it holds true whether you first connected on LinkedIn, Reddit, X, Facebook, or Instagram.
+              </p>
+
+              <div className={styles.card} style={{
                 background: 'rgba(254, 226, 226, 0.2)',
                 borderLeft: '4px solid #ef4444',
                 padding: '20px',
                 borderRadius: '8px',
                 marginBottom: '30px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#7f1d1d',
                   marginBottom: '15px',
                   display: 'flex',
@@ -627,7 +1078,7 @@ export default function Post() {
                   <i className="fas fa-exclamation-triangle"></i>
                   What NOT to Do (The Pressure Mistakes)
                 </h4>
-                <ul style={{ 
+                <ul style={{
                   listStyle: 'none',
                   padding: 0,
                   margin: 0,
@@ -640,7 +1091,7 @@ export default function Post() {
                   </li>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <i className="fas fa-times-circle" style={{ color: '#ef4444', marginTop: '3px', flexShrink: 0 }}></i>
-                    <span style={{ color: '#4b5563' }}>"Are you still interested? Please respond ASAP" (sent 2 hours after proposal)</span>
+                    <span style={{ color: '#4b5563' }}>"Are you still interested? Please respond ASAP" (sent 2 hours after the proposal)</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <i className="fas fa-times-circle" style={{ color: '#ef4444', marginTop: '3px', flexShrink: 0 }}></i>
@@ -648,14 +1099,14 @@ export default function Post() {
                   </li>
                 </ul>
               </div>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(110, 231, 183, 0.1)',
                 borderLeft: '4px solid #10b981',
                 padding: '20px',
                 borderRadius: '8px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#065f46',
                   marginBottom: '15px',
                   display: 'flex',
@@ -665,18 +1116,18 @@ export default function Post() {
                   <i className="fas fa-check-circle"></i>
                   Professional Follow-Up Sequence (What Works)
                 </h4>
-                <div style={{ 
+                <div style={{
                   display: 'grid',
                   gap: '20px'
                 }}>
-                  <div style={{ 
+                  <div style={{
                     background: 'white',
                     padding: '15px',
                     borderRadius: '8px',
                     border: '1px solid #e5e7eb'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                      <span style={{ 
+                      <span style={{
                         background: '#6f7bf7',
                         color: 'white',
                         width: '24px',
@@ -690,21 +1141,21 @@ export default function Post() {
                       }}>
                         1
                       </span>
-                      <strong style={{ color: '#1f2937' }}>Follow-up #1 (2 days after proposal):</strong>
+                      <strong style={{ color: '#1f2937' }}>Follow-up #1 (2 days after the proposal):</strong>
                     </div>
                     <p style={{ color: '#4b5563', margin: '0', fontSize: '14px', fontStyle: 'italic' }}>
                       "Hi [Name], just following up on the proposal I sent. Happy to answer any questions or provide additional details that would help with your decision."
                     </p>
                   </div>
-                  
-                  <div style={{ 
+
+                  <div style={{
                     background: 'white',
                     padding: '15px',
                     borderRadius: '8px',
                     border: '1px solid #e5e7eb'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                      <span style={{ 
+                      <span style={{
                         background: '#9c6ff7',
                         color: 'white',
                         width: '24px',
@@ -724,15 +1175,15 @@ export default function Post() {
                       "Hi [Name], checking in to see if you had a chance to review the proposal. I've been thinking about your project and had an additional idea about [specific aspect] that might be helpful."
                     </p>
                   </div>
-                  
-                  <div style={{ 
+
+                  <div style={{
                     background: 'white',
                     padding: '15px',
                     borderRadius: '8px',
                     border: '1px solid #e5e7eb'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                      <span style={{ 
+                      <span style={{
                         background: '#f76fd8',
                         color: 'white',
                         width: '24px',
@@ -754,11 +1205,15 @@ export default function Post() {
                   </div>
                 </div>
               </div>
+
+              <p className={styles.subtitle} style={{ fontSize: '15px', lineHeight: '1.7', color: '#4b5563', marginTop: '20px' }}>
+                Once you've moved to email, keep following up there rather than jumping back to the original platform — a scattered conversation across LinkedIn comments, DMs, and email makes you look disorganized right when you need to look the most professional.
+              </p>
             </div>
 
             {/* The Complete Deal Closing Framework */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -767,38 +1222,39 @@ export default function Post() {
                 gap: '15px'
               }}>
                 <i className="fas fa-star" style={{ color: '#f59e0b' }}></i>
-                The Complete LinkedIn Deal Closing Framework
+                The Complete Framework for Closing Deals from Any Platform
               </h2>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'linear-gradient(135deg, rgba(111, 123, 247, 0.08), rgba(156, 111, 247, 0.05))',
-                padding: '30px', 
+                padding: '30px',
                 borderRadius: '16px',
                 border: '1px solid rgba(111, 123, 247, 0.15)'
               }}>
-                <h3 style={{ 
+                <h3 style={{
                   textAlign: 'center',
                   marginBottom: '25px',
                   color: '#1f2937'
                 }}>
                   <i className="fas fa-road" style={{ color: '#6f7bf7', marginRight: '10px' }}></i>
-                  7-Step LinkedIn Deal Closing Process
+                  8-Step Deal Closing Process
                 </h3>
-                
-                <div style={{ 
+
+                <div style={{
                   display: 'grid',
                   gap: '15px'
                 }}>
                   {[
                     { step: 1, title: "Qualification Check", desc: "Confirm they have budget, authority, need, and timeline (BANT)", icon: "fas fa-filter", color: "#6f7bf7" },
-                    { step: 2, title: "Deep Discovery", desc: "Ask probing questions to understand real needs and constraints", icon: "fas fa-search", color: "#9c6ff7" },
-                    { step: 3, title: "Value Alignment", desc: "Connect your solution directly to their business goals", icon: "fas fa-bullseye", color: "#f76fd8" },
-                    { step: 4, title: "Process Demonstration", desc: "Show exactly how you'll deliver results", icon: "fas fa-project-diagram", color: "#ff6b9d" },
-                    { step: 5, title: "Proposal Presentation", desc: "Present clear scope, timeline, and investment", icon: "fas fa-file-alt", color: "#10b981" },
-                    { step: 6, title: "Objection Handling", desc: "Address concerns with empathy and solutions", icon: "fas fa-comments", color: "#f59e0b" },
-                    { step: 7, title: "Patient Follow-Up", desc: "Respectful persistence without pressure", icon: "fas fa-clock", color: "#6b7280" }
+                    { step: 2, title: "Bridge Off-Platform", desc: "Move from the comment or DM to email, a call, or a proposal tool", icon: "fas fa-arrow-right-arrow-left", color: "#9c6ff7" },
+                    { step: 3, title: "Deep Discovery", desc: "Ask probing questions to understand real needs and constraints", icon: "fas fa-search", color: "#f76fd8" },
+                    { step: 4, title: "Value Alignment", desc: "Connect your solution directly to their business goals", icon: "fas fa-bullseye", color: "#ff6b9d" },
+                    { step: 5, title: "Proposal Presentation", desc: "Present clear scope, timeline, process, and investment", icon: "fas fa-file-alt", color: "#10b981" },
+                    { step: 6, title: "Objection Handling", desc: "Address concerns with empathy and evidence", icon: "fas fa-comments", color: "#f59e0b" },
+                    { step: 7, title: "Contract & Deposit", desc: "Get a signed agreement and upfront payment before starting", icon: "fas fa-file-signature", color: "#0ea5e9" },
+                    { step: 8, title: "Patient Follow-Up", desc: "Respectful persistence without pressure until you get to yes", icon: "fas fa-clock", color: "#6b7280" }
                   ].map((item, index) => (
-                    <div key={index} style={{ 
+                    <div key={index} style={{
                       display: 'flex',
                       alignItems: 'center',
                       gap: '15px',
@@ -807,7 +1263,7 @@ export default function Post() {
                       borderRadius: '10px',
                       border: '1px solid rgba(226, 232, 240, 0.8)'
                     }}>
-                      <div style={{ 
+                      <div style={{
                         background: item.color,
                         color: 'white',
                         width: '40px',
@@ -836,32 +1292,32 @@ export default function Post() {
             </div>
 
             {/* Conclusion */}
-            <div style={{ 
+            <div style={{
               background: 'linear-gradient(135deg, rgba(111, 123, 247, 0.08), rgba(156, 111, 247, 0.05))',
-              padding: '30px', 
+              padding: '30px',
               borderRadius: '16px',
               border: '1px solid rgba(111, 123, 247, 0.15)',
               marginTop: '40px'
             }}>
-              <h3 style={{ 
+              <h3 style={{
                 textAlign: 'center',
                 marginBottom: '20px',
                 color: '#1f2937',
                 fontSize: '24px'
               }}>
                 <i className="fas fa-award" style={{ color: '#f59e0b', marginRight: '10px' }}></i>
-                Final Word on LinkedIn Deal Closing
+                Key Takeaway
               </h3>
-              <p className={styles.subtitle} style={{ 
+              <p className={styles.subtitle} style={{
                 fontSize: '17px',
                 lineHeight: '1.8',
                 color: '#4b5563',
                 textAlign: 'center',
                 marginBottom: '0'
               }}>
-                Closing <strong>LinkedIn project deals</strong> successfully requires shifting from a "sales" mindset to a "partnership" mindset. Your goal isn't to convince someone to buy, but to help them make the best decision for their business.
+                Closing <strong>project deals sourced from social media</strong> successfully requires shifting from a "sales" mindset to a "partnership" mindset. Your goal isn't to convince someone to buy, but to help them make the best decision for their business — no matter whether that conversation began on LinkedIn, Reddit, X, Facebook, or Instagram.
                 <br/><br/>
-                Remember: <strong>Clarity beats persuasion.</strong> A client who understands exactly what they're getting, how they're getting it, and why it's valuable will close themselves. Your job is to provide that clarity through thorough discovery, transparent process explanation, and patient, professional follow-up.
+                Remember: <strong>clarity beats persuasion, and the platform stops mattering the moment someone replies.</strong> A client who understands exactly what they're getting, how they're getting it, and why it's valuable will close themselves. Your job is to provide that clarity through a fast bridge off-platform, a specific proposal, a confident pricing conversation, a solid contract, and patient, professional follow-up.
               </p>
             </div>
           </div>
@@ -876,16 +1332,16 @@ export default function Post() {
           <div className={`${styles.waterDrop} ${styles.water11}`}></div>
           <div className={`${styles.waterDrop} ${styles.water12}`}></div>
         </div>
-        
+
         <div className={styles.container}>
-          <h2 style={{ 
-            textAlign: 'center', 
+          <h2 style={{
+            textAlign: 'center',
             marginBottom: '40px',
             color: '#1f2937'
           }}>
             Master the <span className={styles.gradientText}>Full Process</span>
           </h2>
-          
+
           <div className={styles.howGrid}>
             <a href="/blog/how-to-convert-linkedin-project-leads" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
               <div className={styles.cardIcon}>
@@ -896,9 +1352,9 @@ export default function Post() {
                   Foundation
                 </span>
               </div>
-              <h3>How to Convert LinkedIn Project Leads into Clients</h3>
-              <p>Learn proven strategies to turn LinkedIn project leads into paying clients with authentic outreach.</p>
-              <div style={{ 
+              <h3>How to Convert Social Media Project Leads into Paying Clients</h3>
+              <p>Learn proven strategies to turn leads from LinkedIn, Reddit, X, Facebook, and Instagram into paying clients with authentic outreach.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -922,9 +1378,9 @@ export default function Post() {
                   Step 2
                 </span>
               </div>
-              <h3>Best Ways to Approach LinkedIn Project Leads</h3>
-              <p>Discover the most effective methods to contact LinkedIn leads without sounding salesy.</p>
-              <div style={{ 
+              <h3>Best Ways to Approach Project Leads From Social Media</h3>
+              <p>Discover the most effective methods to contact leads across every platform without sounding salesy.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -939,25 +1395,25 @@ export default function Post() {
               </div>
             </a>
 
-            <a href="/blog/follow-up-strategies-for-linkedin-leads" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
+            <a href="/blog/building-trust-before-closing-linkedin-clients" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
               <div className={styles.cardIcon}>
-                <i className="fas fa-sync-alt"></i>
+                <i className="fas fa-shield-heart"></i>
               </div>
               <div style={{ marginBottom: '12px' }}>
                 <span className={styles.step}>
                   Essential
                 </span>
               </div>
-              <h3>Follow-Up Strategies That Actually Work</h3>
-              <p>Professional follow-up techniques that increase response rates without being annoying.</p>
-              <div style={{ 
+              <h3>Building Trust Before Closing a Deal</h3>
+              <p>Why trust-building matters even more with social media leads, and how to establish it before you ever mention price.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 marginTop: '15px'
               }}>
                 <span style={{ fontSize: '12px', color: '#6b7280' }}>
-                  <i className="fas fa-clock"></i> 5 min read
+                  <i className="fas fa-clock"></i> 7 min read
                 </span>
                 <span style={{ fontSize: '12px', color: '#6f7bf7', fontWeight: '600' }}>
                   Read Guide <i className="fas fa-arrow-right"></i>
@@ -971,8 +1427,8 @@ export default function Post() {
       {/* CTA SECTION */}
       <section className={styles.features} style={{ paddingBottom: '80px' }}>
         <div className={styles.container}>
-          <div className={styles.card} style={{ 
-            maxWidth: '800px', 
+          <div className={styles.card} style={{
+            maxWidth: '800px',
             margin: '0 auto',
             textAlign: 'center',
             padding: '40px'
@@ -983,8 +1439,8 @@ export default function Post() {
             <h2 style={{ marginBottom: '15px', color: '#1f2937' }}>
               Ready to Close More Deals?
             </h2>
-            <p style={{ 
-              color: '#6b7280', 
+            <p style={{
+              color: '#6b7280',
               fontSize: '16px',
               lineHeight: '1.6',
               marginBottom: '25px',
@@ -992,16 +1448,16 @@ export default function Post() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Apply these deal-closing strategies with real LinkedIn project leads who are actively looking for services like yours.
+              Apply these deal-closing strategies with real project leads actively looking for services like yours across LinkedIn, Reddit, X, Facebook, and Instagram.
             </p>
-            <div style={{ 
+            <div style={{
               display: 'flex',
               gap: '15px',
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a 
-                href="/leads" 
+              <a
+                href="/leads"
                 className={styles.btnPrimary}
                 style={{
                   display: 'inline-flex',
@@ -1015,8 +1471,8 @@ export default function Post() {
                 <i className="fas fa-search"></i>
                 Find Project Leads
               </a>
-              <a 
-                href="/blog" 
+              <a
+                href="/blog"
                 className={styles.btnPrimary}
                 style={{
                   display: 'inline-flex',

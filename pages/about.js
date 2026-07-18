@@ -63,8 +63,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About RequestSignals – Real LinkedIn Service Requests</title>
-        <meta name="description" content="Learn about RequestSignals - how we track real-time service requests from LinkedIn to connect freelancers with real clients." />
+        <title>About RequestSignals – Real Service Requests from Social Media</title>
+        <meta name="description" content="Learn about RequestSignals - how we track real-time service requests across LinkedIn, Reddit, X, Facebook, and Instagram to connect freelancers with real clients." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
@@ -114,7 +114,7 @@ export default function About() {
                     <span className={styles.highlightIcon}><i className="fas fa-shield-alt"></i></span>
                     <div className={styles.highlightText}>
                       <h4>Quality First</h4>
-                      <p>Every lead is manually verified for relevance and authenticity.</p>
+                      <p>Every lead is AI-verified for relevance and authenticity.</p>
                     </div>
                   </div>
                 </div>
@@ -152,16 +152,16 @@ export default function About() {
                   lineHeight: '1.7',
                   marginBottom: '20px'
                 }}>
-                  RequestSignals is a platform that tracks <strong>real-time service and project requests</strong> shared by professionals across public platforms like LinkedIn. We're not just another lead generation tool – we're a bridge between genuine need and available talent.
+                  RequestSignals is a platform that tracks <strong>real-time service and project requests</strong> shared by professionals across public social platforms — LinkedIn, Reddit, X, Facebook, and Instagram. We're not just another lead generation tool – we're a bridge between genuine need and available talent.
                 </p>
-                
-                <p style={{ 
-                  color: '#4b5563', 
-                  fontSize: '16px', 
+
+                <p style={{
+                  color: '#4b5563',
+                  fontSize: '16px',
                   lineHeight: '1.7',
                   marginBottom: '20px'
                 }}>
-                  Our team manually scans LinkedIn and other professional networks to find people who are <strong>actively looking for services</strong> – whether it's a web developer for a startup, a designer for a rebrand, or a marketing consultant for a new campaign.
+                  Our system continuously scans LinkedIn, Reddit, X, Facebook, and Instagram to find people who are <strong>actively looking for services</strong> – whether it's a web developer for a startup, a designer for a rebrand, or a marketing consultant for a new campaign.
                 </p>
               </div>
               
@@ -188,7 +188,7 @@ export default function About() {
                   lineHeight: '1.6',
                   marginBottom: '0'
                 }}>
-                  We focus only on genuine requests where individuals or businesses are actively looking for services, expertise, or external support. <strong>Job postings, promotions, and unrelated content are filtered out.</strong> Every signal displayed on RequestSignals is manually verified to ensure relevance, accuracy, and quality.
+                  We focus only on genuine requests where individuals or businesses are actively looking for services, expertise, or external support. <strong>Job postings, promotions, and unrelated content are filtered out.</strong> Every signal displayed on RequestSignals is scored by an AI model trained to catch genuine hiring intent, ensuring relevance, accuracy, and quality.
                 </p>
               </div>
               
@@ -236,7 +236,7 @@ export default function About() {
               <div className={styles.cardIcon}><i className="fas fa-check-circle"></i></div>
               <h3>Quality Over Quantity</h3>
               <p>
-                We'd rather show you 10 high-quality leads than 100 mediocre ones. Every request is manually verified.
+                We'd rather show you 10 high-quality leads than 100 mediocre ones. Every request is AI-verified before it's published.
               </p>
             </div>
 
@@ -290,7 +290,7 @@ export default function About() {
                   </div>
                   <h4 style={{ marginBottom: '8px', color: '#1f2937' }}>Discover</h4>
                   <p style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.5' }}>
-                    Scan LinkedIn for public service requests
+                    Scan LinkedIn, Reddit, X, Facebook & Instagram for public service requests
                   </p>
                 </div>
                 

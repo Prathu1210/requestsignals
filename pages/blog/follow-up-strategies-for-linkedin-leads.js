@@ -11,7 +11,7 @@ export default function Post() {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -20,7 +20,7 @@ export default function Post() {
         }
       });
     }, observerOptions);
-    
+
     // Observe all cards
     const allCards = document.querySelectorAll(`.${styles.card}`);
     allCards.forEach(card => {
@@ -29,7 +29,7 @@ export default function Post() {
       card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(card);
     });
-    
+
     return () => {
       observer.disconnect();
     };
@@ -38,29 +38,29 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>Follow-Up Strategies That Actually Work for LinkedIn Leads | RequestSignals</title>
+        <title>Follow-Up Strategies That Actually Work | RequestSignals</title>
         <meta
           name="description"
-          content="Master professional follow-up strategies for LinkedIn leads. Learn timing, messaging, and value-added techniques that convert 35% more conversations into clients."
+          content="How and when to follow up on a lead you found on LinkedIn, Reddit, X, Facebook, or Instagram. Platform-specific timing, message templates, and etiquette that keep you from getting ignored, blocked, or reported."
         />
-        <meta name="keywords" content="LinkedIn follow-up strategies, follow-up emails, lead follow-up, LinkedIn outreach follow-up, professional follow-up, cold outreach follow-up, email follow-up sequences, conversion follow-up, sales follow-up, client follow-up" />
+        <meta name="keywords" content="follow-up strategies, how to follow up on a lead, LinkedIn follow-up, Reddit DM follow-up, X Twitter follow-up, Instagram DM follow-up, Facebook group follow-up, cold outreach follow-up, freelance lead follow-up, social media outreach" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Follow-Up Strategies That Actually Work for LinkedIn Leads" />
-        <meta property="og:description" content="Learn professional follow-up techniques that revive stalled conversations and convert 35% more LinkedIn leads into clients." />
+        <meta property="og:title" content="Follow-Up Strategies That Actually Work" />
+        <meta property="og:description" content="Follow-up timing and etiquette are different on every platform. Here's how to follow up on LinkedIn, Reddit, X, Facebook, and Instagram without getting ignored or blocked." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://requestsignals.com/blog/follow-up-strategies-for-linkedin-leads" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Follow-Up Strategies That Actually Work for LinkedIn Leads" />
-        <meta name="twitter:description" content="Effective follow-up strategies to convert LinkedIn project leads into clients with professional, non-pushy techniques." />
-        
+        <meta name="twitter:title" content="Follow-Up Strategies That Actually Work" />
+        <meta name="twitter:description" content="Platform-specific follow-up timing and templates for LinkedIn, Reddit, X, Facebook, and Instagram leads." />
+
         {/* Structured Data for SEO */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Follow-Up Strategies That Actually Work for LinkedIn Leads",
-            "description": "Master professional follow-up strategies for LinkedIn leads. Learn timing, messaging, and value-added techniques that convert more conversations into clients.",
-            "image": "https://requestsignals.com/images/linkedin-follow-up-strategies.jpg",
+            "headline": "Follow-Up Strategies That Actually Work",
+            "description": "How and when to follow up on a lead you found on LinkedIn, Reddit, X, Facebook, or Instagram, with platform-specific timing, templates, and etiquette.",
+            "image": "https://requestsignals.com/images/follow-up-strategies.jpg",
             "author": {
               "@type": "Organization",
               "name": "RequestSignals",
@@ -74,8 +74,8 @@ export default function Post() {
                 "url": "https://requestsignals.com/logo.png"
               }
             },
-            "datePublished": "2024-01-25",
-            "dateModified": "2024-01-25",
+            "datePublished": "2026-07-18",
+            "dateModified": "2026-07-18",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://requestsignals.com/blog/follow-up-strategies-for-linkedin-leads"
@@ -84,15 +84,15 @@ export default function Post() {
         </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Head>
-      
+
       <Header />
-      
+
       {/* BLOG HERO SECTION */}
       <section className={styles.hero}>
         <div className={`${styles.container} ${styles.heroInner}`}>
           <div className={styles.heroText}>
-            <div style={{ 
-              display: 'inline-block', 
+            <div style={{
+              display: 'inline-block',
               marginBottom: '15px',
               fontSize: '14px',
               fontWeight: '600',
@@ -107,28 +107,28 @@ export default function Post() {
               Follow-Up Strategies That <span className={styles.gradientText}>Actually Work</span>
             </h1>
             <p className={styles.subtitle} style={{ fontSize: '18px' }}>
-              Master the art of professional follow-ups that convert 35% more LinkedIn conversations into clients. Learn timing, messaging, and value-added techniques that work.
+              A lead going quiet doesn't mean no. It usually means your follow-up needs to match the platform. Here's how timing, tone, and cadence should change across LinkedIn, Reddit, X, Facebook, and Instagram.
             </p>
-            
+
             <div className={styles.meta} style={{ marginTop: '25px', flexWrap: 'wrap', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <i className="fas fa-chart-line" style={{ color: '#10b981' }}></i>
-                <span style={{ fontSize: '14px', color: '#4b5563' }}>35% More Conversions</span>
+                <i className="fas fa-layer-group" style={{ color: '#10b981' }}></i>
+                <span style={{ fontSize: '14px', color: '#4b5563' }}>5 Platforms Covered</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fas fa-clock" style={{ color: '#10b981' }}></i>
-                <span style={{ fontSize: '14px', color: '#4b5563' }}>7 min read</span>
+                <span style={{ fontSize: '14px', color: '#4b5563' }}>9 min read</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fas fa-users" style={{ color: '#10b981' }}></i>
                 <span style={{ fontSize: '14px', color: '#4b5563' }}>All Experience Levels</span>
               </div>
             </div>
-            
+
             <div style={{ marginTop: '25px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              <span className={styles.tag}>Follow-Up Strategy</span>
-              <span className={styles.tag}>LinkedIn Outreach</span>
-              <span className={styles.tag}>Email Sequences</span>
+              <span className={styles.tag}>Follow-Up Timing</span>
+              <span className={styles.tag}>Multi-Platform Outreach</span>
+              <span className={styles.tag}>Message Templates</span>
               <span className={styles.tag}>Lead Nurturing</span>
               <span className={styles.tag}>Conversion</span>
             </div>
@@ -138,26 +138,26 @@ export default function Post() {
             <div className={styles.postBackground}>
               <div className={`${styles.blurredPost} ${styles.postBg1}`}></div>
               <div className={`${styles.blurredPost} ${styles.postBg2}`}></div>
-              
+
               <div className={`${styles.linkedinPost} ${styles.post1}`}>
                 <div className={styles.postContent}>
                   <div className={styles.contentHighlight}>
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}><i className="fas fa-chart-bar"></i></span>
                     <div className={styles.highlightText}>
-                      <h4>Conversion Boost</h4>
-                      <p>Proper follow-ups increase responses by 35%</p>
+                      <h4>Silence Isn't a No</h4>
+                      <p>Most leads are lost to no follow-up, not rejection</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className={`${styles.linkedinPost} ${styles.post2}`}>
                 <div className={styles.postContent}>
                   <div className={styles.contentHighlight}>
                     <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #10b981, #34d399)' }}><i className="fas fa-lightbulb"></i></span>
                     <div className={styles.highlightText}>
-                      <h4>Key Insight</h4>
-                      <p>Most deals are lost to silence, not rejection</p>
+                      <h4>Timing Isn't Universal</h4>
+                      <p>A Reddit DM and an X reply need very different cadences</p>
                     </div>
                   </div>
                 </div>
@@ -180,33 +180,81 @@ export default function Post() {
           <div className={`${styles.waterDrop} ${styles.water3}`}></div>
           <div className={`${styles.waterDrop} ${styles.water4}`}></div>
         </div>
-        
+
         <div className={styles.container}>
           <div className={styles.card} style={{ maxWidth: '800px', margin: '0 auto' }}>
+            {/* Table of Contents */}
+            <div className={styles.card} style={{
+              background: 'rgba(16, 185, 129, 0.05)',
+              padding: '25px',
+              borderRadius: '12px',
+              border: '1px solid rgba(16, 185, 129, 0.1)',
+              marginBottom: '40px'
+            }}>
+              <h3 style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                marginBottom: '20px',
+                color: '#1f2937'
+              }}>
+                <i className="fas fa-list-ol" style={{ color: '#10b981' }}></i>
+                In This Guide
+              </h3>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'grid',
+                gap: '10px'
+              }}>
+                {[
+                  "How long should you wait before following up?",
+                  "Does follow-up timing change by platform?",
+                  "What should a good follow-up message say?",
+                  "How many times should you follow up before giving up?",
+                  "How do you follow up without sounding desperate or annoying?"
+                ].map((item, index) => (
+                  <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                    <span style={{ color: '#10b981', fontWeight: '600', minWidth: '24px' }}>{index + 1}.</span>
+                    <span style={{ color: '#4b5563' }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Introduction */}
             <div style={{ marginBottom: '40px' }}>
-              <p className={styles.subtitle} style={{ 
+              <p className={styles.subtitle} style={{
                 fontSize: '18px',
                 lineHeight: '1.8',
                 color: '#374151',
                 marginBottom: '20px'
               }}>
-                <strong>Most deals are not lost because of rejection, but because of silence.</strong> According to sales research, 80% of sales require 5+ follow-ups, yet 44% of salespeople give up after just one attempt. A thoughtful, strategic follow-up can revive stalled conversations and convert prospects who were initially unresponsive.
+                <strong>Most leads are not lost because of rejection, but because of silence.</strong> Sales research consistently shows that 80% of deals require 5+ touches, yet the majority of outreach stops after one message. A thoughtful, well-timed follow-up can revive a conversation that looked dead.
               </p>
-              
-              <div className={styles.card} style={{ 
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.8',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                But "follow up a few days later" isn't a universal rule anymore. <strong>RequestSignals now surfaces leads from LinkedIn, Reddit, X (Twitter), Facebook, and Instagram</strong> — and each of those platforms has its own norms for how soon is too soon, how many follow-ups are acceptable, and what actually gets you blocked or reported. This guide breaks down follow-up timing and etiquette platform by platform, so your persistence reads as helpful instead of pushy.
+              </p>
+
+              <div className={styles.card} style={{
                 background: 'rgba(16, 185, 129, 0.05)',
-                padding: '25px', 
+                padding: '25px',
                 borderRadius: '12px',
                 border: '1px solid rgba(16, 185, 129, 0.1)',
                 marginBottom: '30px'
               }}>
-                <div style={{ 
-                  display: 'flex', 
+                <div style={{
+                  display: 'flex',
                   alignItems: 'flex-start',
                   gap: '20px'
                 }}>
-                  <div style={{ 
+                  <div style={{
                     width: '50px',
                     height: '50px',
                     background: 'linear-gradient(135deg, #10b981, #34d399)',
@@ -223,7 +271,7 @@ export default function Post() {
                   <div>
                     <h4 style={{ margin: '0 0 10px 0', color: '#1f2937' }}>The Follow-Up Reality Check</h4>
                     <p style={{ margin: '0', color: '#4b5563', fontSize: '15px', lineHeight: '1.6' }}>
-                      <strong>48% of salespeople</strong> never follow up with a prospect. <strong>25%</strong> make a second contact and then stop. Only <strong>8%</strong> make five or more attempts – and these are the ones closing 80% of the deals. Your follow-up strategy isn't just important; it's the difference between success and failure.
+                      <strong>Roughly half of outreach senders</strong> never follow up at all. Another quarter send one follow-up and stop. The people closing the most deals are the small minority who send several well-spaced, value-adding follow-ups — but "well-spaced" means something different on Reddit than it does on LinkedIn.
                     </p>
                   </div>
                 </div>
@@ -232,7 +280,7 @@ export default function Post() {
 
             {/* Section 1 */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -240,7 +288,7 @@ export default function Post() {
                 alignItems: 'center',
                 gap: '15px'
               }}>
-                <span style={{ 
+                <span style={{
                   background: 'linear-gradient(135deg, #10b981, #34d399)',
                   color: 'white',
                   width: '40px',
@@ -254,46 +302,46 @@ export default function Post() {
                 }}>
                   1
                 </span>
-                The Science of Timing: When to Follow Up
+                How Long Should You Wait Before Following Up?
               </h2>
-              
-              <p className={styles.subtitle} style={{ 
+
+              <p className={styles.subtitle} style={{
                 fontSize: '16px',
                 lineHeight: '1.7',
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                Following up too quickly can feel pushy and desperate, while waiting too long allows leads to go completely cold. <strong>The sweet spot for follow-ups depends on the context and previous interactions.</strong>
+                <strong>As a baseline, wait 2-4 days before your first follow-up and space later ones further apart.</strong> Following up too quickly reads as pushy; waiting too long lets the lead go cold and lose context. The exact window still depends on the platform and the pace people expect there — which is exactly what the next section covers.
               </p>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(255, 255, 255, 0.9)',
                 padding: '25px',
                 borderRadius: '12px',
                 border: '1px solid #e5e7eb',
                 marginBottom: '30px'
               }}>
-                <h3 style={{ 
+                <h3 style={{
                   textAlign: 'center',
                   marginBottom: '25px',
                   color: '#1f2937'
                 }}>
                   <i className="fas fa-clock" style={{ color: '#10b981', marginRight: '10px' }}></i>
-                  Optimal Follow-Up Timeline for LinkedIn Leads
+                  General Follow-Up Timeline
                 </h3>
-                
-                <div style={{ 
+
+                <div style={{
                   display: 'grid',
                   gap: '20px'
                 }}>
                   {[
-                    { time: "2-4 hours", type: "Initial Response", desc: "After initial LinkedIn message or connection request", purpose: "Quick acknowledgment and value addition" },
-                    { time: "2-3 days", type: "First Follow-Up", desc: "If no response to initial message", purpose: "Add new insight or ask thoughtful question" },
-                    { time: "5-7 days", type: "Second Follow-Up", desc: "If still no response", purpose: "Share relevant case study or article" },
-                    { time: "10-14 days", type: "Third Follow-Up", desc: "Final attempt before moving on", purpose: "Offer specific, actionable advice" },
-                    { time: "30 days", type: "Re-engagement", desc: "For leads that went cold", purpose: "Check in with industry update or insight" }
+                    { time: "2-6 hours", type: "Initial Response", desc: "After they reply to your first message", purpose: "Quick acknowledgment and next question" },
+                    { time: "2-4 days", type: "First Follow-Up", desc: "If no response to initial outreach", purpose: "Add new insight or ask a specific question" },
+                    { time: "5-7 days", type: "Second Follow-Up", desc: "If still no response", purpose: "Share relevant example or portfolio piece" },
+                    { time: "10-14 days", type: "Third Follow-Up", desc: "Final attempt before moving on", purpose: "Offer one concrete, useful suggestion" },
+                    { time: "30+ days", type: "Re-engagement", desc: "For leads that went fully cold", purpose: "Check in with a fresh, relevant update" }
                   ].map((item, index) => (
-                    <div key={index} style={{ 
+                    <div key={index} style={{
                       display: 'flex',
                       alignItems: 'center',
                       gap: '20px',
@@ -301,7 +349,7 @@ export default function Post() {
                       background: index % 2 === 0 ? 'rgba(16, 185, 129, 0.05)' : 'transparent',
                       borderRadius: '8px'
                     }}>
-                      <div style={{ 
+                      <div style={{
                         background: 'linear-gradient(135deg, #10b981, #34d399)',
                         color: 'white',
                         width: '80px',
@@ -329,7 +377,7 @@ export default function Post() {
                   ))}
                 </div>
               </div>
-              
+
               <div className={styles.howGrid} style={{ marginBottom: '30px' }}>
                 <div className={styles.card}>
                   <div className={styles.cardIcon}>
@@ -338,9 +386,9 @@ export default function Post() {
                   <h3>Timing Mistakes</h3>
                   <ul style={{ textAlign: 'left', fontSize: '14px', color: '#4b5563', paddingLeft: '20px' }}>
                     <li>Following up multiple times in one day</li>
-                    <li>No follow-up for weeks</li>
-                    <li>Weekend or late-night messages</li>
-                    <li>Holiday season follow-ups</li>
+                    <li>Using the same cadence on every platform</li>
+                    <li>No follow-up at all for weeks</li>
+                    <li>Ignoring a platform's normal response speed</li>
                   </ul>
                 </div>
 
@@ -350,18 +398,18 @@ export default function Post() {
                   </div>
                   <h3>Optimal Timing</h3>
                   <ul style={{ textAlign: 'left', fontSize: '14px', color: '#4b5563', paddingLeft: '20px' }}>
-                    <li>Tuesdays-Thursdays, 10am-2pm</li>
-                    <li>2-3 day intervals initially</li>
-                    <li>Longer gaps for later follow-ups</li>
-                    <li>Business hours in their timezone</li>
+                    <li>Weekday mornings and early afternoons</li>
+                    <li>Short intervals on fast-moving platforms</li>
+                    <li>Longer gaps on slower, professional platforms</li>
+                    <li>Business hours in the lead's timezone when known</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Section 2 */}
+            {/* Section 2: Platform Differences */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -369,7 +417,7 @@ export default function Post() {
                 alignItems: 'center',
                 gap: '15px'
               }}>
-                <span style={{ 
+                <span style={{
                   background: 'linear-gradient(135deg, #34d399, #10b981)',
                   color: 'white',
                   width: '40px',
@@ -383,25 +431,109 @@ export default function Post() {
                 }}>
                   2
                 </span>
-                The Value-Added Follow-Up Framework
+                Does Follow-Up Timing Change by Platform?
               </h2>
-              
-              <p className={styles.subtitle} style={{ 
+
+              <p className={styles.subtitle} style={{
                 fontSize: '16px',
                 lineHeight: '1.7',
                 color: '#4b5563',
                 marginBottom: '20px'
               }}>
-                The single most important principle of effective follow-ups: <strong>Every follow-up must add value.</strong> Sharing a small suggestion, insight, or resource shows continued interest and positions you as a helpful professional, not just another salesperson.
+                <strong>Yes — significantly.</strong> The same follow-up cadence that feels normal on LinkedIn can feel like harassment on Reddit, and the pace that feels appropriate on X can feel glacially slow on Instagram. Here's how to adjust for each platform where RequestSignals surfaces leads.
               </p>
-              
-              <div className={styles.card} style={{ 
+
+              <div style={{ display: 'grid', gap: '20px', marginBottom: '10px' }}>
+                <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
+                    <i className="fab fa-linkedin" style={{ color: '#0a66c2' }}></i> LinkedIn
+                  </h4>
+                  <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                    LinkedIn is the most follow-up-tolerant platform in this list. A message a few days later that references the original post — <em>"following up on what you mentioned about [project]"</em> — is normal, expected, and rarely seen as pushy. People check LinkedIn less frequently than X or Instagram, so a 2-4 day gap before your first follow-up is appropriate, not impatient.
+                  </p>
+                </div>
+
+                <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
+                    <i className="fab fa-reddit-alien" style={{ color: '#ff4500' }}></i> Reddit
+                  </h4>
+                  <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                    Reddit needs the lightest touch of any platform. If a conversation started in a thread's comments and moved to DMs, <strong>one follow-up is usually the ceiling.</strong> Redditors are unusually sensitive to feeling "sold to," and a subreddit's culture punishes anything that smells like repeated solicitation. A second follow-up after silence can get you blocked or reported rather than answered — if there's no reply after your first DM follow-up, let it go.
+                  </p>
+                </div>
+
+                <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
+                    <i className="fab fa-twitter" style={{ color: '#1da1f2' }}></i> X (Twitter)
+                  </h4>
+                  <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                    Conversation on X moves fast, and your follow-up cadence should match. <strong>Follow up after 1-2 days, not weeks</strong> — by then the original post has scrolled out of relevance. A common and effective pattern is a public reply to keep the thread visible, followed by a DM once there's some engagement. Don't let an X lead sit as long as you would a LinkedIn one; the platform's pace makes a two-week-old follow-up feel like it came from nowhere.
+                  </p>
+                </div>
+
+                <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
+                    <i className="fab fa-instagram" style={{ color: '#e1306c' }}></i> Instagram
+                  </h4>
+                  <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                    Instagram is a visual platform, so a plain "just checking in" DM tends to fall flat. <strong>A follow-up that includes an added portfolio piece, before/after example, or relevant sample</strong> performs noticeably better — it gives the recipient a reason to open it and a reason to reply. Treat every follow-up here as a small additional pitch, not a nudge.
+                  </p>
+                </div>
+
+                <div className={styles.card} style={{ padding: '20px', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#1f2937', marginBottom: '10px' }}>
+                    <i className="fab fa-facebook" style={{ color: '#1877f2' }}></i> Facebook
+                  </h4>
+                  <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                    Most Facebook leads come from groups, and groups have posting rules — some explicitly ban repeated commenting on the same thread or restrict self-promotion. <strong>Respect the group's rules and avoid multiple public comments on the same post.</strong> Once you've made contact, move the follow-up to a private message rather than commenting again publicly; it's both more professional and less likely to get you removed from the group.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 3 - Value-Added Framework */}
+            <div style={{ marginBottom: '40px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                marginBottom: '20px',
+                color: '#1f2937',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px'
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #10b981, #34d399)',
+                  color: 'white',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  fontWeight: '600'
+                }}>
+                  3
+                </span>
+                What Should a Good Follow-Up Message Say?
+              </h2>
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                The single most important principle of an effective follow-up, on any platform: <strong>it must add value.</strong> A small insight, resource, or example shows continued interest and positions you as helpful — not as someone just chasing a sale.
+              </p>
+
+              <div className={styles.card} style={{
                 background: 'rgba(16, 185, 129, 0.05)',
                 padding: '25px',
                 borderRadius: '12px',
                 marginBottom: '30px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#1f2937',
                   marginBottom: '20px',
                   display: 'flex',
@@ -410,28 +542,28 @@ export default function Post() {
                   textAlign: 'center'
                 }}>
                   <i className="fas fa-lightbulb" style={{ color: '#10b981' }}></i>
-                  The 5 Types of Value You Can Add in Follow-Ups
+                  6 Types of Value You Can Add in a Follow-Up
                 </h4>
-                
-                <div style={{ 
+
+                <div style={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(2, 1fr)',
                   gap: '20px'
                 }}>
                   {[
-                    { icon: 'fas fa-newspaper', title: 'Industry Insight', desc: 'Share relevant article or trend', example: '"I saw this article about [their industry] and thought of our conversation"' },
-                    { icon: 'fas fa-chart-line', title: 'Data Point', desc: 'Share relevant statistic or finding', example: '"Research shows companies like yours see X% improvement when..."' },
-                    { icon: 'fas fa-user-friends', title: 'Case Study', desc: 'Brief success story', example: '"We recently helped [similar company] achieve [result]"' },
-                    { icon: 'fas fa-question-circle', title: 'Thoughtful Question', desc: 'Ask about specific challenge', example: '"Have you considered how [specific aspect] might affect your timeline?"' },
-                    { icon: 'fas fa-tools', title: 'Tool/Resource', desc: 'Share helpful tool or template', example: '"This [tool/template] might help with [their challenge]"' },
-                    { icon: 'fas fa-comment', title: 'Expert Opinion', desc: 'Share perspective on their situation', example: '"Based on my experience, many companies find that..."' }
+                    { icon: 'fas fa-newspaper', title: 'Industry Insight', desc: 'Share a relevant article or trend', example: '"Saw this and thought of what you posted about [project]"' },
+                    { icon: 'fas fa-image', title: 'Portfolio Sample', desc: 'A relevant example or before/after (great on Instagram)', example: '"Here\'s a similar project I finished recently"' },
+                    { icon: 'fas fa-user-friends', title: 'Case Study', desc: 'Brief success story', example: '"I recently helped someone with a very similar need"' },
+                    { icon: 'fas fa-question-circle', title: 'Thoughtful Question', desc: 'Ask about a specific detail', example: '"Have you settled on a timeline for this yet?"' },
+                    { icon: 'fas fa-tools', title: 'Tool/Resource', desc: 'Share a helpful tool or template', example: '"This template might help while you\'re scoping it out"' },
+                    { icon: 'fas fa-comment', title: 'Direct Answer', desc: 'Answer something they asked without being paid to', example: '"Quick thought on the approach you mentioned..."' }
                   ].map((item, index) => (
-                    <div key={index} className={styles.card} style={{ 
+                    <div key={index} className={styles.card} style={{
                       padding: '15px',
                       textAlign: 'center',
                       height: '100%'
                     }}>
-                      <div style={{ 
+                      <div style={{
                         width: '40px',
                         height: '40px',
                         background: 'linear-gradient(135deg, #10b981, #34d399)',
@@ -447,19 +579,19 @@ export default function Post() {
                       </div>
                       <h5 style={{ margin: '0 0 8px 0', color: '#1f2937', fontSize: '14px' }}>{item.title}</h5>
                       <p style={{ margin: '0 0 8px 0', color: '#6b7280', fontSize: '12px' }}>{item.desc}</p>
-                      <p style={{ margin: '0', color: '#4b5563', fontSize: '11px', fontStyle: 'italic' }}>"{item.example}"</p>
+                      <p style={{ margin: '0', color: '#4b5563', fontSize: '11px', fontStyle: 'italic' }}>{item.example}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(110, 231, 183, 0.1)',
                 borderLeft: '4px solid #10b981',
                 padding: '20px',
                 borderRadius: '8px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#065f46',
                   marginBottom: '15px',
                   display: 'flex',
@@ -470,14 +602,14 @@ export default function Post() {
                   The Golden Rule of Value-Added Follow-Ups
                 </h4>
                 <p style={{ color: '#4b5563', marginBottom: '0', fontSize: '15px' }}>
-                  <strong>Never send a follow-up that only says "just checking in" or "wanted to follow up."</strong> Always include something that provides value, shows you've been thinking about their situation, or moves the conversation forward. This transforms your follow-up from an annoyance into a welcome communication.
+                  <strong>Never send a follow-up that only says "just checking in" or "wanted to follow up."</strong> On every platform, that message reads as a nudge for the recipient to do work, not something that helps them. Always include something that shows you've been thinking about their situation or moves the conversation forward.
                 </p>
               </div>
             </div>
 
-            {/* Complete Follow-Up Sequence */}
+            {/* Section 4 - Complete Follow-Up Sequence */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -486,76 +618,92 @@ export default function Post() {
                 gap: '15px'
               }}>
                 <i className="fas fa-list-ol" style={{ color: '#10b981' }}></i>
-                The Complete 5-Step Follow-Up Sequence
+                How Many Times Should You Follow Up Before Giving Up?
               </h2>
-              
-              <div className={styles.card} style={{ 
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                <strong>Three to five follow-ups is a reasonable ceiling on most platforms — but on Reddit, one is often the limit.</strong> Below is a general sequence built for LinkedIn, X, Facebook, and Instagram. Adjust the number of steps down sharply for Reddit, where persistence past a single DM tends to backfire.
+              </p>
+
+              <div className={styles.card} style={{
                 background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.05))',
-                padding: '30px', 
+                padding: '30px',
                 borderRadius: '16px',
                 border: '1px solid rgba(16, 185, 129, 0.15)'
               }}>
-                <h3 style={{ 
+                <h3 style={{
                   textAlign: 'center',
                   marginBottom: '25px',
                   color: '#1f2937'
                 }}>
                   <i className="fas fa-sitemap" style={{ color: '#10b981', marginRight: '10px' }}></i>
-                  Professional Follow-Up Sequence Template
+                  Follow-Up Sequence Template
                 </h3>
-                
-                <div style={{ 
+
+                <div style={{
                   display: 'grid',
                   gap: '25px'
                 }}>
                   {[
-                    { 
-                      step: "Initial Contact", 
-                      timing: "Day 0", 
-                      template: `Hi [Name], I saw your post about [topic] and wanted to share [insight/thought]. I've worked with [similar companies] on [related projects] and found that [specific insight]. Would [relevant question] apply to your situation?`,
-                      goal: "Start conversation, provide immediate value"
+                    {
+                      step: "Initial Contact",
+                      timing: "Day 0",
+                      platformNote: "All platforms",
+                      template: `Hi [Name], saw your post about [topic] and wanted to share [insight/thought]. I've worked on [related projects] and found that [specific insight]. Would [relevant question] apply to your situation?`,
+                      goal: "Start the conversation, provide immediate value"
                     },
-                    { 
-                      step: "First Follow-Up", 
-                      timing: "Day 3", 
-                      template: `Hi [Name], following up on my previous message. I was reading about [industry trend] and thought this might be relevant: [brief insight/article link]. How are you thinking about [their challenge] in light of this?`,
-                      goal: "Add new value, show continued interest"
+                    {
+                      step: "First Follow-Up",
+                      timing: "Day 2-4 (LinkedIn/Facebook/Instagram) · Day 1-2 (X) · Skip unless it's a warm DM (Reddit)",
+                      platformNote: "Adjust timing per platform",
+                      template: `Hi [Name], following up on my message. I came across [relevant example/insight] and thought it might help with [their challenge]. How are you thinking about [detail] at this point?`,
+                      goal: "Add new value, show continued interest without pressure"
                     },
-                    { 
-                      step: "Second Follow-Up", 
-                      timing: "Day 7", 
-                      template: `Hi [Name], hope you're having a productive week. I was working on a similar project recently and thought of our conversation. One approach that worked well was [specific strategy]. Would you like me to share more details?`,
-                      goal: "Share experience, offer deeper value"
+                    {
+                      step: "Second Follow-Up",
+                      timing: "Day 7 (LinkedIn/Facebook) · Day 3-4 (X) · Not recommended (Reddit)",
+                      platformNote: "Reddit: stop here",
+                      template: `Hi [Name], hope things are moving along. I put together [example/portfolio piece/case study] that's close to what you described — happy to share more details if useful.`,
+                      goal: "Share proof, offer deeper value"
                     },
-                    { 
-                      step: "Third Follow-Up", 
-                      timing: "Day 14", 
-                      template: `Hi [Name], checking in one last time. Even if now isn't the right time, I'd love to stay connected. Here's a [tool/template] that might be helpful for [their challenge] regardless. All the best with your project.`,
-                      goal: "Graceful exit, leave door open"
+                    {
+                      step: "Third Follow-Up",
+                      timing: "Day 14 (LinkedIn/Facebook) · Day 6-7 (X/Instagram)",
+                      platformNote: "Final attempt",
+                      template: `Hi [Name], checking in one last time. Even if now isn't the right time, I'd love to stay connected. Here's a [tool/resource] that might help with [their challenge] regardless.`,
+                      goal: "Graceful exit, leave the door open"
                     },
-                    { 
-                      step: "Re-engagement", 
-                      timing: "Month 1+", 
-                      template: `Hi [Name], hope all is well. I came across [industry development] and thought of our previous conversation. How have things progressed with [their project]? Still happy to help if relevant.`,
-                      goal: "Reconnect with fresh perspective"
+                    {
+                      step: "Re-engagement",
+                      timing: "Month 1+ (LinkedIn/Facebook/Instagram only)",
+                      platformNote: "Skip on X and Reddit",
+                      template: `Hi [Name], hope all is well. I came across [relevant update] and thought of our earlier conversation. How did things end up going with [their project]? Still happy to help if it's relevant.`,
+                      goal: "Reconnect with a fresh, low-pressure reason"
                     }
                   ].map((item, index) => (
-                    <div key={index} style={{ 
+                    <div key={index} style={{
                       background: 'white',
                       borderRadius: '12px',
                       border: '1px solid #e5e7eb',
                       overflow: 'hidden'
                     }}>
-                      <div style={{ 
+                      <div style={{
                         background: 'linear-gradient(135deg, #10b981, #34d399)',
                         color: 'white',
                         padding: '15px',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-between'
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        gap: '10px'
                       }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                          <span style={{ 
+                          <span style={{
                             background: 'white',
                             color: '#10b981',
                             width: '30px',
@@ -571,7 +719,7 @@ export default function Post() {
                           </span>
                           <strong style={{ fontSize: '16px' }}>{item.step}</strong>
                         </div>
-                        <span style={{ 
+                        <span style={{
                           background: 'rgba(255, 255, 255, 0.2)',
                           padding: '4px 12px',
                           borderRadius: '20px',
@@ -587,7 +735,7 @@ export default function Post() {
                         </div>
                         <div>
                           <strong style={{ color: '#1f2937', display: 'block', marginBottom: '5px' }}>Template:</strong>
-                          <div style={{ 
+                          <div style={{
                             background: '#f9fafb',
                             padding: '15px',
                             borderRadius: '8px',
@@ -607,9 +755,9 @@ export default function Post() {
               </div>
             </div>
 
-            {/* The Psychology of Effective Follow-Ups */}
+            {/* Section 5 - Psychology / Etiquette */}
             <div style={{ marginBottom: '40px' }}>
-              <h2 style={{ 
+              <h2 style={{
                 fontSize: '28px',
                 marginBottom: '20px',
                 color: '#1f2937',
@@ -618,9 +766,18 @@ export default function Post() {
                 gap: '15px'
               }}>
                 <i className="fas fa-brain" style={{ color: '#8b5cf6' }}></i>
-                The Psychology Behind Effective Follow-Ups
+                How Do You Follow Up Without Sounding Desperate or Annoying?
               </h2>
-              
+
+              <p className={styles.subtitle} style={{
+                fontSize: '16px',
+                lineHeight: '1.7',
+                color: '#4b5563',
+                marginBottom: '20px'
+              }}>
+                <strong>Follow-ups feel desperate when they're about you, and feel helpful when they're about the recipient.</strong> The tactics below hold across every platform, but the consequences of getting it wrong vary — a slightly-too-eager LinkedIn message gets ignored, while the same behavior on Reddit or in a Facebook group can get you blocked or reported.
+              </p>
+
               <div className={styles.howGrid} style={{ marginBottom: '30px' }}>
                 <div className={styles.card}>
                   <div className={styles.cardIcon}>
@@ -629,10 +786,10 @@ export default function Post() {
                   <h3>What People Hate</h3>
                   <ul style={{ textAlign: 'left', fontSize: '14px', color: '#4b5563', paddingLeft: '20px' }}>
                     <li>Pressure and urgency tactics</li>
-                    <li>Generic "checking in" messages</li>
-                    <li>Multiple daily follow-ups</li>
-                    <li>Ignoring previous responses</li>
-                    <li>Guilt-tripping language</li>
+                    <li>Generic "just checking in" messages</li>
+                    <li>Multiple follow-ups in one day</li>
+                    <li>Repeated public comments on the same post</li>
+                    <li>Ignoring platform norms (e.g. over-DMing on Reddit)</li>
                   </ul>
                 </div>
 
@@ -642,22 +799,22 @@ export default function Post() {
                   </div>
                   <h3>What People Appreciate</h3>
                   <ul style={{ textAlign: 'left', fontSize: '14px', color: '#4b5563', paddingLeft: '20px' }}>
-                    <li>Helpful insights and resources</li>
-                    <li>Respect for their time and priorities</li>
-                    <li>Thoughtful questions</li>
-                    <li>Professional persistence</li>
-                    <li>Easy opt-out options</li>
+                    <li>Helpful insights, examples, or resources</li>
+                    <li>Respect for their time and the platform's culture</li>
+                    <li>Thoughtful, specific questions</li>
+                    <li>A cadence that matches the platform's pace</li>
+                    <li>An easy, graceful way to say "not now"</li>
                   </ul>
                 </div>
               </div>
-              
-              <div className={styles.card} style={{ 
+
+              <div className={styles.card} style={{
                 background: 'rgba(139, 92, 246, 0.05)',
                 borderLeft: '4px solid #8b5cf6',
                 padding: '20px',
                 borderRadius: '8px'
               }}>
-                <h4 style={{ 
+                <h4 style={{
                   color: '#5b21b6',
                   marginBottom: '10px',
                   display: 'flex',
@@ -668,38 +825,38 @@ export default function Post() {
                   The Reminder vs. Pressure Principle
                 </h4>
                 <p style={{ color: '#4b5563', marginBottom: '0', fontSize: '15px' }}>
-                  <strong>Effective follow-ups feel like helpful reminders, not pressure.</strong> They acknowledge that the prospect is busy, provide value regardless of response, and make it easy for them to engage when they're ready. The best follow-ups are those that the prospect is glad to receive, even if they're not ready to move forward yet.
+                  <strong>Effective follow-ups feel like helpful reminders, not pressure.</strong> They acknowledge that the person is busy, provide value regardless of whether they respond, and make it easy to engage when they're ready. On Reddit especially, treat a non-response as a final answer — the platform's community norms make "no reply" a much stronger signal than it is on LinkedIn.
                 </p>
               </div>
             </div>
 
             {/* Conclusion */}
-            <div style={{ 
+            <div style={{
               background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.05))',
-              padding: '30px', 
+              padding: '30px',
               borderRadius: '16px',
               border: '1px solid rgba(16, 185, 129, 0.15)',
               marginTop: '40px'
             }}>
-              <h3 style={{ 
+              <h3 style={{
                 textAlign: 'center',
                 marginBottom: '20px',
                 color: '#1f2937',
                 fontSize: '24px'
               }}>
                 <i className="fas fa-check-circle" style={{ color: '#10b981', marginRight: '10px' }}></i>
-                Key Takeaway for LinkedIn Follow-Ups
+                Key Takeaway
               </h3>
-              <p className={styles.subtitle} style={{ 
+              <p className={styles.subtitle} style={{
                 fontSize: '17px',
                 lineHeight: '1.8',
                 color: '#4b5563',
                 textAlign: 'center',
                 marginBottom: '0'
               }}>
-                Mastering <strong>follow-up strategies for LinkedIn leads</strong> is about finding the balance between persistence and patience, between adding value and avoiding annoyance. Remember: most prospects aren't saying no; they're just not saying yes yet.
+                Mastering <strong>follow-up strategy across platforms</strong> means matching your cadence to where the lead actually is: patient and expected on LinkedIn, fast and public-then-private on X, light-touch and easily-limited on Reddit, example-driven on Instagram, and rule-respecting inside Facebook groups.
                 <br/><br/>
-                Your follow-up strategy should be a <strong>value delivery system,</strong> not a pressure application system. When done right, follow-ups don't just convert leads; they build relationships, establish expertise, and create opportunities that didn't exist before.
+                Your follow-up should always be a <strong>value delivery system,</strong> not a pressure application system — tuned to the platform it's sent on. Get that right, and follow-ups stop feeling like a numbers game and start doing what they're supposed to: turning silence into a client.
               </p>
             </div>
           </div>
@@ -714,36 +871,36 @@ export default function Post() {
           <div className={`${styles.waterDrop} ${styles.water11}`}></div>
           <div className={`${styles.waterDrop} ${styles.water12}`}></div>
         </div>
-        
+
         <div className={styles.container}>
-          <h2 style={{ 
-            textAlign: 'center', 
+          <h2 style={{
+            textAlign: 'center',
             marginBottom: '40px',
             color: '#1f2937'
           }}>
-            Complete Your <span className={styles.gradientText}>LinkedIn Toolkit</span>
+            Complete Your <span className={styles.gradientText}>Outreach Toolkit</span>
           </h2>
-          
+
           <div className={styles.howGrid}>
-            <a href="/blog/how-to-close-project-deals-from-linkedin" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
+            <a href="/blog/how-to-convert-linkedin-project-leads" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
               <div className={styles.cardIcon}>
-                <i className="fas fa-file-contract"></i>
+                <i className="fas fa-comments"></i>
               </div>
               <div style={{ marginBottom: '12px' }}>
                 <span className={styles.step}>
-                  Next Step
+                  Foundation
                 </span>
               </div>
-              <h3>How to Close Project Deals from LinkedIn</h3>
-              <p>Master the art of closing deals after initial contact. From proposal to signed contract.</p>
-              <div style={{ 
+              <h3>How to Convert Social Media Project Leads into Paying Clients</h3>
+              <p>The full process for turning a public post into a paying client, from first read to signed deal.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 marginTop: '15px'
               }}>
                 <span style={{ fontSize: '12px', color: '#6b7280' }}>
-                  <i className="fas fa-clock"></i> 9 min read
+                  <i className="fas fa-clock"></i> 8 min read
                 </span>
                 <span style={{ fontSize: '12px', color: '#6f7bf7', fontWeight: '600' }}>
                   Read Guide <i className="fas fa-arrow-right"></i>
@@ -757,12 +914,12 @@ export default function Post() {
               </div>
               <div style={{ marginBottom: '12px' }}>
                 <span className={styles.step}>
-                  Foundation
+                  Before You Follow Up
                 </span>
               </div>
-              <h3>Best Ways to Approach LinkedIn Project Leads</h3>
-              <p>Discover the most effective methods to contact LinkedIn leads without sounding salesy.</p>
-              <div style={{ 
+              <h3>Best Ways to Approach Project Leads From Social Media</h3>
+              <p>How to make a strong first contact on each platform, so your follow-ups have something to build on.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -777,25 +934,25 @@ export default function Post() {
               </div>
             </a>
 
-            <a href="/blog/building-trust-before-closing-linkedin-clients" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
+            <a href="/blog/how-to-close-project-deals-from-linkedin" className={styles.card} style={{ textDecoration: 'none', display: 'block' }}>
               <div className={styles.cardIcon}>
-                <i className="fas fa-shield-alt"></i>
+                <i className="fas fa-file-contract"></i>
               </div>
               <div style={{ marginBottom: '12px' }}>
                 <span className={styles.step}>
-                  Advanced
+                  Next Step
                 </span>
               </div>
-              <h3>Building Trust Before Closing a Deal</h3>
-              <p>Establish credibility and trust with potential clients before discussing money or contracts.</p>
-              <div style={{ 
+              <h3>How to Close Project Deals You Found on Social Media</h3>
+              <p>Once a follow-up gets a reply, here's how to move from conversation to signed contract.</p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 marginTop: '15px'
               }}>
                 <span style={{ fontSize: '12px', color: '#6b7280' }}>
-                  <i className="fas fa-clock"></i> 7 min read
+                  <i className="fas fa-clock"></i> 9 min read
                 </span>
                 <span style={{ fontSize: '12px', color: '#6f7bf7', fontWeight: '600' }}>
                   Read Guide <i className="fas fa-arrow-right"></i>
@@ -809,8 +966,8 @@ export default function Post() {
       {/* CTA SECTION */}
       <section className={styles.features} style={{ paddingBottom: '80px' }}>
         <div className={styles.container}>
-          <div className={styles.card} style={{ 
-            maxWidth: '800px', 
+          <div className={styles.card} style={{
+            maxWidth: '800px',
             margin: '0 auto',
             textAlign: 'center',
             padding: '40px'
@@ -821,8 +978,8 @@ export default function Post() {
             <h2 style={{ marginBottom: '15px', color: '#1f2937' }}>
               Ready to Implement Better Follow-Ups?
             </h2>
-            <p style={{ 
-              color: '#6b7280', 
+            <p style={{
+              color: '#6b7280',
               fontSize: '16px',
               lineHeight: '1.6',
               marginBottom: '25px',
@@ -830,16 +987,16 @@ export default function Post() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Put these follow-up strategies to work with real LinkedIn project leads who need your services right now.
+              Put these follow-up strategies to work with real leads sourced from LinkedIn, Reddit, X, Facebook, and Instagram — refreshed every two hours on RequestSignals.
             </p>
-            <div style={{ 
+            <div style={{
               display: 'flex',
               gap: '15px',
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a 
-                href="/leads" 
+              <a
+                href="/leads"
                 className={styles.btnPrimary}
                 style={{
                   display: 'inline-flex',
@@ -853,8 +1010,8 @@ export default function Post() {
                 <i className="fas fa-search"></i>
                 Find Leads to Follow Up With
               </a>
-              <a 
-                href="/blog" 
+              <a
+                href="/blog"
                 className={styles.btnPrimary}
                 style={{
                   display: 'inline-flex',

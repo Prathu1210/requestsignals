@@ -47,11 +47,23 @@ const CATEGORIES = [
 ]
 
 // Intent phrases signalling someone is seeking freelance/agency help. Combined
-// with each category term. More phrases = more queries = more CSE quota used.
-// Google CSE free tier is 100 queries/day; 10 categories x 2 phrases = 20/day.
-// Each query searches across whatever platforms are configured in the CSE's
-// own "Sites to search" list, not just one hardcoded site.
+// with each category term. Each query searches across whatever platforms are
+// configured in the CSE's own "Sites to search" list, not just one hardcoded
+// site.
 const SEEK_PHRASES = ['looking for', 'in need of a']
+
+// Google CSE free tier is 100 queries/day. The workflow runs every 2 hours
+// (12 runs/day), so each run only covers a rotating slice of categories
+// instead of all 10 every time: 3 categories x 2 phrases x 12 runs/day = 72
+// queries/day, safely under the cap while still touching every category
+// several times a day. If you change the cron schedule, adjust this so
+// CATEGORIES_PER_RUN x SEEK_PHRASES.length x (runs per day) stays under 100.
+const CATEGORIES_PER_RUN = Number(process.env.CATEGORIES_PER_RUN || 3)
+
+// Rotation window in hours — should match the cron schedule's interval. Used
+// only to size the rotation step so coverage advances smoothly over time,
+// not tied to a run counter (which cron delays/misses could throw off).
+const ROTATION_SLOT_HOURS = Number(process.env.ROTATION_SLOT_HOURS || 2)
 
 // Delay between classification calls. OpenRouter's free-tier binding
 // constraint is a daily request cap rather than a tight per-minute one, but we
@@ -285,15 +297,20 @@ async function main() {
   // when it surfaces under multiple queries.
   const seenLinks = new Set()
 
-  // The classifier's free-tier daily quota can run out before we reach every
-  // category. Rotate the starting category by day so the cutoff point moves
-  // each run instead of always starving the same categories at the end of
-  // the list.
-  const dayOffset = Math.floor(Date.now() / 86400000) % CATEGORIES.length
-  const rotatedCategories = [...CATEGORIES.slice(dayOffset), ...CATEGORIES.slice(0, dayOffset)]
+  // Cover a rolling slice of categories each run (see CATEGORIES_PER_RUN)
+  // instead of all 10 every time, to stay within the CSE daily quota at
+  // higher run frequencies. The slice advances by wall-clock time rather
+  // than a run counter, so coverage stays even even if a run is delayed or
+  // skipped entirely.
+  const slotIndex = Math.floor(Date.now() / (ROTATION_SLOT_HOURS * 3600000))
+  const startIdx = (slotIndex * CATEGORIES_PER_RUN) % CATEGORIES.length
+  const selectedCategories = Array.from(
+    { length: Math.min(CATEGORIES_PER_RUN, CATEGORIES.length) },
+    (_, i) => CATEGORIES[(startIdx + i) % CATEGORIES.length]
+  )
 
   catLoop:
-  for (const cat of rotatedCategories) {
+  for (const cat of selectedCategories) {
     for (const phrase of SEEK_PHRASES) {
       const query = `"${phrase}" ${cat.term}`
       console.log(`\n[query] ${query}`)

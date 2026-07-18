@@ -2,9 +2,12 @@ name: Scrape LinkedIn leads
 
 on:
   schedule:
-    # Runs every 6 hours. Safe to run this often because check-lead.js skips
-    # already-saved posts before spending any AI classification quota on them.
-    - cron: '0 */6 * * *'
+    # Runs every 2 hours (matches ROTATION_SLOT_HOURS in the script — keep
+    # these in sync). Safe at this frequency because check-lead.js skips
+    # already-saved posts for free, and each run only queries a rotating
+    # slice of categories (CATEGORIES_PER_RUN) to stay under the CSE daily
+    # quota: 3 categories x 2 phrases x 12 runs/day = 72 queries/day.
+    - cron: '0 */2 * * *'
   workflow_dispatch: {} # allows manual runs from the Actions tab
 
 jobs:

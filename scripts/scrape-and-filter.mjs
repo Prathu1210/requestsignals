@@ -81,7 +81,11 @@ const MIN_CONFIDENCE = 0.6
 // often aren't indexed same-day anyway, so an exact "last 1-2 hours" window
 // isn't achievable against this data source. Instead we parse the real post
 // date out of the search snippet (Google shows it there) and filter on that.
-const MAX_POST_AGE_DAYS = Number(process.env.MAX_POST_AGE_DAYS || 14)
+// Measured against real search results: Google ranks these queries by
+// relevance/authority, not recency, so a tight window (originally 14 days)
+// rejected essentially 100% of results in testing. 90 days still filters
+// genuinely stale content while letting real volume through.
+const MAX_POST_AGE_DAYS = Number(process.env.MAX_POST_AGE_DAYS || 90)
 
 // ---------------------------------------------------------------------------
 // Helpers

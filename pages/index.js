@@ -165,18 +165,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className={`${styles.linkedinPost} ${styles.post3}`}>
-                <div className={styles.postContent}>
-                  <div className={styles.contentHighlight}>
-                    <span className={styles.highlightIcon}><i className="fas fa-bolt"></i></span>
-                    <div className={styles.highlightText}>
-                      <h4>Always Fresh</h4>
-                      <p>New leads added every 2 hours, automatically.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

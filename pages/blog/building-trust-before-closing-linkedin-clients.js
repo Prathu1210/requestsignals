@@ -163,18 +163,6 @@ export default function Post() {
                   </div>
                 </div>
               </div>
-
-              <div className={`${styles.linkedinPost} ${styles.post3}`}>
-                <div className={styles.postContent}>
-                  <div className={styles.contentHighlight}>
-                    <span className={styles.highlightIcon} style={{ background: 'linear-gradient(135deg, #f59e0b, #fbbf24)' }}><i className="fas fa-globe"></i></span>
-                    <div className={styles.highlightText}>
-                      <h4>Same Psychology</h4>
-                      <p>Different proof, same human need to feel safe</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

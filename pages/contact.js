@@ -222,22 +222,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              
-              <div className={`${styles.linkedinPost} ${styles.post3}`}>
-                <div className={styles.postContent}>
-                  <div className={styles.contentHighlight}>
-                    <span className={styles.highlightIcon}><i className="fas fa-question-circle"></i></span>
-                    <div className={styles.highlightText}>
-                      <h4>FAQ & Guidance</h4>
-                      <p>Get answers to common questions about using RequestSignals.</p>
-                      <div className={styles.postTags}>
-                        <span className={styles.tag}>#questions</span>
-                        <span className={styles.tag}>#guidance</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

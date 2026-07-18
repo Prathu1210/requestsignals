@@ -148,22 +148,6 @@ export default function BlogIndex() {
                   </div>
                 </div>
               </div>
-
-              <div className={`${styles.linkedinPost} ${styles.post3}`}>
-                <div className={styles.postContent}>
-                  <div className={styles.contentHighlight}>
-                    <span className={styles.highlightIcon}><i className="fas fa-user-tie"></i></span>
-                    <div className={styles.highlightText}>
-                      <h4>Client-First Approach</h4>
-                      <p>Focus on building relationships, not just making sales.</p>
-                      <div className={styles.postTags}>
-                        <span className={styles.tag}>Relationship</span>
-                        <span className={styles.tag}>Trust</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
